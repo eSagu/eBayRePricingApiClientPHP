@@ -1,5 +1,5 @@
 {
-    "name": "e-sagu/e-bay-re-pricing-api-client-php",
+    "name": "e-sagu/ebay-re-pricing-api-client-php",
     "version": "1.0.0",
     "description": "",
     "keywords": [
@@ -8,12 +8,12 @@
         "sdk",
         "api"
     ],
-    "homepage": "http://swagger.io",
+    "homepage": "https://www.esagu.de",
     "license": "proprietary",
     "authors": [
         {
-            "name": "Swagger and contributors",
-            "homepage": "https://github.com/swagger-api/swagger-codegen"
+            "name": "eSagu",
+            "homepage": "https://www.esagu.de"
         }
     ],
     "require": {

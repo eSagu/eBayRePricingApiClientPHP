@@ -21,11 +21,11 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
   "repositories": [
     {
       "type": "git",
-      "url": "https://github.com/eSagu/eBayRePricingApiClientPHP.git"
+      "url": "https://github.com/e-sagu/ebay-re-pricing-api-client-php.git"
     }
   ],
   "require": {
-    "eSagu/eBayRePricingApiClientPHP": "*@dev"
+    "e-sagu/ebay-re-pricing-api-client-php": "*@dev"
   }
 }
 ```
