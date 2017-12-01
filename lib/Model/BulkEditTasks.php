@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model;
+namespace eSagu\EBay\RePricing\V1\Model;
 
 use \ArrayAccess;
 
@@ -54,12 +54,12 @@ class BulkEditTasks implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'change_price_tasks' => '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkTaskPriceSettings[]',
-        'task_custom_code' => '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkTaskCustomCode',
-        'task_finding_api_filter' => '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkTaskFindingAPIFilter',
-        'task_price_gap' => '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkTaskPriceGap',
-        'task_price_mode' => '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkTaskPriceMode',
-        'task_search_term' => '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkTaskSearchTerm'
+        'change_price_tasks' => '\eSagu\EBay\RePricing\V1\Model\BulkTaskPriceSettings[]',
+        'task_custom_code' => '\eSagu\EBay\RePricing\V1\Model\BulkTaskCustomCode',
+        'task_finding_api_filter' => '\eSagu\EBay\RePricing\V1\Model\BulkTaskFindingAPIFilter',
+        'task_price_gap' => '\eSagu\EBay\RePricing\V1\Model\BulkTaskPriceGap',
+        'task_price_mode' => '\eSagu\EBay\RePricing\V1\Model\BulkTaskPriceMode',
+        'task_search_term' => '\eSagu\EBay\RePricing\V1\Model\BulkTaskSearchTerm'
     ];
 
     public static function swaggerTypes()
@@ -174,7 +174,7 @@ class BulkEditTasks implements ArrayAccess
 
     /**
      * Gets change_price_tasks
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkTaskPriceSettings[]
+     * @return \eSagu\EBay\RePricing\V1\Model\BulkTaskPriceSettings[]
      */
     public function getChangePriceTasks()
     {
@@ -183,7 +183,7 @@ class BulkEditTasks implements ArrayAccess
 
     /**
      * Sets change_price_tasks
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkTaskPriceSettings[] $change_price_tasks
+     * @param \eSagu\EBay\RePricing\V1\Model\BulkTaskPriceSettings[] $change_price_tasks
      * @return $this
      */
     public function setChangePriceTasks($change_price_tasks)
@@ -195,7 +195,7 @@ class BulkEditTasks implements ArrayAccess
 
     /**
      * Gets task_custom_code
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkTaskCustomCode
+     * @return \eSagu\EBay\RePricing\V1\Model\BulkTaskCustomCode
      */
     public function getTaskCustomCode()
     {
@@ -204,7 +204,7 @@ class BulkEditTasks implements ArrayAccess
 
     /**
      * Sets task_custom_code
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkTaskCustomCode $task_custom_code
+     * @param \eSagu\EBay\RePricing\V1\Model\BulkTaskCustomCode $task_custom_code
      * @return $this
      */
     public function setTaskCustomCode($task_custom_code)
@@ -216,7 +216,7 @@ class BulkEditTasks implements ArrayAccess
 
     /**
      * Gets task_finding_api_filter
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkTaskFindingAPIFilter
+     * @return \eSagu\EBay\RePricing\V1\Model\BulkTaskFindingAPIFilter
      */
     public function getTaskFindingApiFilter()
     {
@@ -225,7 +225,7 @@ class BulkEditTasks implements ArrayAccess
 
     /**
      * Sets task_finding_api_filter
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkTaskFindingAPIFilter $task_finding_api_filter
+     * @param \eSagu\EBay\RePricing\V1\Model\BulkTaskFindingAPIFilter $task_finding_api_filter
      * @return $this
      */
     public function setTaskFindingApiFilter($task_finding_api_filter)
@@ -237,7 +237,7 @@ class BulkEditTasks implements ArrayAccess
 
     /**
      * Gets task_price_gap
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkTaskPriceGap
+     * @return \eSagu\EBay\RePricing\V1\Model\BulkTaskPriceGap
      */
     public function getTaskPriceGap()
     {
@@ -246,7 +246,7 @@ class BulkEditTasks implements ArrayAccess
 
     /**
      * Sets task_price_gap
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkTaskPriceGap $task_price_gap
+     * @param \eSagu\EBay\RePricing\V1\Model\BulkTaskPriceGap $task_price_gap
      * @return $this
      */
     public function setTaskPriceGap($task_price_gap)
@@ -258,7 +258,7 @@ class BulkEditTasks implements ArrayAccess
 
     /**
      * Gets task_price_mode
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkTaskPriceMode
+     * @return \eSagu\EBay\RePricing\V1\Model\BulkTaskPriceMode
      */
     public function getTaskPriceMode()
     {
@@ -267,7 +267,7 @@ class BulkEditTasks implements ArrayAccess
 
     /**
      * Sets task_price_mode
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkTaskPriceMode $task_price_mode
+     * @param \eSagu\EBay\RePricing\V1\Model\BulkTaskPriceMode $task_price_mode
      * @return $this
      */
     public function setTaskPriceMode($task_price_mode)
@@ -279,7 +279,7 @@ class BulkEditTasks implements ArrayAccess
 
     /**
      * Gets task_search_term
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkTaskSearchTerm
+     * @return \eSagu\EBay\RePricing\V1\Model\BulkTaskSearchTerm
      */
     public function getTaskSearchTerm()
     {
@@ -288,7 +288,7 @@ class BulkEditTasks implements ArrayAccess
 
     /**
      * Sets task_search_term
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkTaskSearchTerm $task_search_term
+     * @param \eSagu\EBay\RePricing\V1\Model\BulkTaskSearchTerm $task_search_term
      * @return $this
      */
     public function setTaskSearchTerm($task_search_term)

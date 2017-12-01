@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model;
+namespace eSagu\EBay\RePricing\V1\Model;
 
 use \ArrayAccess;
 
@@ -54,15 +54,15 @@ class BulkEditRefinement implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'by_condition' => '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RefineByCondition',
-        'by_current_price' => '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RefineByCurrentPrice',
-        'by_end_time' => '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RefineByEndTime',
-        'by_item_id' => '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RefineByItemId',
-        'by_item_ids' => '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RefineByItemIds',
-        'by_quantity' => '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RefineByQuantity',
-        'by_sku' => '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RefineBySKU',
-        'by_shipping' => '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RefineByShipping',
-        'by_title' => '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RefineByTitle'
+        'by_condition' => '\eSagu\EBay\RePricing\V1\Model\RefineByCondition',
+        'by_current_price' => '\eSagu\EBay\RePricing\V1\Model\RefineByCurrentPrice',
+        'by_end_time' => '\eSagu\EBay\RePricing\V1\Model\RefineByEndTime',
+        'by_item_id' => '\eSagu\EBay\RePricing\V1\Model\RefineByItemId',
+        'by_item_ids' => '\eSagu\EBay\RePricing\V1\Model\RefineByItemIds',
+        'by_quantity' => '\eSagu\EBay\RePricing\V1\Model\RefineByQuantity',
+        'by_sku' => '\eSagu\EBay\RePricing\V1\Model\RefineBySKU',
+        'by_shipping' => '\eSagu\EBay\RePricing\V1\Model\RefineByShipping',
+        'by_title' => '\eSagu\EBay\RePricing\V1\Model\RefineByTitle'
     ];
 
     public static function swaggerTypes()
@@ -189,7 +189,7 @@ class BulkEditRefinement implements ArrayAccess
 
     /**
      * Gets by_condition
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RefineByCondition
+     * @return \eSagu\EBay\RePricing\V1\Model\RefineByCondition
      */
     public function getByCondition()
     {
@@ -198,7 +198,7 @@ class BulkEditRefinement implements ArrayAccess
 
     /**
      * Sets by_condition
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RefineByCondition $by_condition
+     * @param \eSagu\EBay\RePricing\V1\Model\RefineByCondition $by_condition
      * @return $this
      */
     public function setByCondition($by_condition)
@@ -210,7 +210,7 @@ class BulkEditRefinement implements ArrayAccess
 
     /**
      * Gets by_current_price
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RefineByCurrentPrice
+     * @return \eSagu\EBay\RePricing\V1\Model\RefineByCurrentPrice
      */
     public function getByCurrentPrice()
     {
@@ -219,7 +219,7 @@ class BulkEditRefinement implements ArrayAccess
 
     /**
      * Sets by_current_price
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RefineByCurrentPrice $by_current_price
+     * @param \eSagu\EBay\RePricing\V1\Model\RefineByCurrentPrice $by_current_price
      * @return $this
      */
     public function setByCurrentPrice($by_current_price)
@@ -231,7 +231,7 @@ class BulkEditRefinement implements ArrayAccess
 
     /**
      * Gets by_end_time
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RefineByEndTime
+     * @return \eSagu\EBay\RePricing\V1\Model\RefineByEndTime
      */
     public function getByEndTime()
     {
@@ -240,7 +240,7 @@ class BulkEditRefinement implements ArrayAccess
 
     /**
      * Sets by_end_time
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RefineByEndTime $by_end_time
+     * @param \eSagu\EBay\RePricing\V1\Model\RefineByEndTime $by_end_time
      * @return $this
      */
     public function setByEndTime($by_end_time)
@@ -252,7 +252,7 @@ class BulkEditRefinement implements ArrayAccess
 
     /**
      * Gets by_item_id
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RefineByItemId
+     * @return \eSagu\EBay\RePricing\V1\Model\RefineByItemId
      */
     public function getByItemId()
     {
@@ -261,7 +261,7 @@ class BulkEditRefinement implements ArrayAccess
 
     /**
      * Sets by_item_id
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RefineByItemId $by_item_id
+     * @param \eSagu\EBay\RePricing\V1\Model\RefineByItemId $by_item_id
      * @return $this
      */
     public function setByItemId($by_item_id)
@@ -273,7 +273,7 @@ class BulkEditRefinement implements ArrayAccess
 
     /**
      * Gets by_item_ids
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RefineByItemIds
+     * @return \eSagu\EBay\RePricing\V1\Model\RefineByItemIds
      */
     public function getByItemIds()
     {
@@ -282,7 +282,7 @@ class BulkEditRefinement implements ArrayAccess
 
     /**
      * Sets by_item_ids
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RefineByItemIds $by_item_ids
+     * @param \eSagu\EBay\RePricing\V1\Model\RefineByItemIds $by_item_ids
      * @return $this
      */
     public function setByItemIds($by_item_ids)
@@ -294,7 +294,7 @@ class BulkEditRefinement implements ArrayAccess
 
     /**
      * Gets by_quantity
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RefineByQuantity
+     * @return \eSagu\EBay\RePricing\V1\Model\RefineByQuantity
      */
     public function getByQuantity()
     {
@@ -303,7 +303,7 @@ class BulkEditRefinement implements ArrayAccess
 
     /**
      * Sets by_quantity
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RefineByQuantity $by_quantity
+     * @param \eSagu\EBay\RePricing\V1\Model\RefineByQuantity $by_quantity
      * @return $this
      */
     public function setByQuantity($by_quantity)
@@ -315,7 +315,7 @@ class BulkEditRefinement implements ArrayAccess
 
     /**
      * Gets by_sku
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RefineBySKU
+     * @return \eSagu\EBay\RePricing\V1\Model\RefineBySKU
      */
     public function getBySku()
     {
@@ -324,7 +324,7 @@ class BulkEditRefinement implements ArrayAccess
 
     /**
      * Sets by_sku
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RefineBySKU $by_sku
+     * @param \eSagu\EBay\RePricing\V1\Model\RefineBySKU $by_sku
      * @return $this
      */
     public function setBySku($by_sku)
@@ -336,7 +336,7 @@ class BulkEditRefinement implements ArrayAccess
 
     /**
      * Gets by_shipping
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RefineByShipping
+     * @return \eSagu\EBay\RePricing\V1\Model\RefineByShipping
      */
     public function getByShipping()
     {
@@ -345,7 +345,7 @@ class BulkEditRefinement implements ArrayAccess
 
     /**
      * Sets by_shipping
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RefineByShipping $by_shipping
+     * @param \eSagu\EBay\RePricing\V1\Model\RefineByShipping $by_shipping
      * @return $this
      */
     public function setByShipping($by_shipping)
@@ -357,7 +357,7 @@ class BulkEditRefinement implements ArrayAccess
 
     /**
      * Gets by_title
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RefineByTitle
+     * @return \eSagu\EBay\RePricing\V1\Model\RefineByTitle
      */
     public function getByTitle()
     {
@@ -366,7 +366,7 @@ class BulkEditRefinement implements ArrayAccess
 
     /**
      * Sets by_title
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RefineByTitle $by_title
+     * @param \eSagu\EBay\RePricing\V1\Model\RefineByTitle $by_title
      * @return $this
      */
     public function setByTitle($by_title)

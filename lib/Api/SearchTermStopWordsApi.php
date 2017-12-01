@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Api;
+namespace eSagu\EBay\RePricing\V1\Api;
 
 use \eSagu\EBay\RePricing\V1\ApiClient;
 use \eSagu\EBay\RePricing\V1\ApiException;
@@ -93,7 +93,7 @@ class SearchTermStopWordsApi
      * Get the search term stop words.
      *
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO
+     * @return \eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO
      */
     public function get()
     {
@@ -107,7 +107,7 @@ class SearchTermStopWordsApi
      * Get the search term stop words.
      *
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
-     * @return array of \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWithHttpInfo()
     {
@@ -146,15 +146,15 @@ class SearchTermStopWordsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO',
+                '\eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO',
                 '/search-term-stop-words'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -168,7 +168,7 @@ class SearchTermStopWordsApi
      *
      * Creates new search term stop words if empty.
      *
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO $body  (optional)
+     * @param \eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO $body  (optional)
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
      * @return void
      */
@@ -183,7 +183,7 @@ class SearchTermStopWordsApi
      *
      * Creates new search term stop words if empty.
      *
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO $body  (optional)
+     * @param \eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO $body  (optional)
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -247,7 +247,7 @@ class SearchTermStopWordsApi
      *
      * Edits search term stop words.
      *
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO $body  (optional)
+     * @param \eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO $body  (optional)
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
      * @return void
      */
@@ -262,7 +262,7 @@ class SearchTermStopWordsApi
      *
      * Edits search term stop words.
      *
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO $body  (optional)
+     * @param \eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO $body  (optional)
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

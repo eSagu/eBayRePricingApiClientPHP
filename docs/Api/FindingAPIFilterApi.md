@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **callList**
-> \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\FindingAPIFilterDTO[] callList()
+> \eSagu\EBay\RePricing\V1\Model\FindingAPIFilterDTO[] callList()
 
 Get a list of all FindingAPIFilters.
 
@@ -44,7 +44,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\FindingAPIFilterDTO[]**](../Model/FindingAPIFilterDTO.md)
+[**\eSagu\EBay\RePricing\V1\Model\FindingAPIFilterDTO[]**](../Model/FindingAPIFilterDTO.md)
 
 ### Authorization
 
@@ -107,7 +107,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **get**
-> \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\FindingAPIFilterDTO get($finding_api_filter_id)
+> \eSagu\EBay\RePricing\V1\Model\FindingAPIFilterDTO get($finding_api_filter_id)
 
 Get a single FindingAPIFilter specified by it's id.
 
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\FindingAPIFilterDTO**](../Model/FindingAPIFilterDTO.md)
+[**\eSagu\EBay\RePricing\V1\Model\FindingAPIFilterDTO**](../Model/FindingAPIFilterDTO.md)
 
 ### Authorization
 
@@ -174,7 +174,7 @@ eSagu\EBay\RePricing\V1\Configuration::getDefaultConfiguration()->setApiKey('Aut
 // eSagu\EBay\RePricing\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new eSagu\EBay\RePricing\V1\Api\FindingAPIFilterApi();
-$body = new \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\FindingAPIFilterDTO(); // \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\FindingAPIFilterDTO | 
+$body = new \eSagu\EBay\RePricing\V1\Model\FindingAPIFilterDTO(); // \eSagu\EBay\RePricing\V1\Model\FindingAPIFilterDTO | 
 
 try {
     $api_instance->post($body);
@@ -188,7 +188,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\FindingAPIFilterDTO**](../Model/\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\FindingAPIFilterDTO.md)|  | [optional]
+ **body** | [**\eSagu\EBay\RePricing\V1\Model\FindingAPIFilterDTO**](../Model/\eSagu\EBay\RePricing\V1\Model\FindingAPIFilterDTO.md)|  | [optional]
 
 ### Return type
 
@@ -224,7 +224,7 @@ eSagu\EBay\RePricing\V1\Configuration::getDefaultConfiguration()->setApiKey('Aut
 
 $api_instance = new eSagu\EBay\RePricing\V1\Api\FindingAPIFilterApi();
 $finding_api_filter_id = 789; // int | 
-$body = new \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\FindingAPIFilterDTO(); // \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\FindingAPIFilterDTO | 
+$body = new \eSagu\EBay\RePricing\V1\Model\FindingAPIFilterDTO(); // \eSagu\EBay\RePricing\V1\Model\FindingAPIFilterDTO | 
 
 try {
     $api_instance->put($finding_api_filter_id, $body);
@@ -239,7 +239,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **finding_api_filter_id** | **int**|  |
- **body** | [**\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\FindingAPIFilterDTO**](../Model/\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\FindingAPIFilterDTO.md)|  | [optional]
+ **body** | [**\eSagu\EBay\RePricing\V1\Model\FindingAPIFilterDTO**](../Model/\eSagu\EBay\RePricing\V1\Model\FindingAPIFilterDTO.md)|  | [optional]
 
 ### Return type
 

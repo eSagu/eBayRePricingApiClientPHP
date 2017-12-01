@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model;
+namespace eSagu\EBay\RePricing\V1\Model;
 
 use \ArrayAccess;
 
@@ -59,7 +59,7 @@ class FindingAPIFilterDynamicDTO implements ArrayAccess
         'category_refinement' => 'string',
         'conditions' => 'string[]',
         'description_search' => 'bool',
-        'exclude_category' => '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\EbayCategoryDTO[]',
+        'exclude_category' => '\eSagu\EBay\RePricing\V1\Model\EbayCategoryDTO[]',
         'exclude_seller' => 'string[]',
         'feedback_score_min' => 'int',
         'hide_duplicate_items' => 'bool',
@@ -462,7 +462,7 @@ class FindingAPIFilterDynamicDTO implements ArrayAccess
 
     /**
      * Gets exclude_category
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\EbayCategoryDTO[]
+     * @return \eSagu\EBay\RePricing\V1\Model\EbayCategoryDTO[]
      */
     public function getExcludeCategory()
     {
@@ -471,7 +471,7 @@ class FindingAPIFilterDynamicDTO implements ArrayAccess
 
     /**
      * Sets exclude_category
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\EbayCategoryDTO[] $exclude_category
+     * @param \eSagu\EBay\RePricing\V1\Model\EbayCategoryDTO[] $exclude_category
      * @return $this
      */
     public function setExcludeCategory($exclude_category)

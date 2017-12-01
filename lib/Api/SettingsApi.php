@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Api;
+namespace eSagu\EBay\RePricing\V1\Api;
 
 use \eSagu\EBay\RePricing\V1\ApiClient;
 use \eSagu\EBay\RePricing\V1\ApiException;
@@ -93,7 +93,7 @@ class SettingsApi
      * Gets the repricing settings.
      *
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\SettingsDTO
+     * @return \eSagu\EBay\RePricing\V1\Model\SettingsDTO
      */
     public function get()
     {
@@ -107,7 +107,7 @@ class SettingsApi
      * Gets the repricing settings.
      *
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
-     * @return array of \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\SettingsDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \eSagu\EBay\RePricing\V1\Model\SettingsDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWithHttpInfo()
     {
@@ -146,15 +146,15 @@ class SettingsApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\SettingsDTO',
+                '\eSagu\EBay\RePricing\V1\Model\SettingsDTO',
                 '/settings'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\SettingsDTO', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\eSagu\EBay\RePricing\V1\Model\SettingsDTO', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\SettingsDTO', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\eSagu\EBay\RePricing\V1\Model\SettingsDTO', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -168,7 +168,7 @@ class SettingsApi
      *
      * Adds new repricing settings if not exists.
      *
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\SettingsDTO $body  (optional)
+     * @param \eSagu\EBay\RePricing\V1\Model\SettingsDTO $body  (optional)
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
      * @return void
      */
@@ -183,7 +183,7 @@ class SettingsApi
      *
      * Adds new repricing settings if not exists.
      *
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\SettingsDTO $body  (optional)
+     * @param \eSagu\EBay\RePricing\V1\Model\SettingsDTO $body  (optional)
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -247,7 +247,7 @@ class SettingsApi
      *
      * Edit the repricing settings.
      *
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\SettingsDTO $body  (optional)
+     * @param \eSagu\EBay\RePricing\V1\Model\SettingsDTO $body  (optional)
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
      * @return void
      */
@@ -262,7 +262,7 @@ class SettingsApi
      *
      * Edit the repricing settings.
      *
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\SettingsDTO $body  (optional)
+     * @param \eSagu\EBay\RePricing\V1\Model\SettingsDTO $body  (optional)
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

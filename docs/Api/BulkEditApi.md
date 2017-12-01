@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **callList**
-> \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkEditDTO[] callList()
+> \eSagu\EBay\RePricing\V1\Model\BulkEditDTO[] callList()
 
 Get a list of all bulk edits.
 
@@ -42,7 +42,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkEditDTO[]**](../Model/BulkEditDTO.md)
+[**\eSagu\EBay\RePricing\V1\Model\BulkEditDTO[]**](../Model/BulkEditDTO.md)
 
 ### Authorization
 
@@ -56,7 +56,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **get**
-> \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkEditDTO get($bulk_edit_id)
+> \eSagu\EBay\RePricing\V1\Model\BulkEditDTO get($bulk_edit_id)
 
 Get a single bulk edit specified by it's id.
 
@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkEditDTO**](../Model/BulkEditDTO.md)
+[**\eSagu\EBay\RePricing\V1\Model\BulkEditDTO**](../Model/BulkEditDTO.md)
 
 ### Authorization
 
@@ -123,7 +123,7 @@ eSagu\EBay\RePricing\V1\Configuration::getDefaultConfiguration()->setApiKey('Aut
 // eSagu\EBay\RePricing\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new eSagu\EBay\RePricing\V1\Api\BulkEditApi();
-$body = new \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkEditDTO(); // \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkEditDTO | 
+$body = new \eSagu\EBay\RePricing\V1\Model\BulkEditDTO(); // \eSagu\EBay\RePricing\V1\Model\BulkEditDTO | 
 
 try {
     $api_instance->post($body);
@@ -137,7 +137,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkEditDTO**](../Model/\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkEditDTO.md)|  | [optional]
+ **body** | [**\eSagu\EBay\RePricing\V1\Model\BulkEditDTO**](../Model/\eSagu\EBay\RePricing\V1\Model\BulkEditDTO.md)|  | [optional]
 
 ### Return type
 

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **callList**
-> \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\CustomCodeDTO[] callList()
+> \eSagu\EBay\RePricing\V1\Model\CustomCodeDTO[] callList()
 
 Get a list of all CustomCodes items.
 
@@ -41,7 +41,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\CustomCodeDTO[]**](../Model/CustomCodeDTO.md)
+[**\eSagu\EBay\RePricing\V1\Model\CustomCodeDTO[]**](../Model/CustomCodeDTO.md)
 
 ### Authorization
 
@@ -55,7 +55,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **get**
-> \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\CustomCodeDTO get($custom_code_id)
+> \eSagu\EBay\RePricing\V1\Model\CustomCodeDTO get($custom_code_id)
 
 Get a single CustomCode specified by it's id..
 
@@ -91,7 +91,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\CustomCodeDTO**](../Model/CustomCodeDTO.md)
+[**\eSagu\EBay\RePricing\V1\Model\CustomCodeDTO**](../Model/CustomCodeDTO.md)
 
 ### Authorization
 

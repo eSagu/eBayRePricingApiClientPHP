@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **category_refinement** | **string** |  | [optional] 
 **conditions** | **string[]** |  | [optional] 
 **description_search** | **bool** |  | [optional] 
-**exclude_category** | [**\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\EbayCategoryDTO[]**](EbayCategoryDTO.md) |  | [optional] 
+**exclude_category** | [**\eSagu\EBay\RePricing\V1\Model\EbayCategoryDTO[]**](EbayCategoryDTO.md) |  | [optional] 
 **exclude_seller** | **string[]** |  | [optional] 
 **feedback_score_min** | **int** |  | [optional] 
 **hide_duplicate_items** | **bool** |  | [optional] 

@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 
 # **callList**
-> \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO[] callList()
+> \eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO[] callList()
 
 Get a list of all CSV request presets for given user service.
 
@@ -44,7 +44,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO[]**](../Model/RepricingCSVRequestPresetDTO.md)
+[**\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO[]**](../Model/RepricingCSVRequestPresetDTO.md)
 
 ### Authorization
 
@@ -107,7 +107,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **get**
-> \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO get($csv_request_preset_id)
+> \eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO get($csv_request_preset_id)
 
 Get a single CSV request preset specified by it's id.
 
@@ -143,7 +143,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO**](../Model/RepricingCSVRequestPresetDTO.md)
+[**\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO**](../Model/RepricingCSVRequestPresetDTO.md)
 
 ### Authorization
 
@@ -174,7 +174,7 @@ eSagu\EBay\RePricing\V1\Configuration::getDefaultConfiguration()->setApiKey('Aut
 // eSagu\EBay\RePricing\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new eSagu\EBay\RePricing\V1\Api\CSVRequestPresetApi();
-$body = new \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO(); // \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO | 
+$body = new \eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO(); // \eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO | 
 
 try {
     $api_instance->post($body);
@@ -188,7 +188,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO**](../Model/\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO.md)|  | [optional]
+ **body** | [**\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO**](../Model/\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO.md)|  | [optional]
 
 ### Return type
 
@@ -224,7 +224,7 @@ eSagu\EBay\RePricing\V1\Configuration::getDefaultConfiguration()->setApiKey('Aut
 
 $api_instance = new eSagu\EBay\RePricing\V1\Api\CSVRequestPresetApi();
 $csv_request_preset_id = 789; // int | 
-$body = new \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO(); // \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO | 
+$body = new \eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO(); // \eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO | 
 
 try {
     $api_instance->put($csv_request_preset_id, $body);
@@ -239,7 +239,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **csv_request_preset_id** | **int**|  |
- **body** | [**\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO**](../Model/\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO.md)|  | [optional]
+ **body** | [**\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO**](../Model/\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO.md)|  | [optional]
 
 ### Return type
 

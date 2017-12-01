@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **get**
-> \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO get()
+> \eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO get()
 
 Get the search term stop words.
 
@@ -42,7 +42,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO**](../Model/SearchTermStopWordsDTO.md)
+[**\eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO**](../Model/SearchTermStopWordsDTO.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ eSagu\EBay\RePricing\V1\Configuration::getDefaultConfiguration()->setApiKey('Aut
 // eSagu\EBay\RePricing\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new eSagu\EBay\RePricing\V1\Api\SearchTermStopWordsApi();
-$body = new \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO(); // \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO | 
+$body = new \eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO(); // \eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO | 
 
 try {
     $api_instance->post($body);
@@ -87,7 +87,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO**](../Model/\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO.md)|  | [optional]
+ **body** | [**\eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO**](../Model/\eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO.md)|  | [optional]
 
 ### Return type
 
@@ -122,7 +122,7 @@ eSagu\EBay\RePricing\V1\Configuration::getDefaultConfiguration()->setApiKey('Aut
 // eSagu\EBay\RePricing\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new eSagu\EBay\RePricing\V1\Api\SearchTermStopWordsApi();
-$body = new \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO(); // \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO | 
+$body = new \eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO(); // \eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO | 
 
 try {
     $api_instance->put($body);
@@ -136,7 +136,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO**](../Model/\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO.md)|  | [optional]
+ **body** | [**\eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO**](../Model/\eSagu\EBay\RePricing\V1\Model\SearchTermStopWordsDTO.md)|  | [optional]
 
 ### Return type
 

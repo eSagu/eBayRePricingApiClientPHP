@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model;
+namespace eSagu\EBay\RePricing\V1\Model;
 
 use \ArrayAccess;
 
@@ -57,9 +57,9 @@ class RepricingItemStrategyDTO implements ArrayAccess
     protected static $swaggerTypes = [
         'custom_code_id' => 'int',
         'finding_api_filter_id' => 'int',
-        'finding_search_term' => '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\FindingSearchTermDTO',
+        'finding_search_term' => '\eSagu\EBay\RePricing\V1\Model\FindingSearchTermDTO',
         'price_gap_id' => 'int',
-        'price_settings' => '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemPriceSettingsDTO'
+        'price_settings' => '\eSagu\EBay\RePricing\V1\Model\RepricingItemPriceSettingsDTO'
     ];
 
     public static function swaggerTypes()
@@ -212,7 +212,7 @@ class RepricingItemStrategyDTO implements ArrayAccess
 
     /**
      * Gets finding_search_term
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\FindingSearchTermDTO
+     * @return \eSagu\EBay\RePricing\V1\Model\FindingSearchTermDTO
      */
     public function getFindingSearchTerm()
     {
@@ -221,7 +221,7 @@ class RepricingItemStrategyDTO implements ArrayAccess
 
     /**
      * Sets finding_search_term
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\FindingSearchTermDTO $finding_search_term
+     * @param \eSagu\EBay\RePricing\V1\Model\FindingSearchTermDTO $finding_search_term
      * @return $this
      */
     public function setFindingSearchTerm($finding_search_term)
@@ -254,7 +254,7 @@ class RepricingItemStrategyDTO implements ArrayAccess
 
     /**
      * Gets price_settings
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemPriceSettingsDTO
+     * @return \eSagu\EBay\RePricing\V1\Model\RepricingItemPriceSettingsDTO
      */
     public function getPriceSettings()
     {
@@ -263,7 +263,7 @@ class RepricingItemStrategyDTO implements ArrayAccess
 
     /**
      * Sets price_settings
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemPriceSettingsDTO $price_settings
+     * @param \eSagu\EBay\RePricing\V1\Model\RepricingItemPriceSettingsDTO $price_settings
      * @return $this
      */
     public function setPriceSettings($price_settings)

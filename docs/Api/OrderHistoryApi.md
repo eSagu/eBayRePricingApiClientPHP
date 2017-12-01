@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **get**
-> \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingEbayOrderHistoryDTO[] get()
+> \eSagu\EBay\RePricing\V1\Model\RepricingEbayOrderHistoryDTO[] get()
 
 Gets the order statistics of the last days.
 
@@ -40,7 +40,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingEbayOrderHistoryDTO[]**](../Model/RepricingEbayOrderHistoryDTO.md)
+[**\eSagu\EBay\RePricing\V1\Model\RepricingEbayOrderHistoryDTO[]**](../Model/RepricingEbayOrderHistoryDTO.md)
 
 ### Authorization
 

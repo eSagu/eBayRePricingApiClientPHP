@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model;
+namespace eSagu\EBay\RePricing\V1\Model;
 
 use \ArrayAccess;
 
@@ -55,7 +55,7 @@ class NewItemBulkEditDTO implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'tasks' => '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkEditTasks'
+        'tasks' => '\eSagu\EBay\RePricing\V1\Model\BulkEditTasks'
     ];
 
     public static function swaggerTypes()
@@ -150,7 +150,7 @@ class NewItemBulkEditDTO implements ArrayAccess
 
     /**
      * Gets tasks
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkEditTasks
+     * @return \eSagu\EBay\RePricing\V1\Model\BulkEditTasks
      */
     public function getTasks()
     {
@@ -159,7 +159,7 @@ class NewItemBulkEditDTO implements ArrayAccess
 
     /**
      * Sets tasks
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkEditTasks $tasks
+     * @param \eSagu\EBay\RePricing\V1\Model\BulkEditTasks $tasks
      * @return $this
      */
     public function setTasks($tasks)

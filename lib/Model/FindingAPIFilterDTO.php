@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model;
+namespace eSagu\EBay\RePricing\V1\Model;
 
 use \ArrayAccess;
 
@@ -55,7 +55,7 @@ class FindingAPIFilterDTO implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'filter' => '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\FindingAPIFilterDynamicDTO',
+        'filter' => '\eSagu\EBay\RePricing\V1\Model\FindingAPIFilterDynamicDTO',
         'name' => 'string'
     ];
 
@@ -167,7 +167,7 @@ class FindingAPIFilterDTO implements ArrayAccess
 
     /**
      * Gets filter
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\FindingAPIFilterDynamicDTO
+     * @return \eSagu\EBay\RePricing\V1\Model\FindingAPIFilterDynamicDTO
      */
     public function getFilter()
     {
@@ -176,7 +176,7 @@ class FindingAPIFilterDTO implements ArrayAccess
 
     /**
      * Sets filter
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\FindingAPIFilterDynamicDTO $filter
+     * @param \eSagu\EBay\RePricing\V1\Model\FindingAPIFilterDynamicDTO $filter
      * @return $this
      */
     public function setFilter($filter)

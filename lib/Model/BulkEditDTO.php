@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model;
+namespace eSagu\EBay\RePricing\V1\Model;
 
 use \ArrayAccess;
 
@@ -57,8 +57,8 @@ class BulkEditDTO implements ArrayAccess
     protected static $swaggerTypes = [
         'failure_items' => 'int',
         'processed' => 'bool',
-        'refinement' => '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkEditRefinement',
-        'tasks' => '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkEditTasks',
+        'refinement' => '\eSagu\EBay\RePricing\V1\Model\BulkEditRefinement',
+        'tasks' => '\eSagu\EBay\RePricing\V1\Model\BulkEditTasks',
         'total_items' => 'int'
     ];
 
@@ -212,7 +212,7 @@ class BulkEditDTO implements ArrayAccess
 
     /**
      * Gets refinement
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkEditRefinement
+     * @return \eSagu\EBay\RePricing\V1\Model\BulkEditRefinement
      */
     public function getRefinement()
     {
@@ -221,7 +221,7 @@ class BulkEditDTO implements ArrayAccess
 
     /**
      * Sets refinement
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkEditRefinement $refinement
+     * @param \eSagu\EBay\RePricing\V1\Model\BulkEditRefinement $refinement
      * @return $this
      */
     public function setRefinement($refinement)
@@ -233,7 +233,7 @@ class BulkEditDTO implements ArrayAccess
 
     /**
      * Gets tasks
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkEditTasks
+     * @return \eSagu\EBay\RePricing\V1\Model\BulkEditTasks
      */
     public function getTasks()
     {
@@ -242,7 +242,7 @@ class BulkEditDTO implements ArrayAccess
 
     /**
      * Sets tasks
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\BulkEditTasks $tasks
+     * @param \eSagu\EBay\RePricing\V1\Model\BulkEditTasks $tasks
      * @return $this
      */
     public function setTasks($tasks)

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **callList**
-> \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestDTO[] callList()
+> \eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestDTO[] callList()
 
 Get a list of all CSV Requests for given user service.
 
@@ -42,7 +42,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestDTO[]**](../Model/RepricingCSVRequestDTO.md)
+[**\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestDTO[]**](../Model/RepricingCSVRequestDTO.md)
 
 ### Authorization
 
@@ -56,7 +56,7 @@ This endpoint does not need any parameter.
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **get**
-> \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestDTO get($csv_request_id)
+> \eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestDTO get($csv_request_id)
 
 Get a single CSV Request.
 
@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestDTO**](../Model/RepricingCSVRequestDTO.md)
+[**\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestDTO**](../Model/RepricingCSVRequestDTO.md)
 
 ### Authorization
 
@@ -123,7 +123,7 @@ eSagu\EBay\RePricing\V1\Configuration::getDefaultConfiguration()->setApiKey('Aut
 // eSagu\EBay\RePricing\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new eSagu\EBay\RePricing\V1\Api\CSVRequestApi();
-$body = new \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestDTO(); // \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestDTO | 
+$body = new \eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestDTO(); // \eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestDTO | 
 
 try {
     $api_instance->post($body);
@@ -137,7 +137,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestDTO**](../Model/\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestDTO.md)|  | [optional]
+ **body** | [**\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestDTO**](../Model/\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestDTO.md)|  | [optional]
 
 ### Return type
 

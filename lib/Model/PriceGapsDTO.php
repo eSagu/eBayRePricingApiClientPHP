@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model;
+namespace eSagu\EBay\RePricing\V1\Model;
 
 use \ArrayAccess;
 
@@ -56,7 +56,7 @@ class PriceGapsDTO implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'name' => 'string',
-        'price_gaps' => '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\PriceGapDTO[]'
+        'price_gaps' => '\eSagu\EBay\RePricing\V1\Model\PriceGapDTO[]'
     ];
 
     public static function swaggerTypes()
@@ -188,7 +188,7 @@ class PriceGapsDTO implements ArrayAccess
 
     /**
      * Gets price_gaps
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\PriceGapDTO[]
+     * @return \eSagu\EBay\RePricing\V1\Model\PriceGapDTO[]
      */
     public function getPriceGaps()
     {
@@ -197,7 +197,7 @@ class PriceGapsDTO implements ArrayAccess
 
     /**
      * Sets price_gaps
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\PriceGapDTO[] $price_gaps
+     * @param \eSagu\EBay\RePricing\V1\Model\PriceGapDTO[] $price_gaps
      * @return $this
      */
     public function setPriceGaps($price_gaps)

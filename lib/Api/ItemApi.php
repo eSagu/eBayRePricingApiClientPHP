@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Api;
+namespace eSagu\EBay\RePricing\V1\Api;
 
 use \eSagu\EBay\RePricing\V1\ApiClient;
 use \eSagu\EBay\RePricing\V1\ApiException;
@@ -124,7 +124,7 @@ class ItemApi
      * @param bool $count_items  (optional, default to false)
      * @param bool $return_items  (optional, default to true)
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemDTO[]
+     * @return \eSagu\EBay\RePricing\V1\Model\RepricingItemDTO[]
      */
     public function callList($by_item_id = null, $by_sku = null, $by_title = null, $by_title_exact = null, $by_search_term = null, $by_condition = null, $by_price_mode = null, $by_price_gaps = null, $by_finding_filter = null, $by_price_state = null, $by_current_price_from = null, $by_current_price_to = null, $by_quantity_from = null, $by_quantity_to = null, $by_shipping_from = null, $by_shipping_to = null, $by_site = null, $by_hide_ended_items = null, $by_id_greater_than = null, $where_search_rank_null = null, $where_search_rank_not_null = null, $where_total_entries_null = null, $where_total_entries_not_null = null, $where_only_own_offer = null, $offset = null, $limit = null, $sort = null, $order = null, $exclude_childs = null, $count_items = null, $return_items = null)
     {
@@ -169,7 +169,7 @@ class ItemApi
      * @param bool $count_items  (optional, default to false)
      * @param bool $return_items  (optional, default to true)
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
-     * @return array of \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \eSagu\EBay\RePricing\V1\Model\RepricingItemDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function callListWithHttpInfo($by_item_id = null, $by_sku = null, $by_title = null, $by_title_exact = null, $by_search_term = null, $by_condition = null, $by_price_mode = null, $by_price_gaps = null, $by_finding_filter = null, $by_price_state = null, $by_current_price_from = null, $by_current_price_to = null, $by_quantity_from = null, $by_quantity_to = null, $by_shipping_from = null, $by_shipping_to = null, $by_site = null, $by_hide_ended_items = null, $by_id_greater_than = null, $where_search_rank_null = null, $where_search_rank_not_null = null, $where_total_entries_null = null, $where_total_entries_not_null = null, $where_only_own_offer = null, $offset = null, $limit = null, $sort = null, $order = null, $exclude_childs = null, $count_items = null, $return_items = null)
     {
@@ -332,15 +332,15 @@ class ItemApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemDTO[]',
+                '\eSagu\EBay\RePricing\V1\Model\RepricingItemDTO[]',
                 '/item'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemDTO[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\eSagu\EBay\RePricing\V1\Model\RepricingItemDTO[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemDTO[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\eSagu\EBay\RePricing\V1\Model\RepricingItemDTO[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -356,7 +356,7 @@ class ItemApi
      *
      * @param int $item_id  (required)
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemDTO
+     * @return \eSagu\EBay\RePricing\V1\Model\RepricingItemDTO
      */
     public function get($item_id)
     {
@@ -371,7 +371,7 @@ class ItemApi
      *
      * @param int $item_id  (required)
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
-     * @return array of \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \eSagu\EBay\RePricing\V1\Model\RepricingItemDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWithHttpInfo($item_id)
     {
@@ -422,15 +422,15 @@ class ItemApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemDTO',
+                '\eSagu\EBay\RePricing\V1\Model\RepricingItemDTO',
                 '/item/{itemId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemDTO', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\eSagu\EBay\RePricing\V1\Model\RepricingItemDTO', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemDTO', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\eSagu\EBay\RePricing\V1\Model\RepricingItemDTO', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

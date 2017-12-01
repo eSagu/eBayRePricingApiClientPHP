@@ -27,7 +27,7 @@
  * Do not edit the class manually.
  */
 
-namespace eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model;
+namespace eSagu\EBay\RePricing\V1\Model;
 
 use \ArrayAccess;
 
@@ -55,7 +55,7 @@ class RepricingItemDTO implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'additional_details' => '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemAdditionalDetailsDTO',
+        'additional_details' => '\eSagu\EBay\RePricing\V1\Model\RepricingItemAdditionalDetailsDTO',
         'condition' => 'string',
         'current_price' => 'int',
         'end_time' => 'int',
@@ -68,26 +68,26 @@ class RepricingItemDTO implements ArrayAccess
         'item_url' => 'string',
         'listing_type' => 'string',
         'offer_ended' => 'bool',
-        'offers' => '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\ItemOfferDTO[]',
+        'offers' => '\eSagu\EBay\RePricing\V1\Model\ItemOfferDTO[]',
         'offers_last_update' => 'int',
-        'optimization_result' => '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemOptimizationResultDTO',
-        'price_upload' => '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemPriceUploadDTO',
-        'primary_category' => '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\EbayCategoryDTO',
+        'optimization_result' => '\eSagu\EBay\RePricing\V1\Model\RepricingItemOptimizationResultDTO',
+        'price_upload' => '\eSagu\EBay\RePricing\V1\Model\RepricingItemPriceUploadDTO',
+        'primary_category' => '\eSagu\EBay\RePricing\V1\Model\EbayCategoryDTO',
         'quantity' => 'int',
         'quantity_sold' => 'int',
         'search_rank' => 'int',
-        'secondary_category' => '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\EbayCategoryDTO',
+        'secondary_category' => '\eSagu\EBay\RePricing\V1\Model\EbayCategoryDTO',
         'shipping_costs' => 'int',
         'site' => 'string',
         'sku' => 'string',
         'start_time' => 'int',
-        'strategy' => '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemStrategyDTO',
+        'strategy' => '\eSagu\EBay\RePricing\V1\Model\RepricingItemStrategyDTO',
         'title' => 'string',
         'total_entries' => 'int',
         'updated' => '\DateTime',
         'variation_specifics' => 'map[string,string[]]',
         'variation_type' => 'string',
-        'variations' => '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemDTO[]'
+        'variations' => '\eSagu\EBay\RePricing\V1\Model\RepricingItemDTO[]'
     ];
 
     public static function swaggerTypes()
@@ -464,7 +464,7 @@ class RepricingItemDTO implements ArrayAccess
 
     /**
      * Gets additional_details
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemAdditionalDetailsDTO
+     * @return \eSagu\EBay\RePricing\V1\Model\RepricingItemAdditionalDetailsDTO
      */
     public function getAdditionalDetails()
     {
@@ -473,7 +473,7 @@ class RepricingItemDTO implements ArrayAccess
 
     /**
      * Sets additional_details
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemAdditionalDetailsDTO $additional_details
+     * @param \eSagu\EBay\RePricing\V1\Model\RepricingItemAdditionalDetailsDTO $additional_details
      * @return $this
      */
     public function setAdditionalDetails($additional_details)
@@ -745,7 +745,7 @@ class RepricingItemDTO implements ArrayAccess
 
     /**
      * Gets offers
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\ItemOfferDTO[]
+     * @return \eSagu\EBay\RePricing\V1\Model\ItemOfferDTO[]
      */
     public function getOffers()
     {
@@ -754,7 +754,7 @@ class RepricingItemDTO implements ArrayAccess
 
     /**
      * Sets offers
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\ItemOfferDTO[] $offers
+     * @param \eSagu\EBay\RePricing\V1\Model\ItemOfferDTO[] $offers
      * @return $this
      */
     public function setOffers($offers)
@@ -787,7 +787,7 @@ class RepricingItemDTO implements ArrayAccess
 
     /**
      * Gets optimization_result
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemOptimizationResultDTO
+     * @return \eSagu\EBay\RePricing\V1\Model\RepricingItemOptimizationResultDTO
      */
     public function getOptimizationResult()
     {
@@ -796,7 +796,7 @@ class RepricingItemDTO implements ArrayAccess
 
     /**
      * Sets optimization_result
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemOptimizationResultDTO $optimization_result
+     * @param \eSagu\EBay\RePricing\V1\Model\RepricingItemOptimizationResultDTO $optimization_result
      * @return $this
      */
     public function setOptimizationResult($optimization_result)
@@ -808,7 +808,7 @@ class RepricingItemDTO implements ArrayAccess
 
     /**
      * Gets price_upload
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemPriceUploadDTO
+     * @return \eSagu\EBay\RePricing\V1\Model\RepricingItemPriceUploadDTO
      */
     public function getPriceUpload()
     {
@@ -817,7 +817,7 @@ class RepricingItemDTO implements ArrayAccess
 
     /**
      * Sets price_upload
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemPriceUploadDTO $price_upload
+     * @param \eSagu\EBay\RePricing\V1\Model\RepricingItemPriceUploadDTO $price_upload
      * @return $this
      */
     public function setPriceUpload($price_upload)
@@ -829,7 +829,7 @@ class RepricingItemDTO implements ArrayAccess
 
     /**
      * Gets primary_category
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\EbayCategoryDTO
+     * @return \eSagu\EBay\RePricing\V1\Model\EbayCategoryDTO
      */
     public function getPrimaryCategory()
     {
@@ -838,7 +838,7 @@ class RepricingItemDTO implements ArrayAccess
 
     /**
      * Sets primary_category
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\EbayCategoryDTO $primary_category
+     * @param \eSagu\EBay\RePricing\V1\Model\EbayCategoryDTO $primary_category
      * @return $this
      */
     public function setPrimaryCategory($primary_category)
@@ -913,7 +913,7 @@ class RepricingItemDTO implements ArrayAccess
 
     /**
      * Gets secondary_category
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\EbayCategoryDTO
+     * @return \eSagu\EBay\RePricing\V1\Model\EbayCategoryDTO
      */
     public function getSecondaryCategory()
     {
@@ -922,7 +922,7 @@ class RepricingItemDTO implements ArrayAccess
 
     /**
      * Sets secondary_category
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\EbayCategoryDTO $secondary_category
+     * @param \eSagu\EBay\RePricing\V1\Model\EbayCategoryDTO $secondary_category
      * @return $this
      */
     public function setSecondaryCategory($secondary_category)
@@ -1022,7 +1022,7 @@ class RepricingItemDTO implements ArrayAccess
 
     /**
      * Gets strategy
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemStrategyDTO
+     * @return \eSagu\EBay\RePricing\V1\Model\RepricingItemStrategyDTO
      */
     public function getStrategy()
     {
@@ -1031,7 +1031,7 @@ class RepricingItemDTO implements ArrayAccess
 
     /**
      * Sets strategy
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemStrategyDTO $strategy
+     * @param \eSagu\EBay\RePricing\V1\Model\RepricingItemStrategyDTO $strategy
      * @return $this
      */
     public function setStrategy($strategy)
@@ -1152,7 +1152,7 @@ class RepricingItemDTO implements ArrayAccess
 
     /**
      * Gets variations
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemDTO[]
+     * @return \eSagu\EBay\RePricing\V1\Model\RepricingItemDTO[]
      */
     public function getVariations()
     {
@@ -1161,7 +1161,7 @@ class RepricingItemDTO implements ArrayAccess
 
     /**
      * Sets variations
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemDTO[] $variations
+     * @param \eSagu\EBay\RePricing\V1\Model\RepricingItemDTO[] $variations
      * @return $this
      */
     public function setVariations($variations)

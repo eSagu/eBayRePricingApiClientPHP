@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Api;
+namespace eSagu\EBay\RePricing\V1\Api;
 
 use \eSagu\EBay\RePricing\V1\ApiClient;
 use \eSagu\EBay\RePricing\V1\ApiException;
@@ -93,7 +93,7 @@ class CSVImportApi
      * Get a list of all CSV Imports for given user service.
      *
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVImportDTO[]
+     * @return \eSagu\EBay\RePricing\V1\Model\RepricingCSVImportDTO[]
      */
     public function callList()
     {
@@ -107,7 +107,7 @@ class CSVImportApi
      * Get a list of all CSV Imports for given user service.
      *
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
-     * @return array of \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVImportDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \eSagu\EBay\RePricing\V1\Model\RepricingCSVImportDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function callListWithHttpInfo()
     {
@@ -146,15 +146,15 @@ class CSVImportApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVImportDTO[]',
+                '\eSagu\EBay\RePricing\V1\Model\RepricingCSVImportDTO[]',
                 '/csv-import'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVImportDTO[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\eSagu\EBay\RePricing\V1\Model\RepricingCSVImportDTO[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVImportDTO[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\eSagu\EBay\RePricing\V1\Model\RepricingCSVImportDTO[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -170,7 +170,7 @@ class CSVImportApi
      *
      * @param int $csv_import_id  (required)
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVImportDTO
+     * @return \eSagu\EBay\RePricing\V1\Model\RepricingCSVImportDTO
      */
     public function get($csv_import_id)
     {
@@ -185,7 +185,7 @@ class CSVImportApi
      *
      * @param int $csv_import_id  (required)
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
-     * @return array of \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVImportDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \eSagu\EBay\RePricing\V1\Model\RepricingCSVImportDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWithHttpInfo($csv_import_id)
     {
@@ -236,15 +236,15 @@ class CSVImportApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVImportDTO',
+                '\eSagu\EBay\RePricing\V1\Model\RepricingCSVImportDTO',
                 '/csv-import/{csvImportId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVImportDTO', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\eSagu\EBay\RePricing\V1\Model\RepricingCSVImportDTO', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVImportDTO', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\eSagu\EBay\RePricing\V1\Model\RepricingCSVImportDTO', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -258,7 +258,7 @@ class CSVImportApi
      *
      * Creates a new CSV Import.
      *
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVImportDTO $body  (optional)
+     * @param \eSagu\EBay\RePricing\V1\Model\RepricingCSVImportDTO $body  (optional)
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
      * @return void
      */
@@ -273,7 +273,7 @@ class CSVImportApi
      *
      * Creates a new CSV Import.
      *
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVImportDTO $body  (optional)
+     * @param \eSagu\EBay\RePricing\V1\Model\RepricingCSVImportDTO $body  (optional)
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

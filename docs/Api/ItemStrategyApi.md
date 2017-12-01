@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **get**
-> \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemStrategyDTO get($item_id)
+> \eSagu\EBay\RePricing\V1\Model\RepricingItemStrategyDTO get($item_id)
 
 Gets the item's strategy settings specified by the repricing item id.
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemStrategyDTO**](../Model/RepricingItemStrategyDTO.md)
+[**\eSagu\EBay\RePricing\V1\Model\RepricingItemStrategyDTO**](../Model/RepricingItemStrategyDTO.md)
 
 ### Authorization
 
@@ -77,7 +77,7 @@ eSagu\EBay\RePricing\V1\Configuration::getDefaultConfiguration()->setApiKey('Aut
 
 $api_instance = new eSagu\EBay\RePricing\V1\Api\ItemStrategyApi();
 $item_id = 789; // int | 
-$body = new \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemStrategyDTO(); // \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemStrategyDTO | 
+$body = new \eSagu\EBay\RePricing\V1\Model\RepricingItemStrategyDTO(); // \eSagu\EBay\RePricing\V1\Model\RepricingItemStrategyDTO | 
 
 try {
     $api_instance->put($item_id, $body);
@@ -92,7 +92,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **item_id** | **int**|  |
- **body** | [**\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemStrategyDTO**](../Model/\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemStrategyDTO.md)|  | [optional]
+ **body** | [**\eSagu\EBay\RePricing\V1\Model\RepricingItemStrategyDTO**](../Model/\eSagu\EBay\RePricing\V1\Model\RepricingItemStrategyDTO.md)|  | [optional]
 
 ### Return type
 

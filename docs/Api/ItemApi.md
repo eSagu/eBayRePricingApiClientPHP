@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **callList**
-> \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemDTO[] callList($by_item_id, $by_sku, $by_title, $by_title_exact, $by_search_term, $by_condition, $by_price_mode, $by_price_gaps, $by_finding_filter, $by_price_state, $by_current_price_from, $by_current_price_to, $by_quantity_from, $by_quantity_to, $by_shipping_from, $by_shipping_to, $by_site, $by_hide_ended_items, $by_id_greater_than, $where_search_rank_null, $where_search_rank_not_null, $where_total_entries_null, $where_total_entries_not_null, $where_only_own_offer, $offset, $limit, $sort, $order, $exclude_childs, $count_items, $return_items)
+> \eSagu\EBay\RePricing\V1\Model\RepricingItemDTO[] callList($by_item_id, $by_sku, $by_title, $by_title_exact, $by_search_term, $by_condition, $by_price_mode, $by_price_gaps, $by_finding_filter, $by_price_state, $by_current_price_from, $by_current_price_to, $by_quantity_from, $by_quantity_to, $by_shipping_from, $by_shipping_to, $by_site, $by_hide_ended_items, $by_id_greater_than, $where_search_rank_null, $where_search_rank_not_null, $where_total_entries_null, $where_total_entries_not_null, $where_only_own_offer, $offset, $limit, $sort, $order, $exclude_childs, $count_items, $return_items)
 
 Gets a list of repricing items.
 
@@ -105,7 +105,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemDTO[]**](../Model/RepricingItemDTO.md)
+[**\eSagu\EBay\RePricing\V1\Model\RepricingItemDTO[]**](../Model/RepricingItemDTO.md)
 
 ### Authorization
 
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **get**
-> \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemDTO get($item_id)
+> \eSagu\EBay\RePricing\V1\Model\RepricingItemDTO get($item_id)
 
 Get a single repricing Item.
 
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingItemDTO**](../Model/RepricingItemDTO.md)
+[**\eSagu\EBay\RePricing\V1\Model\RepricingItemDTO**](../Model/RepricingItemDTO.md)
 
 ### Authorization
 

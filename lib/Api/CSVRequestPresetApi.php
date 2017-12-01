@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Api;
+namespace eSagu\EBay\RePricing\V1\Api;
 
 use \eSagu\EBay\RePricing\V1\ApiClient;
 use \eSagu\EBay\RePricing\V1\ApiException;
@@ -93,7 +93,7 @@ class CSVRequestPresetApi
      * Get a list of all CSV request presets for given user service.
      *
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO[]
+     * @return \eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO[]
      */
     public function callList()
     {
@@ -107,7 +107,7 @@ class CSVRequestPresetApi
      * Get a list of all CSV request presets for given user service.
      *
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
-     * @return array of \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function callListWithHttpInfo()
     {
@@ -146,15 +146,15 @@ class CSVRequestPresetApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO[]',
+                '\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO[]',
                 '/csv-request/preset'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -256,7 +256,7 @@ class CSVRequestPresetApi
      *
      * @param int $csv_request_preset_id  (required)
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO
+     * @return \eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO
      */
     public function get($csv_request_preset_id)
     {
@@ -271,7 +271,7 @@ class CSVRequestPresetApi
      *
      * @param int $csv_request_preset_id  (required)
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
-     * @return array of \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO, HTTP status code, HTTP response headers (array of strings)
      */
     public function getWithHttpInfo($csv_request_preset_id)
     {
@@ -322,15 +322,15 @@ class CSVRequestPresetApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO',
+                '\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO',
                 '/csv-request/preset/{csvRequestPresetId}'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -344,7 +344,7 @@ class CSVRequestPresetApi
      *
      * Creates a new CSV Preset.
      *
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO $body  (optional)
+     * @param \eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO $body  (optional)
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
      * @return void
      */
@@ -359,7 +359,7 @@ class CSVRequestPresetApi
      *
      * Creates a new CSV Preset.
      *
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO $body  (optional)
+     * @param \eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO $body  (optional)
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
@@ -424,7 +424,7 @@ class CSVRequestPresetApi
      * Updates a CSV Preset specified by it's id.
      *
      * @param int $csv_request_preset_id  (required)
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO $body  (optional)
+     * @param \eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO $body  (optional)
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
      * @return void
      */
@@ -440,7 +440,7 @@ class CSVRequestPresetApi
      * Updates a CSV Preset specified by it's id.
      *
      * @param int $csv_request_preset_id  (required)
-     * @param \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO $body  (optional)
+     * @param \eSagu\EBay\RePricing\V1\Model\RepricingCSVRequestPresetDTO $body  (optional)
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */

@@ -26,7 +26,7 @@
  * Do not edit the class manually.
  */
 
-namespace eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Api;
+namespace eSagu\EBay\RePricing\V1\Api;
 
 use \eSagu\EBay\RePricing\V1\ApiClient;
 use \eSagu\EBay\RePricing\V1\ApiException;
@@ -93,7 +93,7 @@ class OrderHistoryApi
      * Gets the order statistics of the last days.
      *
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
-     * @return \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingEbayOrderHistoryDTO[]
+     * @return \eSagu\EBay\RePricing\V1\Model\RepricingEbayOrderHistoryDTO[]
      */
     public function get()
     {
@@ -107,7 +107,7 @@ class OrderHistoryApi
      * Gets the order statistics of the last days.
      *
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
-     * @return array of \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingEbayOrderHistoryDTO[], HTTP status code, HTTP response headers (array of strings)
+     * @return array of \eSagu\EBay\RePricing\V1\Model\RepricingEbayOrderHistoryDTO[], HTTP status code, HTTP response headers (array of strings)
      */
     public function getWithHttpInfo()
     {
@@ -146,15 +146,15 @@ class OrderHistoryApi
                 $queryParams,
                 $httpBody,
                 $headerParams,
-                '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingEbayOrderHistoryDTO[]',
+                '\eSagu\EBay\RePricing\V1\Model\RepricingEbayOrderHistoryDTO[]',
                 '/order-history'
             );
 
-            return [$this->apiClient->getSerializer()->deserialize($response, '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingEbayOrderHistoryDTO[]', $httpHeader), $statusCode, $httpHeader];
+            return [$this->apiClient->getSerializer()->deserialize($response, '\eSagu\EBay\RePricing\V1\Model\RepricingEbayOrderHistoryDTO[]', $httpHeader), $statusCode, $httpHeader];
         } catch (ApiException $e) {
             switch ($e->getCode()) {
                 case 200:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\RepricingEbayOrderHistoryDTO[]', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\eSagu\EBay\RePricing\V1\Model\RepricingEbayOrderHistoryDTO[]', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

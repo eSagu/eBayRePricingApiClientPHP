@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **get**
-> \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\NewItemBulkEditDTO get()
+> \eSagu\EBay\RePricing\V1\Model\NewItemBulkEditDTO get()
 
 Get the new item bulk edit settings.
 
@@ -42,7 +42,7 @@ This endpoint does not need any parameter.
 
 ### Return type
 
-[**\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\NewItemBulkEditDTO**](../Model/NewItemBulkEditDTO.md)
+[**\eSagu\EBay\RePricing\V1\Model\NewItemBulkEditDTO**](../Model/NewItemBulkEditDTO.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ eSagu\EBay\RePricing\V1\Configuration::getDefaultConfiguration()->setApiKey('Aut
 // eSagu\EBay\RePricing\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new eSagu\EBay\RePricing\V1\Api\NewItemBulkEditApi();
-$body = new \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\NewItemBulkEditDTO(); // \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\NewItemBulkEditDTO | 
+$body = new \eSagu\EBay\RePricing\V1\Model\NewItemBulkEditDTO(); // \eSagu\EBay\RePricing\V1\Model\NewItemBulkEditDTO | 
 
 try {
     $api_instance->post($body);
@@ -87,7 +87,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\NewItemBulkEditDTO**](../Model/\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\NewItemBulkEditDTO.md)|  | [optional]
+ **body** | [**\eSagu\EBay\RePricing\V1\Model\NewItemBulkEditDTO**](../Model/\eSagu\EBay\RePricing\V1\Model\NewItemBulkEditDTO.md)|  | [optional]
 
 ### Return type
 
@@ -122,7 +122,7 @@ eSagu\EBay\RePricing\V1\Configuration::getDefaultConfiguration()->setApiKey('Aut
 // eSagu\EBay\RePricing\V1\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 $api_instance = new eSagu\EBay\RePricing\V1\Api\NewItemBulkEditApi();
-$body = new \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\NewItemBulkEditDTO(); // \eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\NewItemBulkEditDTO | 
+$body = new \eSagu\EBay\RePricing\V1\Model\NewItemBulkEditDTO(); // \eSagu\EBay\RePricing\V1\Model\NewItemBulkEditDTO | 
 
 try {
     $api_instance->put($body);
@@ -136,7 +136,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\NewItemBulkEditDTO**](../Model/\eSagu\EBay\RePricing\V1\eSagu\EBay\RePricing\V1\Model\NewItemBulkEditDTO.md)|  | [optional]
+ **body** | [**\eSagu\EBay\RePricing\V1\Model\NewItemBulkEditDTO**](../Model/\eSagu\EBay\RePricing\V1\Model\NewItemBulkEditDTO.md)|  | [optional]
 
 ### Return type
 
