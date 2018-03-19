@@ -59,10 +59,13 @@ class BulkEditRefinement implements ArrayAccess
         'by_end_time' => '\eSagu\EBay\RePricing\V1\Model\RefineByEndTime',
         'by_item_id' => '\eSagu\EBay\RePricing\V1\Model\RefineByItemId',
         'by_item_ids' => '\eSagu\EBay\RePricing\V1\Model\RefineByItemIds',
+        'by_price_mode' => '\eSagu\EBay\RePricing\V1\Model\RefineByPriceMode',
+        'by_price_mode_where_null' => '\eSagu\EBay\RePricing\V1\Model\RefineByPriceModeWhereNull',
         'by_quantity' => '\eSagu\EBay\RePricing\V1\Model\RefineByQuantity',
         'by_sku' => '\eSagu\EBay\RePricing\V1\Model\RefineBySKU',
         'by_shipping' => '\eSagu\EBay\RePricing\V1\Model\RefineByShipping',
-        'by_title' => '\eSagu\EBay\RePricing\V1\Model\RefineByTitle'
+        'by_title' => '\eSagu\EBay\RePricing\V1\Model\RefineByTitle',
+        'by_variation_type' => '\eSagu\EBay\RePricing\V1\Model\RefineByVariationType'
     ];
 
     public static function swaggerTypes()
@@ -80,10 +83,13 @@ class BulkEditRefinement implements ArrayAccess
         'by_end_time' => 'byEndTime',
         'by_item_id' => 'byItemId',
         'by_item_ids' => 'byItemIds',
+        'by_price_mode' => 'byPriceMode',
+        'by_price_mode_where_null' => 'byPriceModeWhereNull',
         'by_quantity' => 'byQuantity',
         'by_sku' => 'bySKU',
         'by_shipping' => 'byShipping',
-        'by_title' => 'byTitle'
+        'by_title' => 'byTitle',
+        'by_variation_type' => 'byVariationType'
     ];
 
 
@@ -97,10 +103,13 @@ class BulkEditRefinement implements ArrayAccess
         'by_end_time' => 'setByEndTime',
         'by_item_id' => 'setByItemId',
         'by_item_ids' => 'setByItemIds',
+        'by_price_mode' => 'setByPriceMode',
+        'by_price_mode_where_null' => 'setByPriceModeWhereNull',
         'by_quantity' => 'setByQuantity',
         'by_sku' => 'setBySku',
         'by_shipping' => 'setByShipping',
-        'by_title' => 'setByTitle'
+        'by_title' => 'setByTitle',
+        'by_variation_type' => 'setByVariationType'
     ];
 
 
@@ -114,10 +123,13 @@ class BulkEditRefinement implements ArrayAccess
         'by_end_time' => 'getByEndTime',
         'by_item_id' => 'getByItemId',
         'by_item_ids' => 'getByItemIds',
+        'by_price_mode' => 'getByPriceMode',
+        'by_price_mode_where_null' => 'getByPriceModeWhereNull',
         'by_quantity' => 'getByQuantity',
         'by_sku' => 'getBySku',
         'by_shipping' => 'getByShipping',
-        'by_title' => 'getByTitle'
+        'by_title' => 'getByTitle',
+        'by_variation_type' => 'getByVariationType'
     ];
 
     public static function attributeMap()
@@ -156,10 +168,13 @@ class BulkEditRefinement implements ArrayAccess
         $this->container['by_end_time'] = isset($data['by_end_time']) ? $data['by_end_time'] : null;
         $this->container['by_item_id'] = isset($data['by_item_id']) ? $data['by_item_id'] : null;
         $this->container['by_item_ids'] = isset($data['by_item_ids']) ? $data['by_item_ids'] : null;
+        $this->container['by_price_mode'] = isset($data['by_price_mode']) ? $data['by_price_mode'] : null;
+        $this->container['by_price_mode_where_null'] = isset($data['by_price_mode_where_null']) ? $data['by_price_mode_where_null'] : null;
         $this->container['by_quantity'] = isset($data['by_quantity']) ? $data['by_quantity'] : null;
         $this->container['by_sku'] = isset($data['by_sku']) ? $data['by_sku'] : null;
         $this->container['by_shipping'] = isset($data['by_shipping']) ? $data['by_shipping'] : null;
         $this->container['by_title'] = isset($data['by_title']) ? $data['by_title'] : null;
+        $this->container['by_variation_type'] = isset($data['by_variation_type']) ? $data['by_variation_type'] : null;
     }
 
     /**
@@ -293,6 +308,48 @@ class BulkEditRefinement implements ArrayAccess
     }
 
     /**
+     * Gets by_price_mode
+     * @return \eSagu\EBay\RePricing\V1\Model\RefineByPriceMode
+     */
+    public function getByPriceMode()
+    {
+        return $this->container['by_price_mode'];
+    }
+
+    /**
+     * Sets by_price_mode
+     * @param \eSagu\EBay\RePricing\V1\Model\RefineByPriceMode $by_price_mode
+     * @return $this
+     */
+    public function setByPriceMode($by_price_mode)
+    {
+        $this->container['by_price_mode'] = $by_price_mode;
+
+        return $this;
+    }
+
+    /**
+     * Gets by_price_mode_where_null
+     * @return \eSagu\EBay\RePricing\V1\Model\RefineByPriceModeWhereNull
+     */
+    public function getByPriceModeWhereNull()
+    {
+        return $this->container['by_price_mode_where_null'];
+    }
+
+    /**
+     * Sets by_price_mode_where_null
+     * @param \eSagu\EBay\RePricing\V1\Model\RefineByPriceModeWhereNull $by_price_mode_where_null
+     * @return $this
+     */
+    public function setByPriceModeWhereNull($by_price_mode_where_null)
+    {
+        $this->container['by_price_mode_where_null'] = $by_price_mode_where_null;
+
+        return $this;
+    }
+
+    /**
      * Gets by_quantity
      * @return \eSagu\EBay\RePricing\V1\Model\RefineByQuantity
      */
@@ -372,6 +429,27 @@ class BulkEditRefinement implements ArrayAccess
     public function setByTitle($by_title)
     {
         $this->container['by_title'] = $by_title;
+
+        return $this;
+    }
+
+    /**
+     * Gets by_variation_type
+     * @return \eSagu\EBay\RePricing\V1\Model\RefineByVariationType
+     */
+    public function getByVariationType()
+    {
+        return $this->container['by_variation_type'];
+    }
+
+    /**
+     * Sets by_variation_type
+     * @param \eSagu\EBay\RePricing\V1\Model\RefineByVariationType $by_variation_type
+     * @return $this
+     */
+    public function setByVariationType($by_variation_type)
+    {
+        $this->container['by_variation_type'] = $by_variation_type;
 
         return $this;
     }
