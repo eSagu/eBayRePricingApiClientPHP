@@ -58,8 +58,11 @@ class RepricingCSVImportDTO implements ArrayAccess
         'download_url' => 'string',
         'error_count' => 'int',
         'error_report_url' => 'string',
+        'id' => 'int',
+        'inserted' => '\DateTime',
         'md5' => 'string',
-        'state' => 'string'
+        'state' => 'string',
+        'updated' => '\DateTime'
     ];
 
     public static function swaggerTypes()
@@ -75,8 +78,11 @@ class RepricingCSVImportDTO implements ArrayAccess
         'download_url' => 'downloadUrl',
         'error_count' => 'errorCount',
         'error_report_url' => 'errorReportUrl',
+        'id' => 'id',
+        'inserted' => 'inserted',
         'md5' => 'md5',
-        'state' => 'state'
+        'state' => 'state',
+        'updated' => 'updated'
     ];
 
 
@@ -88,8 +94,11 @@ class RepricingCSVImportDTO implements ArrayAccess
         'download_url' => 'setDownloadUrl',
         'error_count' => 'setErrorCount',
         'error_report_url' => 'setErrorReportUrl',
+        'id' => 'setId',
+        'inserted' => 'setInserted',
         'md5' => 'setMd5',
-        'state' => 'setState'
+        'state' => 'setState',
+        'updated' => 'setUpdated'
     ];
 
 
@@ -101,8 +110,11 @@ class RepricingCSVImportDTO implements ArrayAccess
         'download_url' => 'getDownloadUrl',
         'error_count' => 'getErrorCount',
         'error_report_url' => 'getErrorReportUrl',
+        'id' => 'getId',
+        'inserted' => 'getInserted',
         'md5' => 'getMd5',
-        'state' => 'getState'
+        'state' => 'getState',
+        'updated' => 'getUpdated'
     ];
 
     public static function attributeMap()
@@ -167,8 +179,11 @@ class RepricingCSVImportDTO implements ArrayAccess
         $this->container['download_url'] = isset($data['download_url']) ? $data['download_url'] : null;
         $this->container['error_count'] = isset($data['error_count']) ? $data['error_count'] : null;
         $this->container['error_report_url'] = isset($data['error_report_url']) ? $data['error_report_url'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['inserted'] = isset($data['inserted']) ? $data['inserted'] : null;
         $this->container['md5'] = isset($data['md5']) ? $data['md5'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
+        $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
     }
 
     /**
@@ -269,6 +284,48 @@ class RepricingCSVImportDTO implements ArrayAccess
     }
 
     /**
+     * Gets id
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     * @param int $id
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets inserted
+     * @return \DateTime
+     */
+    public function getInserted()
+    {
+        return $this->container['inserted'];
+    }
+
+    /**
+     * Sets inserted
+     * @param \DateTime $inserted
+     * @return $this
+     */
+    public function setInserted($inserted)
+    {
+        $this->container['inserted'] = $inserted;
+
+        return $this;
+    }
+
+    /**
      * Gets md5
      * @return string
      */
@@ -310,6 +367,27 @@ class RepricingCSVImportDTO implements ArrayAccess
             throw new \InvalidArgumentException("Invalid value for 'state', must be one of 'NEW', 'IN_PROGRESS', 'DONE', 'ERROR_DOWNLOAD', 'SKIPPED', 'ERROR', 'ERROR_NUMBER_FORMATTING', 'ERROR_DUPES', 'MISSING_ITEM_IDS'");
         }
         $this->container['state'] = $state;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated
+     * @return \DateTime
+     */
+    public function getUpdated()
+    {
+        return $this->container['updated'];
+    }
+
+    /**
+     * Sets updated
+     * @param \DateTime $updated
+     * @return $this
+     */
+    public function setUpdated($updated)
+    {
+        $this->container['updated'] = $updated;
 
         return $this;
     }

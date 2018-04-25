@@ -58,8 +58,11 @@ class RepricingCSVRequestDTO implements ArrayAccess
         'csv_download_url' => 'string',
         'exclude_expired_items' => 'bool',
         'fields' => 'string[]',
+        'id' => 'int',
+        'inserted' => '\DateTime',
         'number_format' => 'string',
-        'state' => 'string'
+        'state' => 'string',
+        'updated' => '\DateTime'
     ];
 
     public static function swaggerTypes()
@@ -75,8 +78,11 @@ class RepricingCSVRequestDTO implements ArrayAccess
         'csv_download_url' => 'csvDownloadUrl',
         'exclude_expired_items' => 'excludeExpiredItems',
         'fields' => 'fields',
+        'id' => 'id',
+        'inserted' => 'inserted',
         'number_format' => 'numberFormat',
-        'state' => 'state'
+        'state' => 'state',
+        'updated' => 'updated'
     ];
 
 
@@ -88,8 +94,11 @@ class RepricingCSVRequestDTO implements ArrayAccess
         'csv_download_url' => 'setCsvDownloadUrl',
         'exclude_expired_items' => 'setExcludeExpiredItems',
         'fields' => 'setFields',
+        'id' => 'setId',
+        'inserted' => 'setInserted',
         'number_format' => 'setNumberFormat',
-        'state' => 'setState'
+        'state' => 'setState',
+        'updated' => 'setUpdated'
     ];
 
 
@@ -101,8 +110,11 @@ class RepricingCSVRequestDTO implements ArrayAccess
         'csv_download_url' => 'getCsvDownloadUrl',
         'exclude_expired_items' => 'getExcludeExpiredItems',
         'fields' => 'getFields',
+        'id' => 'getId',
+        'inserted' => 'getInserted',
         'number_format' => 'getNumberFormat',
-        'state' => 'getState'
+        'state' => 'getState',
+        'updated' => 'getUpdated'
     ];
 
     public static function attributeMap()
@@ -277,8 +289,11 @@ class RepricingCSVRequestDTO implements ArrayAccess
         $this->container['csv_download_url'] = isset($data['csv_download_url']) ? $data['csv_download_url'] : null;
         $this->container['exclude_expired_items'] = isset($data['exclude_expired_items']) ? $data['exclude_expired_items'] : null;
         $this->container['fields'] = isset($data['fields']) ? $data['fields'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['inserted'] = isset($data['inserted']) ? $data['inserted'] : null;
         $this->container['number_format'] = isset($data['number_format']) ? $data['number_format'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
+        $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
     }
 
     /**
@@ -392,6 +407,48 @@ class RepricingCSVRequestDTO implements ArrayAccess
     }
 
     /**
+     * Gets id
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     * @param int $id
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets inserted
+     * @return \DateTime
+     */
+    public function getInserted()
+    {
+        return $this->container['inserted'];
+    }
+
+    /**
+     * Sets inserted
+     * @param \DateTime $inserted
+     * @return $this
+     */
+    public function setInserted($inserted)
+    {
+        $this->container['inserted'] = $inserted;
+
+        return $this;
+    }
+
+    /**
      * Gets number_format
      * @return string
      */
@@ -437,6 +494,27 @@ class RepricingCSVRequestDTO implements ArrayAccess
             throw new \InvalidArgumentException("Invalid value for 'state', must be one of 'NEW', 'IN_PROGRESS', 'DONE'");
         }
         $this->container['state'] = $state;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated
+     * @return \DateTime
+     */
+    public function getUpdated()
+    {
+        return $this->container['updated'];
+    }
+
+    /**
+     * Sets updated
+     * @param \DateTime $updated
+     * @return $this
+     */
+    public function setUpdated($updated)
+    {
+        $this->container['updated'] = $updated;
 
         return $this;
     }

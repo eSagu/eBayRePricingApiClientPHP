@@ -6,10 +6,12 @@ Name | Type | Description | Notes
 **crawl_quantity_zero_items** | **bool** |  | 
 **download_enabled** | **bool** |  | 
 **ebay_global_id** | **string** |  | [optional] 
+**inserted** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **item_max_age_seconds** | **int** |  | 
 **outdated_stock_items_minus_days** | **int** |  | 
 **show_expert_settings** | **bool** |  | 
 **stock_update_max_age** | **int** |  | 
+**updated** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **upload_enabled** | **bool** |  | 
 **use_relist_parent_id** | **bool** |  | 
 

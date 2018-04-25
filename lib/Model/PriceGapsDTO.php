@@ -55,8 +55,11 @@ class PriceGapsDTO implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'id' => 'int',
+        'inserted' => '\DateTime',
         'name' => 'string',
-        'price_gaps' => '\eSagu\EBay\RePricing\V1\Model\PriceGapDTO[]'
+        'price_gaps' => '\eSagu\EBay\RePricing\V1\Model\PriceGapDTO[]',
+        'updated' => '\DateTime'
     ];
 
     public static function swaggerTypes()
@@ -69,8 +72,11 @@ class PriceGapsDTO implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'id' => 'id',
+        'inserted' => 'inserted',
         'name' => 'name',
-        'price_gaps' => 'priceGaps'
+        'price_gaps' => 'priceGaps',
+        'updated' => 'updated'
     ];
 
 
@@ -79,8 +85,11 @@ class PriceGapsDTO implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'id' => 'setId',
+        'inserted' => 'setInserted',
         'name' => 'setName',
-        'price_gaps' => 'setPriceGaps'
+        'price_gaps' => 'setPriceGaps',
+        'updated' => 'setUpdated'
     ];
 
 
@@ -89,8 +98,11 @@ class PriceGapsDTO implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'id' => 'getId',
+        'inserted' => 'getInserted',
         'name' => 'getName',
-        'price_gaps' => 'getPriceGaps'
+        'price_gaps' => 'getPriceGaps',
+        'updated' => 'getUpdated'
     ];
 
     public static function attributeMap()
@@ -124,8 +136,11 @@ class PriceGapsDTO implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['inserted'] = isset($data['inserted']) ? $data['inserted'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['price_gaps'] = isset($data['price_gaps']) ? $data['price_gaps'] : null;
+        $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
     }
 
     /**
@@ -166,6 +181,48 @@ class PriceGapsDTO implements ArrayAccess
 
 
     /**
+     * Gets id
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     * @param int $id
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets inserted
+     * @return \DateTime
+     */
+    public function getInserted()
+    {
+        return $this->container['inserted'];
+    }
+
+    /**
+     * Sets inserted
+     * @param \DateTime $inserted
+     * @return $this
+     */
+    public function setInserted($inserted)
+    {
+        $this->container['inserted'] = $inserted;
+
+        return $this;
+    }
+
+    /**
      * Gets name
      * @return string
      */
@@ -203,6 +260,27 @@ class PriceGapsDTO implements ArrayAccess
     public function setPriceGaps($price_gaps)
     {
         $this->container['price_gaps'] = $price_gaps;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated
+     * @return \DateTime
+     */
+    public function getUpdated()
+    {
+        return $this->container['updated'];
+    }
+
+    /**
+     * Sets updated
+     * @param \DateTime $updated
+     * @return $this
+     */
+    public function setUpdated($updated)
+    {
+        $this->container['updated'] = $updated;
 
         return $this;
     }

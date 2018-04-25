@@ -55,7 +55,9 @@ class NewItemBulkEditDTO implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'tasks' => '\eSagu\EBay\RePricing\V1\Model\BulkEditTasks'
+        'inserted' => '\DateTime',
+        'tasks' => '\eSagu\EBay\RePricing\V1\Model\BulkEditTasks',
+        'updated' => '\DateTime'
     ];
 
     public static function swaggerTypes()
@@ -68,7 +70,9 @@ class NewItemBulkEditDTO implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'tasks' => 'tasks'
+        'inserted' => 'inserted',
+        'tasks' => 'tasks',
+        'updated' => 'updated'
     ];
 
 
@@ -77,7 +81,9 @@ class NewItemBulkEditDTO implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'tasks' => 'setTasks'
+        'inserted' => 'setInserted',
+        'tasks' => 'setTasks',
+        'updated' => 'setUpdated'
     ];
 
 
@@ -86,7 +92,9 @@ class NewItemBulkEditDTO implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'tasks' => 'getTasks'
+        'inserted' => 'getInserted',
+        'tasks' => 'getTasks',
+        'updated' => 'getUpdated'
     ];
 
     public static function attributeMap()
@@ -120,7 +128,9 @@ class NewItemBulkEditDTO implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['inserted'] = isset($data['inserted']) ? $data['inserted'] : null;
         $this->container['tasks'] = isset($data['tasks']) ? $data['tasks'] : null;
+        $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
     }
 
     /**
@@ -149,6 +159,27 @@ class NewItemBulkEditDTO implements ArrayAccess
 
 
     /**
+     * Gets inserted
+     * @return \DateTime
+     */
+    public function getInserted()
+    {
+        return $this->container['inserted'];
+    }
+
+    /**
+     * Sets inserted
+     * @param \DateTime $inserted
+     * @return $this
+     */
+    public function setInserted($inserted)
+    {
+        $this->container['inserted'] = $inserted;
+
+        return $this;
+    }
+
+    /**
      * Gets tasks
      * @return \eSagu\EBay\RePricing\V1\Model\BulkEditTasks
      */
@@ -165,6 +196,27 @@ class NewItemBulkEditDTO implements ArrayAccess
     public function setTasks($tasks)
     {
         $this->container['tasks'] = $tasks;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated
+     * @return \DateTime
+     */
+    public function getUpdated()
+    {
+        return $this->container['updated'];
+    }
+
+    /**
+     * Sets updated
+     * @param \DateTime $updated
+     * @return $this
+     */
+    public function setUpdated($updated)
+    {
+        $this->container['updated'] = $updated;
 
         return $this;
     }

@@ -55,11 +55,13 @@ class FindingSearchTermDTO implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'inserted' => '\DateTime',
         'operation' => 'string',
         'product_id_type' => 'string',
         'repricing_item_id' => 'int',
         'search_term' => 'string',
-        'source' => 'string'
+        'source' => 'string',
+        'updated' => '\DateTime'
     ];
 
     public static function swaggerTypes()
@@ -72,11 +74,13 @@ class FindingSearchTermDTO implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'inserted' => 'inserted',
         'operation' => 'operation',
         'product_id_type' => 'productIdType',
         'repricing_item_id' => 'repricingItemId',
         'search_term' => 'searchTerm',
-        'source' => 'source'
+        'source' => 'source',
+        'updated' => 'updated'
     ];
 
 
@@ -85,11 +89,13 @@ class FindingSearchTermDTO implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'inserted' => 'setInserted',
         'operation' => 'setOperation',
         'product_id_type' => 'setProductIdType',
         'repricing_item_id' => 'setRepricingItemId',
         'search_term' => 'setSearchTerm',
-        'source' => 'setSource'
+        'source' => 'setSource',
+        'updated' => 'setUpdated'
     ];
 
 
@@ -98,11 +104,13 @@ class FindingSearchTermDTO implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'inserted' => 'getInserted',
         'operation' => 'getOperation',
         'product_id_type' => 'getProductIdType',
         'repricing_item_id' => 'getRepricingItemId',
         'search_term' => 'getSearchTerm',
-        'source' => 'getSource'
+        'source' => 'getSource',
+        'updated' => 'getUpdated'
     ];
 
     public static function attributeMap()
@@ -192,11 +200,13 @@ class FindingSearchTermDTO implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['inserted'] = isset($data['inserted']) ? $data['inserted'] : null;
         $this->container['operation'] = isset($data['operation']) ? $data['operation'] : null;
         $this->container['product_id_type'] = isset($data['product_id_type']) ? $data['product_id_type'] : null;
         $this->container['repricing_item_id'] = isset($data['repricing_item_id']) ? $data['repricing_item_id'] : null;
         $this->container['search_term'] = isset($data['search_term']) ? $data['search_term'] : null;
         $this->container['source'] = isset($data['source']) ? $data['source'] : null;
+        $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
     }
 
     /**
@@ -262,6 +272,27 @@ class FindingSearchTermDTO implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets inserted
+     * @return \DateTime
+     */
+    public function getInserted()
+    {
+        return $this->container['inserted'];
+    }
+
+    /**
+     * Sets inserted
+     * @param \DateTime $inserted
+     * @return $this
+     */
+    public function setInserted($inserted)
+    {
+        $this->container['inserted'] = $inserted;
+
+        return $this;
+    }
 
     /**
      * Gets operation
@@ -376,6 +407,27 @@ class FindingSearchTermDTO implements ArrayAccess
             throw new \InvalidArgumentException("Invalid value for 'source', must be one of 'UNKNOWN', 'MANUAL', 'CSV', 'AUTO_GENERATED_ITEM_SPECS', 'AUTO_GENERATED_TITLE', 'AUTO_GENERATED_PRODUCT_ID'");
         }
         $this->container['source'] = $source;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated
+     * @return \DateTime
+     */
+    public function getUpdated()
+    {
+        return $this->container['updated'];
+    }
+
+    /**
+     * Sets updated
+     * @param \DateTime $updated
+     * @return $this
+     */
+    public function setUpdated($updated)
+    {
+        $this->container['updated'] = $updated;
 
         return $this;
     }

@@ -85,6 +85,7 @@ class RepricingItemDTO implements ArrayAccess
         'title' => 'string',
         'total_entries' => 'int',
         'updated' => '\DateTime',
+        'user_service_id' => 'int',
         'variation_specifics' => 'map[string,string[]]',
         'variation_type' => 'string',
         'variations' => '\eSagu\EBay\RePricing\V1\Model\RepricingItemDTO[]'
@@ -130,6 +131,7 @@ class RepricingItemDTO implements ArrayAccess
         'title' => 'title',
         'total_entries' => 'totalEntries',
         'updated' => 'updated',
+        'user_service_id' => 'userServiceId',
         'variation_specifics' => 'variationSpecifics',
         'variation_type' => 'variationType',
         'variations' => 'variations'
@@ -171,6 +173,7 @@ class RepricingItemDTO implements ArrayAccess
         'title' => 'setTitle',
         'total_entries' => 'setTotalEntries',
         'updated' => 'setUpdated',
+        'user_service_id' => 'setUserServiceId',
         'variation_specifics' => 'setVariationSpecifics',
         'variation_type' => 'setVariationType',
         'variations' => 'setVariations'
@@ -212,6 +215,7 @@ class RepricingItemDTO implements ArrayAccess
         'title' => 'getTitle',
         'total_entries' => 'getTotalEntries',
         'updated' => 'getUpdated',
+        'user_service_id' => 'getUserServiceId',
         'variation_specifics' => 'getVariationSpecifics',
         'variation_type' => 'getVariationType',
         'variations' => 'getVariations'
@@ -396,6 +400,7 @@ class RepricingItemDTO implements ArrayAccess
         $this->container['title'] = isset($data['title']) ? $data['title'] : null;
         $this->container['total_entries'] = isset($data['total_entries']) ? $data['total_entries'] : null;
         $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
+        $this->container['user_service_id'] = isset($data['user_service_id']) ? $data['user_service_id'] : null;
         $this->container['variation_specifics'] = isset($data['variation_specifics']) ? $data['variation_specifics'] : null;
         $this->container['variation_type'] = isset($data['variation_type']) ? $data['variation_type'] : null;
         $this->container['variations'] = isset($data['variations']) ? $data['variations'] : null;
@@ -1100,6 +1105,27 @@ class RepricingItemDTO implements ArrayAccess
     public function setUpdated($updated)
     {
         $this->container['updated'] = $updated;
+
+        return $this;
+    }
+
+    /**
+     * Gets user_service_id
+     * @return int
+     */
+    public function getUserServiceId()
+    {
+        return $this->container['user_service_id'];
+    }
+
+    /**
+     * Sets user_service_id
+     * @param int $user_service_id
+     * @return $this
+     */
+    public function setUserServiceId($user_service_id)
+    {
+        $this->container['user_service_id'] = $user_service_id;
 
         return $this;
     }

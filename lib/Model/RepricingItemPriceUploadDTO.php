@@ -59,6 +59,7 @@ class RepricingItemPriceUploadDTO implements ArrayAccess
         'error_code' => 'int',
         'inserted' => '\DateTime',
         'message_id' => 'string',
+        'repricing_item_id' => 'int',
         'updated' => '\DateTime',
         'uploaded_price' => 'int'
     ];
@@ -77,6 +78,7 @@ class RepricingItemPriceUploadDTO implements ArrayAccess
         'error_code' => 'errorCode',
         'inserted' => 'inserted',
         'message_id' => 'messageId',
+        'repricing_item_id' => 'repricingItemId',
         'updated' => 'updated',
         'uploaded_price' => 'uploadedPrice'
     ];
@@ -91,6 +93,7 @@ class RepricingItemPriceUploadDTO implements ArrayAccess
         'error_code' => 'setErrorCode',
         'inserted' => 'setInserted',
         'message_id' => 'setMessageId',
+        'repricing_item_id' => 'setRepricingItemId',
         'updated' => 'setUpdated',
         'uploaded_price' => 'setUploadedPrice'
     ];
@@ -105,6 +108,7 @@ class RepricingItemPriceUploadDTO implements ArrayAccess
         'error_code' => 'getErrorCode',
         'inserted' => 'getInserted',
         'message_id' => 'getMessageId',
+        'repricing_item_id' => 'getRepricingItemId',
         'updated' => 'getUpdated',
         'uploaded_price' => 'getUploadedPrice'
     ];
@@ -164,6 +168,7 @@ class RepricingItemPriceUploadDTO implements ArrayAccess
         $this->container['error_code'] = isset($data['error_code']) ? $data['error_code'] : null;
         $this->container['inserted'] = isset($data['inserted']) ? $data['inserted'] : null;
         $this->container['message_id'] = isset($data['message_id']) ? $data['message_id'] : null;
+        $this->container['repricing_item_id'] = isset($data['repricing_item_id']) ? $data['repricing_item_id'] : null;
         $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
         $this->container['uploaded_price'] = isset($data['uploaded_price']) ? $data['uploaded_price'] : null;
     }
@@ -286,6 +291,27 @@ class RepricingItemPriceUploadDTO implements ArrayAccess
     public function setMessageId($message_id)
     {
         $this->container['message_id'] = $message_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets repricing_item_id
+     * @return int
+     */
+    public function getRepricingItemId()
+    {
+        return $this->container['repricing_item_id'];
+    }
+
+    /**
+     * Sets repricing_item_id
+     * @param int $repricing_item_id
+     * @return $this
+     */
+    public function setRepricingItemId($repricing_item_id)
+    {
+        $this->container['repricing_item_id'] = $repricing_item_id;
 
         return $this;
     }

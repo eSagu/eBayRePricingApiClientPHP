@@ -57,8 +57,11 @@ class RepricingCSVRequestPresetDTO implements ArrayAccess
     protected static $swaggerTypes = [
         'exclude_expired_items' => 'bool',
         'fields' => 'string[]',
+        'id' => 'int',
+        'inserted' => '\DateTime',
         'name' => 'string',
-        'number_format' => 'string'
+        'number_format' => 'string',
+        'updated' => '\DateTime'
     ];
 
     public static function swaggerTypes()
@@ -73,8 +76,11 @@ class RepricingCSVRequestPresetDTO implements ArrayAccess
     protected static $attributeMap = [
         'exclude_expired_items' => 'excludeExpiredItems',
         'fields' => 'fields',
+        'id' => 'id',
+        'inserted' => 'inserted',
         'name' => 'name',
-        'number_format' => 'numberFormat'
+        'number_format' => 'numberFormat',
+        'updated' => 'updated'
     ];
 
 
@@ -85,8 +91,11 @@ class RepricingCSVRequestPresetDTO implements ArrayAccess
     protected static $setters = [
         'exclude_expired_items' => 'setExcludeExpiredItems',
         'fields' => 'setFields',
+        'id' => 'setId',
+        'inserted' => 'setInserted',
         'name' => 'setName',
-        'number_format' => 'setNumberFormat'
+        'number_format' => 'setNumberFormat',
+        'updated' => 'setUpdated'
     ];
 
 
@@ -97,8 +106,11 @@ class RepricingCSVRequestPresetDTO implements ArrayAccess
     protected static $getters = [
         'exclude_expired_items' => 'getExcludeExpiredItems',
         'fields' => 'getFields',
+        'id' => 'getId',
+        'inserted' => 'getInserted',
         'name' => 'getName',
-        'number_format' => 'getNumberFormat'
+        'number_format' => 'getNumberFormat',
+        'updated' => 'getUpdated'
     ];
 
     public static function attributeMap()
@@ -256,8 +268,11 @@ class RepricingCSVRequestPresetDTO implements ArrayAccess
     {
         $this->container['exclude_expired_items'] = isset($data['exclude_expired_items']) ? $data['exclude_expired_items'] : null;
         $this->container['fields'] = isset($data['fields']) ? $data['fields'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['inserted'] = isset($data['inserted']) ? $data['inserted'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['number_format'] = isset($data['number_format']) ? $data['number_format'] : null;
+        $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
     }
 
     /**
@@ -341,6 +356,48 @@ class RepricingCSVRequestPresetDTO implements ArrayAccess
     }
 
     /**
+     * Gets id
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     * @param int $id
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets inserted
+     * @return \DateTime
+     */
+    public function getInserted()
+    {
+        return $this->container['inserted'];
+    }
+
+    /**
+     * Sets inserted
+     * @param \DateTime $inserted
+     * @return $this
+     */
+    public function setInserted($inserted)
+    {
+        $this->container['inserted'] = $inserted;
+
+        return $this;
+    }
+
+    /**
      * Gets name
      * @return string
      */
@@ -382,6 +439,27 @@ class RepricingCSVRequestPresetDTO implements ArrayAccess
             throw new \InvalidArgumentException("Invalid value for 'number_format', must be one of 'DECIMAL_DOT', 'DECIMAL_COMMA', 'CENTS'");
         }
         $this->container['number_format'] = $number_format;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated
+     * @return \DateTime
+     */
+    public function getUpdated()
+    {
+        return $this->container['updated'];
+    }
+
+    /**
+     * Sets updated
+     * @param \DateTime $updated
+     * @return $this
+     */
+    public function setUpdated($updated)
+    {
+        $this->container['updated'] = $updated;
 
         return $this;
     }

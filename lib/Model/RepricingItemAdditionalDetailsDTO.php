@@ -59,6 +59,7 @@ class RepricingItemAdditionalDetailsDTO implements ArrayAccess
         'item_specifics' => 'map[string,string[]]',
         'product_id_type' => 'string',
         'product_id_value' => 'string',
+        'repricing_item_id' => 'int',
         'updated' => '\DateTime'
     ];
 
@@ -76,6 +77,7 @@ class RepricingItemAdditionalDetailsDTO implements ArrayAccess
         'item_specifics' => 'itemSpecifics',
         'product_id_type' => 'productIdType',
         'product_id_value' => 'productIdValue',
+        'repricing_item_id' => 'repricingItemId',
         'updated' => 'updated'
     ];
 
@@ -89,6 +91,7 @@ class RepricingItemAdditionalDetailsDTO implements ArrayAccess
         'item_specifics' => 'setItemSpecifics',
         'product_id_type' => 'setProductIdType',
         'product_id_value' => 'setProductIdValue',
+        'repricing_item_id' => 'setRepricingItemId',
         'updated' => 'setUpdated'
     ];
 
@@ -102,6 +105,7 @@ class RepricingItemAdditionalDetailsDTO implements ArrayAccess
         'item_specifics' => 'getItemSpecifics',
         'product_id_type' => 'getProductIdType',
         'product_id_value' => 'getProductIdValue',
+        'repricing_item_id' => 'getRepricingItemId',
         'updated' => 'getUpdated'
     ];
 
@@ -158,6 +162,7 @@ class RepricingItemAdditionalDetailsDTO implements ArrayAccess
         $this->container['item_specifics'] = isset($data['item_specifics']) ? $data['item_specifics'] : null;
         $this->container['product_id_type'] = isset($data['product_id_type']) ? $data['product_id_type'] : null;
         $this->container['product_id_value'] = isset($data['product_id_value']) ? $data['product_id_value'] : null;
+        $this->container['repricing_item_id'] = isset($data['repricing_item_id']) ? $data['repricing_item_id'] : null;
         $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
     }
 
@@ -279,6 +284,27 @@ class RepricingItemAdditionalDetailsDTO implements ArrayAccess
     public function setProductIdValue($product_id_value)
     {
         $this->container['product_id_value'] = $product_id_value;
+
+        return $this;
+    }
+
+    /**
+     * Gets repricing_item_id
+     * @return int
+     */
+    public function getRepricingItemId()
+    {
+        return $this->container['repricing_item_id'];
+    }
+
+    /**
+     * Sets repricing_item_id
+     * @param int $repricing_item_id
+     * @return $this
+     */
+    public function setRepricingItemId($repricing_item_id)
+    {
+        $this->container['repricing_item_id'] = $repricing_item_id;
 
         return $this;
     }

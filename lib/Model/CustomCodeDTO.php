@@ -55,10 +55,12 @@ class CustomCodeDTO implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'code' => 'string',
         'id' => 'int',
         'inserted' => '\DateTime',
         'name' => 'string',
         'updated' => '\DateTime',
+        'user_service_id' => 'int',
         'verified' => 'bool'
     ];
 
@@ -72,10 +74,12 @@ class CustomCodeDTO implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'code' => 'code',
         'id' => 'id',
         'inserted' => 'inserted',
         'name' => 'name',
         'updated' => 'updated',
+        'user_service_id' => 'userServiceId',
         'verified' => 'verified'
     ];
 
@@ -85,10 +89,12 @@ class CustomCodeDTO implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'code' => 'setCode',
         'id' => 'setId',
         'inserted' => 'setInserted',
         'name' => 'setName',
         'updated' => 'setUpdated',
+        'user_service_id' => 'setUserServiceId',
         'verified' => 'setVerified'
     ];
 
@@ -98,10 +104,12 @@ class CustomCodeDTO implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'code' => 'getCode',
         'id' => 'getId',
         'inserted' => 'getInserted',
         'name' => 'getName',
         'updated' => 'getUpdated',
+        'user_service_id' => 'getUserServiceId',
         'verified' => 'getVerified'
     ];
 
@@ -136,10 +144,12 @@ class CustomCodeDTO implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['inserted'] = isset($data['inserted']) ? $data['inserted'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
+        $this->container['user_service_id'] = isset($data['user_service_id']) ? $data['user_service_id'] : null;
         $this->container['verified'] = isset($data['verified']) ? $data['verified'] : null;
     }
 
@@ -167,6 +177,27 @@ class CustomCodeDTO implements ArrayAccess
         return true;
     }
 
+
+    /**
+     * Gets code
+     * @return string
+     */
+    public function getCode()
+    {
+        return $this->container['code'];
+    }
+
+    /**
+     * Sets code
+     * @param string $code
+     * @return $this
+     */
+    public function setCode($code)
+    {
+        $this->container['code'] = $code;
+
+        return $this;
+    }
 
     /**
      * Gets id
@@ -248,6 +279,27 @@ class CustomCodeDTO implements ArrayAccess
     public function setUpdated($updated)
     {
         $this->container['updated'] = $updated;
+
+        return $this;
+    }
+
+    /**
+     * Gets user_service_id
+     * @return int
+     */
+    public function getUserServiceId()
+    {
+        return $this->container['user_service_id'];
+    }
+
+    /**
+     * Sets user_service_id
+     * @param int $user_service_id
+     * @return $this
+     */
+    public function setUserServiceId($user_service_id)
+    {
+        $this->container['user_service_id'] = $user_service_id;
 
         return $this;
     }

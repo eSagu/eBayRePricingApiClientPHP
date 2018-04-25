@@ -56,10 +56,13 @@ class BulkEditDTO implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'failure_items' => 'int',
+        'id' => 'int',
+        'inserted' => '\DateTime',
         'processed' => 'bool',
         'refinement' => '\eSagu\EBay\RePricing\V1\Model\BulkEditRefinement',
         'tasks' => '\eSagu\EBay\RePricing\V1\Model\BulkEditTasks',
-        'total_items' => 'int'
+        'total_items' => 'int',
+        'updated' => '\DateTime'
     ];
 
     public static function swaggerTypes()
@@ -73,10 +76,13 @@ class BulkEditDTO implements ArrayAccess
      */
     protected static $attributeMap = [
         'failure_items' => 'failureItems',
+        'id' => 'id',
+        'inserted' => 'inserted',
         'processed' => 'processed',
         'refinement' => 'refinement',
         'tasks' => 'tasks',
-        'total_items' => 'totalItems'
+        'total_items' => 'totalItems',
+        'updated' => 'updated'
     ];
 
 
@@ -86,10 +92,13 @@ class BulkEditDTO implements ArrayAccess
      */
     protected static $setters = [
         'failure_items' => 'setFailureItems',
+        'id' => 'setId',
+        'inserted' => 'setInserted',
         'processed' => 'setProcessed',
         'refinement' => 'setRefinement',
         'tasks' => 'setTasks',
-        'total_items' => 'setTotalItems'
+        'total_items' => 'setTotalItems',
+        'updated' => 'setUpdated'
     ];
 
 
@@ -99,10 +108,13 @@ class BulkEditDTO implements ArrayAccess
      */
     protected static $getters = [
         'failure_items' => 'getFailureItems',
+        'id' => 'getId',
+        'inserted' => 'getInserted',
         'processed' => 'getProcessed',
         'refinement' => 'getRefinement',
         'tasks' => 'getTasks',
-        'total_items' => 'getTotalItems'
+        'total_items' => 'getTotalItems',
+        'updated' => 'getUpdated'
     ];
 
     public static function attributeMap()
@@ -137,10 +149,13 @@ class BulkEditDTO implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['failure_items'] = isset($data['failure_items']) ? $data['failure_items'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['inserted'] = isset($data['inserted']) ? $data['inserted'] : null;
         $this->container['processed'] = isset($data['processed']) ? $data['processed'] : null;
         $this->container['refinement'] = isset($data['refinement']) ? $data['refinement'] : null;
         $this->container['tasks'] = isset($data['tasks']) ? $data['tasks'] : null;
         $this->container['total_items'] = isset($data['total_items']) ? $data['total_items'] : null;
+        $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
     }
 
     /**
@@ -185,6 +200,48 @@ class BulkEditDTO implements ArrayAccess
     public function setFailureItems($failure_items)
     {
         $this->container['failure_items'] = $failure_items;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     * @param int $id
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets inserted
+     * @return \DateTime
+     */
+    public function getInserted()
+    {
+        return $this->container['inserted'];
+    }
+
+    /**
+     * Sets inserted
+     * @param \DateTime $inserted
+     * @return $this
+     */
+    public function setInserted($inserted)
+    {
+        $this->container['inserted'] = $inserted;
 
         return $this;
     }
@@ -269,6 +326,27 @@ class BulkEditDTO implements ArrayAccess
     public function setTotalItems($total_items)
     {
         $this->container['total_items'] = $total_items;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated
+     * @return \DateTime
+     */
+    public function getUpdated()
+    {
+        return $this->container['updated'];
+    }
+
+    /**
+     * Sets updated
+     * @param \DateTime $updated
+     * @return $this
+     */
+    public function setUpdated($updated)
+    {
+        $this->container['updated'] = $updated;
 
         return $this;
     }

@@ -55,8 +55,10 @@ class SearchTermStopWordsDTO implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
+        'inserted' => '\DateTime',
         'item_specifics' => 'string[]',
-        'item_title' => 'string[]'
+        'item_title' => 'string[]',
+        'updated' => '\DateTime'
     ];
 
     public static function swaggerTypes()
@@ -69,8 +71,10 @@ class SearchTermStopWordsDTO implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
+        'inserted' => 'inserted',
         'item_specifics' => 'itemSpecifics',
-        'item_title' => 'itemTitle'
+        'item_title' => 'itemTitle',
+        'updated' => 'updated'
     ];
 
 
@@ -79,8 +83,10 @@ class SearchTermStopWordsDTO implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
+        'inserted' => 'setInserted',
         'item_specifics' => 'setItemSpecifics',
-        'item_title' => 'setItemTitle'
+        'item_title' => 'setItemTitle',
+        'updated' => 'setUpdated'
     ];
 
 
@@ -89,8 +95,10 @@ class SearchTermStopWordsDTO implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
+        'inserted' => 'getInserted',
         'item_specifics' => 'getItemSpecifics',
-        'item_title' => 'getItemTitle'
+        'item_title' => 'getItemTitle',
+        'updated' => 'getUpdated'
     ];
 
     public static function attributeMap()
@@ -124,8 +132,10 @@ class SearchTermStopWordsDTO implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['inserted'] = isset($data['inserted']) ? $data['inserted'] : null;
         $this->container['item_specifics'] = isset($data['item_specifics']) ? $data['item_specifics'] : null;
         $this->container['item_title'] = isset($data['item_title']) ? $data['item_title'] : null;
+        $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
     }
 
     /**
@@ -166,6 +176,27 @@ class SearchTermStopWordsDTO implements ArrayAccess
 
 
     /**
+     * Gets inserted
+     * @return \DateTime
+     */
+    public function getInserted()
+    {
+        return $this->container['inserted'];
+    }
+
+    /**
+     * Sets inserted
+     * @param \DateTime $inserted
+     * @return $this
+     */
+    public function setInserted($inserted)
+    {
+        $this->container['inserted'] = $inserted;
+
+        return $this;
+    }
+
+    /**
      * Gets item_specifics
      * @return string[]
      */
@@ -203,6 +234,27 @@ class SearchTermStopWordsDTO implements ArrayAccess
     public function setItemTitle($item_title)
     {
         $this->container['item_title'] = $item_title;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated
+     * @return \DateTime
+     */
+    public function getUpdated()
+    {
+        return $this->container['updated'];
+    }
+
+    /**
+     * Sets updated
+     * @param \DateTime $updated
+     * @return $this
+     */
+    public function setUpdated($updated)
+    {
+        $this->container['updated'] = $updated;
 
         return $this;
     }

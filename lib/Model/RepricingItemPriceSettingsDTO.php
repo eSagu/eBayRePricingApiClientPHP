@@ -56,9 +56,11 @@ class RepricingItemPriceSettingsDTO implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'fixed_price' => 'int',
+        'inserted' => '\DateTime',
         'max_price' => 'int',
         'min_price' => 'int',
-        'mode' => 'string'
+        'mode' => 'string',
+        'updated' => '\DateTime'
     ];
 
     public static function swaggerTypes()
@@ -72,9 +74,11 @@ class RepricingItemPriceSettingsDTO implements ArrayAccess
      */
     protected static $attributeMap = [
         'fixed_price' => 'fixedPrice',
+        'inserted' => 'inserted',
         'max_price' => 'maxPrice',
         'min_price' => 'minPrice',
-        'mode' => 'mode'
+        'mode' => 'mode',
+        'updated' => 'updated'
     ];
 
 
@@ -84,9 +88,11 @@ class RepricingItemPriceSettingsDTO implements ArrayAccess
      */
     protected static $setters = [
         'fixed_price' => 'setFixedPrice',
+        'inserted' => 'setInserted',
         'max_price' => 'setMaxPrice',
         'min_price' => 'setMinPrice',
-        'mode' => 'setMode'
+        'mode' => 'setMode',
+        'updated' => 'setUpdated'
     ];
 
 
@@ -96,9 +102,11 @@ class RepricingItemPriceSettingsDTO implements ArrayAccess
      */
     protected static $getters = [
         'fixed_price' => 'getFixedPrice',
+        'inserted' => 'getInserted',
         'max_price' => 'getMaxPrice',
         'min_price' => 'getMinPrice',
-        'mode' => 'getMode'
+        'mode' => 'getMode',
+        'updated' => 'getUpdated'
     ];
 
     public static function attributeMap()
@@ -155,9 +163,11 @@ class RepricingItemPriceSettingsDTO implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['fixed_price'] = isset($data['fixed_price']) ? $data['fixed_price'] : null;
+        $this->container['inserted'] = isset($data['inserted']) ? $data['inserted'] : null;
         $this->container['max_price'] = isset($data['max_price']) ? $data['max_price'] : null;
         $this->container['min_price'] = isset($data['min_price']) ? $data['min_price'] : null;
         $this->container['mode'] = isset($data['mode']) ? $data['mode'] : null;
+        $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
     }
 
     /**
@@ -211,6 +221,27 @@ class RepricingItemPriceSettingsDTO implements ArrayAccess
     public function setFixedPrice($fixed_price)
     {
         $this->container['fixed_price'] = $fixed_price;
+
+        return $this;
+    }
+
+    /**
+     * Gets inserted
+     * @return \DateTime
+     */
+    public function getInserted()
+    {
+        return $this->container['inserted'];
+    }
+
+    /**
+     * Sets inserted
+     * @param \DateTime $inserted
+     * @return $this
+     */
+    public function setInserted($inserted)
+    {
+        $this->container['inserted'] = $inserted;
 
         return $this;
     }
@@ -278,6 +309,27 @@ class RepricingItemPriceSettingsDTO implements ArrayAccess
             throw new \InvalidArgumentException("Invalid value for 'mode', must be one of 'UNDEFINED', 'FIXED_PRICE', 'OPTIMIZATION', 'DISABLED', 'CUSTOM_CODE', 'OPTIMIZATION_BEST_VISIBILITY'");
         }
         $this->container['mode'] = $mode;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated
+     * @return \DateTime
+     */
+    public function getUpdated()
+    {
+        return $this->container['updated'];
+    }
+
+    /**
+     * Sets updated
+     * @param \DateTime $updated
+     * @return $this
+     */
+    public function setUpdated($updated)
+    {
+        $this->container['updated'] = $updated;
 
         return $this;
     }

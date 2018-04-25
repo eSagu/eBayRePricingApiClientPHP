@@ -56,7 +56,10 @@ class FindingAPIFilterDTO implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'filter' => '\eSagu\EBay\RePricing\V1\Model\FindingAPIFilterDynamicDTO',
-        'name' => 'string'
+        'id' => 'int',
+        'inserted' => '\DateTime',
+        'name' => 'string',
+        'updated' => '\DateTime'
     ];
 
     public static function swaggerTypes()
@@ -70,7 +73,10 @@ class FindingAPIFilterDTO implements ArrayAccess
      */
     protected static $attributeMap = [
         'filter' => 'filter',
-        'name' => 'name'
+        'id' => 'id',
+        'inserted' => 'inserted',
+        'name' => 'name',
+        'updated' => 'updated'
     ];
 
 
@@ -80,7 +86,10 @@ class FindingAPIFilterDTO implements ArrayAccess
      */
     protected static $setters = [
         'filter' => 'setFilter',
-        'name' => 'setName'
+        'id' => 'setId',
+        'inserted' => 'setInserted',
+        'name' => 'setName',
+        'updated' => 'setUpdated'
     ];
 
 
@@ -90,7 +99,10 @@ class FindingAPIFilterDTO implements ArrayAccess
      */
     protected static $getters = [
         'filter' => 'getFilter',
-        'name' => 'getName'
+        'id' => 'getId',
+        'inserted' => 'getInserted',
+        'name' => 'getName',
+        'updated' => 'getUpdated'
     ];
 
     public static function attributeMap()
@@ -125,7 +137,10 @@ class FindingAPIFilterDTO implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['filter'] = isset($data['filter']) ? $data['filter'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['inserted'] = isset($data['inserted']) ? $data['inserted'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
     }
 
     /**
@@ -187,6 +202,48 @@ class FindingAPIFilterDTO implements ArrayAccess
     }
 
     /**
+     * Gets id
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     * @param int $id
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets inserted
+     * @return \DateTime
+     */
+    public function getInserted()
+    {
+        return $this->container['inserted'];
+    }
+
+    /**
+     * Sets inserted
+     * @param \DateTime $inserted
+     * @return $this
+     */
+    public function setInserted($inserted)
+    {
+        $this->container['inserted'] = $inserted;
+
+        return $this;
+    }
+
+    /**
      * Gets name
      * @return string
      */
@@ -203,6 +260,27 @@ class FindingAPIFilterDTO implements ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated
+     * @return \DateTime
+     */
+    public function getUpdated()
+    {
+        return $this->container['updated'];
+    }
+
+    /**
+     * Sets updated
+     * @param \DateTime $updated
+     * @return $this
+     */
+    public function setUpdated($updated)
+    {
+        $this->container['updated'] = $updated;
 
         return $this;
     }

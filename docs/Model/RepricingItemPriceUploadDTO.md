@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **error_code** | **int** |  | [optional] 
 **inserted** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **message_id** | **string** |  | [optional] 
+**repricing_item_id** | **int** |  | [optional] 
 **updated** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **uploaded_price** | **int** |  | [optional] 
 

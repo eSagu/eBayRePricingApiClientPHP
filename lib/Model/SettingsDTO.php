@@ -57,10 +57,12 @@ class SettingsDTO implements ArrayAccess
         'crawl_quantity_zero_items' => 'bool',
         'download_enabled' => 'bool',
         'ebay_global_id' => 'string',
+        'inserted' => '\DateTime',
         'item_max_age_seconds' => 'int',
         'outdated_stock_items_minus_days' => 'int',
         'show_expert_settings' => 'bool',
         'stock_update_max_age' => 'int',
+        'updated' => '\DateTime',
         'upload_enabled' => 'bool',
         'use_relist_parent_id' => 'bool'
     ];
@@ -78,10 +80,12 @@ class SettingsDTO implements ArrayAccess
         'crawl_quantity_zero_items' => 'crawlQuantityZeroItems',
         'download_enabled' => 'downloadEnabled',
         'ebay_global_id' => 'ebayGlobalId',
+        'inserted' => 'inserted',
         'item_max_age_seconds' => 'itemMaxAgeSeconds',
         'outdated_stock_items_minus_days' => 'outdatedStockItemsMinusDays',
         'show_expert_settings' => 'showExpertSettings',
         'stock_update_max_age' => 'stockUpdateMaxAge',
+        'updated' => 'updated',
         'upload_enabled' => 'uploadEnabled',
         'use_relist_parent_id' => 'useRelistParentId'
     ];
@@ -95,10 +99,12 @@ class SettingsDTO implements ArrayAccess
         'crawl_quantity_zero_items' => 'setCrawlQuantityZeroItems',
         'download_enabled' => 'setDownloadEnabled',
         'ebay_global_id' => 'setEbayGlobalId',
+        'inserted' => 'setInserted',
         'item_max_age_seconds' => 'setItemMaxAgeSeconds',
         'outdated_stock_items_minus_days' => 'setOutdatedStockItemsMinusDays',
         'show_expert_settings' => 'setShowExpertSettings',
         'stock_update_max_age' => 'setStockUpdateMaxAge',
+        'updated' => 'setUpdated',
         'upload_enabled' => 'setUploadEnabled',
         'use_relist_parent_id' => 'setUseRelistParentId'
     ];
@@ -112,10 +118,12 @@ class SettingsDTO implements ArrayAccess
         'crawl_quantity_zero_items' => 'getCrawlQuantityZeroItems',
         'download_enabled' => 'getDownloadEnabled',
         'ebay_global_id' => 'getEbayGlobalId',
+        'inserted' => 'getInserted',
         'item_max_age_seconds' => 'getItemMaxAgeSeconds',
         'outdated_stock_items_minus_days' => 'getOutdatedStockItemsMinusDays',
         'show_expert_settings' => 'getShowExpertSettings',
         'stock_update_max_age' => 'getStockUpdateMaxAge',
+        'updated' => 'getUpdated',
         'upload_enabled' => 'getUploadEnabled',
         'use_relist_parent_id' => 'getUseRelistParentId'
     ];
@@ -208,10 +216,12 @@ class SettingsDTO implements ArrayAccess
         $this->container['crawl_quantity_zero_items'] = isset($data['crawl_quantity_zero_items']) ? $data['crawl_quantity_zero_items'] : null;
         $this->container['download_enabled'] = isset($data['download_enabled']) ? $data['download_enabled'] : null;
         $this->container['ebay_global_id'] = isset($data['ebay_global_id']) ? $data['ebay_global_id'] : null;
+        $this->container['inserted'] = isset($data['inserted']) ? $data['inserted'] : null;
         $this->container['item_max_age_seconds'] = isset($data['item_max_age_seconds']) ? $data['item_max_age_seconds'] : null;
         $this->container['outdated_stock_items_minus_days'] = isset($data['outdated_stock_items_minus_days']) ? $data['outdated_stock_items_minus_days'] : null;
         $this->container['show_expert_settings'] = isset($data['show_expert_settings']) ? $data['show_expert_settings'] : null;
         $this->container['stock_update_max_age'] = isset($data['stock_update_max_age']) ? $data['stock_update_max_age'] : null;
+        $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
         $this->container['upload_enabled'] = isset($data['upload_enabled']) ? $data['upload_enabled'] : null;
         $this->container['use_relist_parent_id'] = isset($data['use_relist_parent_id']) ? $data['use_relist_parent_id'] : null;
     }
@@ -366,6 +376,27 @@ class SettingsDTO implements ArrayAccess
     }
 
     /**
+     * Gets inserted
+     * @return \DateTime
+     */
+    public function getInserted()
+    {
+        return $this->container['inserted'];
+    }
+
+    /**
+     * Sets inserted
+     * @param \DateTime $inserted
+     * @return $this
+     */
+    public function setInserted($inserted)
+    {
+        $this->container['inserted'] = $inserted;
+
+        return $this;
+    }
+
+    /**
      * Gets item_max_age_seconds
      * @return int
      */
@@ -445,6 +476,27 @@ class SettingsDTO implements ArrayAccess
     public function setStockUpdateMaxAge($stock_update_max_age)
     {
         $this->container['stock_update_max_age'] = $stock_update_max_age;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated
+     * @return \DateTime
+     */
+    public function getUpdated()
+    {
+        return $this->container['updated'];
+    }
+
+    /**
+     * Sets updated
+     * @param \DateTime $updated
+     * @return $this
+     */
+    public function setUpdated($updated)
+    {
+        $this->container['updated'] = $updated;
 
         return $this;
     }

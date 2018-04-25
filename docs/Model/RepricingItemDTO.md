@@ -33,6 +33,7 @@ Name | Type | Description | Notes
 **title** | **string** |  | [optional] 
 **total_entries** | **int** |  | [optional] 
 **updated** | [**\DateTime**](\DateTime.md) |  | [optional] 
+**user_service_id** | **int** |  | [optional] 
 **variation_specifics** | [**map[string,string[]]**](array.md) |  | [optional] 
 **variation_type** | **string** |  | [optional] 
 **variations** | [**\eSagu\EBay\RePricing\V1\Model\RepricingItemDTO[]**](RepricingItemDTO.md) |  | [optional] 

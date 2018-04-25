@@ -57,6 +57,7 @@ class RepricingItemOptimizationResultDTO implements ArrayAccess
     protected static $swaggerTypes = [
         'inserted' => '\DateTime',
         'optimized_price' => 'int',
+        'repricing_item_id' => 'int',
         'updated' => '\DateTime'
     ];
 
@@ -72,6 +73,7 @@ class RepricingItemOptimizationResultDTO implements ArrayAccess
     protected static $attributeMap = [
         'inserted' => 'inserted',
         'optimized_price' => 'optimizedPrice',
+        'repricing_item_id' => 'repricingItemId',
         'updated' => 'updated'
     ];
 
@@ -83,6 +85,7 @@ class RepricingItemOptimizationResultDTO implements ArrayAccess
     protected static $setters = [
         'inserted' => 'setInserted',
         'optimized_price' => 'setOptimizedPrice',
+        'repricing_item_id' => 'setRepricingItemId',
         'updated' => 'setUpdated'
     ];
 
@@ -94,6 +97,7 @@ class RepricingItemOptimizationResultDTO implements ArrayAccess
     protected static $getters = [
         'inserted' => 'getInserted',
         'optimized_price' => 'getOptimizedPrice',
+        'repricing_item_id' => 'getRepricingItemId',
         'updated' => 'getUpdated'
     ];
 
@@ -130,6 +134,7 @@ class RepricingItemOptimizationResultDTO implements ArrayAccess
     {
         $this->container['inserted'] = isset($data['inserted']) ? $data['inserted'] : null;
         $this->container['optimized_price'] = isset($data['optimized_price']) ? $data['optimized_price'] : null;
+        $this->container['repricing_item_id'] = isset($data['repricing_item_id']) ? $data['repricing_item_id'] : null;
         $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
     }
 
@@ -196,6 +201,27 @@ class RepricingItemOptimizationResultDTO implements ArrayAccess
     public function setOptimizedPrice($optimized_price)
     {
         $this->container['optimized_price'] = $optimized_price;
+
+        return $this;
+    }
+
+    /**
+     * Gets repricing_item_id
+     * @return int
+     */
+    public function getRepricingItemId()
+    {
+        return $this->container['repricing_item_id'];
+    }
+
+    /**
+     * Sets repricing_item_id
+     * @param int $repricing_item_id
+     * @return $this
+     */
+    public function setRepricingItemId($repricing_item_id)
+    {
+        $this->container['repricing_item_id'] = $repricing_item_id;
 
         return $this;
     }

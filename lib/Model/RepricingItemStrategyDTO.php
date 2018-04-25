@@ -59,7 +59,9 @@ class RepricingItemStrategyDTO implements ArrayAccess
         'finding_api_filter_id' => 'int',
         'finding_search_term' => '\eSagu\EBay\RePricing\V1\Model\FindingSearchTermDTO',
         'price_gap_id' => 'int',
-        'price_settings' => '\eSagu\EBay\RePricing\V1\Model\RepricingItemPriceSettingsDTO'
+        'price_settings' => '\eSagu\EBay\RePricing\V1\Model\RepricingItemPriceSettingsDTO',
+        'inserted' => '\DateTime',
+        'updated' => '\DateTime'
     ];
 
     public static function swaggerTypes()
@@ -76,7 +78,9 @@ class RepricingItemStrategyDTO implements ArrayAccess
         'finding_api_filter_id' => 'findingAPIFilterId',
         'finding_search_term' => 'findingSearchTerm',
         'price_gap_id' => 'priceGapId',
-        'price_settings' => 'priceSettings'
+        'price_settings' => 'priceSettings',
+        'inserted' => 'inserted',
+        'updated' => 'updated'
     ];
 
 
@@ -89,7 +93,9 @@ class RepricingItemStrategyDTO implements ArrayAccess
         'finding_api_filter_id' => 'setFindingApiFilterId',
         'finding_search_term' => 'setFindingSearchTerm',
         'price_gap_id' => 'setPriceGapId',
-        'price_settings' => 'setPriceSettings'
+        'price_settings' => 'setPriceSettings',
+        'inserted' => 'setInserted',
+        'updated' => 'setUpdated'
     ];
 
 
@@ -102,7 +108,9 @@ class RepricingItemStrategyDTO implements ArrayAccess
         'finding_api_filter_id' => 'getFindingApiFilterId',
         'finding_search_term' => 'getFindingSearchTerm',
         'price_gap_id' => 'getPriceGapId',
-        'price_settings' => 'getPriceSettings'
+        'price_settings' => 'getPriceSettings',
+        'inserted' => 'getInserted',
+        'updated' => 'getUpdated'
     ];
 
     public static function attributeMap()
@@ -141,6 +149,8 @@ class RepricingItemStrategyDTO implements ArrayAccess
         $this->container['finding_search_term'] = isset($data['finding_search_term']) ? $data['finding_search_term'] : null;
         $this->container['price_gap_id'] = isset($data['price_gap_id']) ? $data['price_gap_id'] : null;
         $this->container['price_settings'] = isset($data['price_settings']) ? $data['price_settings'] : null;
+        $this->container['inserted'] = isset($data['inserted']) ? $data['inserted'] : null;
+        $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
     }
 
     /**
@@ -269,6 +279,48 @@ class RepricingItemStrategyDTO implements ArrayAccess
     public function setPriceSettings($price_settings)
     {
         $this->container['price_settings'] = $price_settings;
+
+        return $this;
+    }
+
+    /**
+     * Gets inserted
+     * @return \DateTime
+     */
+    public function getInserted()
+    {
+        return $this->container['inserted'];
+    }
+
+    /**
+     * Sets inserted
+     * @param \DateTime $inserted
+     * @return $this
+     */
+    public function setInserted($inserted)
+    {
+        $this->container['inserted'] = $inserted;
+
+        return $this;
+    }
+
+    /**
+     * Gets updated
+     * @return \DateTime
+     */
+    public function getUpdated()
+    {
+        return $this->container['updated'];
+    }
+
+    /**
+     * Sets updated
+     * @param \DateTime $updated
+     * @return $this
+     */
+    public function setUpdated($updated)
+    {
+        $this->container['updated'] = $updated;
 
         return $this;
     }
