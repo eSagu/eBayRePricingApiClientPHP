@@ -56,6 +56,7 @@ class RepricingItemStrategyDTO implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'custom_code_id' => 'int',
+        'excluded_listings' => 'int[]',
         'finding_api_filter_id' => 'int',
         'finding_search_term' => '\eSagu\EBay\RePricing\V1\Model\FindingSearchTermDTO',
         'price_gap_id' => 'int',
@@ -75,6 +76,7 @@ class RepricingItemStrategyDTO implements ArrayAccess
      */
     protected static $attributeMap = [
         'custom_code_id' => 'customCodeId',
+        'excluded_listings' => 'excludedListings',
         'finding_api_filter_id' => 'findingAPIFilterId',
         'finding_search_term' => 'findingSearchTerm',
         'price_gap_id' => 'priceGapId',
@@ -90,6 +92,7 @@ class RepricingItemStrategyDTO implements ArrayAccess
      */
     protected static $setters = [
         'custom_code_id' => 'setCustomCodeId',
+        'excluded_listings' => 'setExcludedListings',
         'finding_api_filter_id' => 'setFindingApiFilterId',
         'finding_search_term' => 'setFindingSearchTerm',
         'price_gap_id' => 'setPriceGapId',
@@ -105,6 +108,7 @@ class RepricingItemStrategyDTO implements ArrayAccess
      */
     protected static $getters = [
         'custom_code_id' => 'getCustomCodeId',
+        'excluded_listings' => 'getExcludedListings',
         'finding_api_filter_id' => 'getFindingApiFilterId',
         'finding_search_term' => 'getFindingSearchTerm',
         'price_gap_id' => 'getPriceGapId',
@@ -145,6 +149,7 @@ class RepricingItemStrategyDTO implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['custom_code_id'] = isset($data['custom_code_id']) ? $data['custom_code_id'] : null;
+        $this->container['excluded_listings'] = isset($data['excluded_listings']) ? $data['excluded_listings'] : null;
         $this->container['finding_api_filter_id'] = isset($data['finding_api_filter_id']) ? $data['finding_api_filter_id'] : null;
         $this->container['finding_search_term'] = isset($data['finding_search_term']) ? $data['finding_search_term'] : null;
         $this->container['price_gap_id'] = isset($data['price_gap_id']) ? $data['price_gap_id'] : null;
@@ -195,6 +200,27 @@ class RepricingItemStrategyDTO implements ArrayAccess
     public function setCustomCodeId($custom_code_id)
     {
         $this->container['custom_code_id'] = $custom_code_id;
+
+        return $this;
+    }
+
+    /**
+     * Gets excluded_listings
+     * @return int[]
+     */
+    public function getExcludedListings()
+    {
+        return $this->container['excluded_listings'];
+    }
+
+    /**
+     * Sets excluded_listings
+     * @param int[] $excluded_listings
+     * @return $this
+     */
+    public function setExcludedListings($excluded_listings)
+    {
+        $this->container['excluded_listings'] = $excluded_listings;
 
         return $this;
     }

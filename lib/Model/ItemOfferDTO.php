@@ -190,6 +190,7 @@ class ItemOfferDTO implements ArrayAccess
     const CONDITION_UNKNOWN = 'UNKNOWN';
     const FLAGS_COMPARED_TO = 'COMPARED_TO';
     const FLAGS_MY_OWN_OFFER = 'MY_OWN_OFFER';
+    const FLAGS_EXCLUDED_BY_ITEM_ID = 'EXCLUDED_BY_ITEM_ID';
     const GLOBAL_ID_US = 'EBAY_US';
     const GLOBAL_ID_ENCA = 'EBAY_ENCA';
     const GLOBAL_ID_GB = 'EBAY_GB';
@@ -264,6 +265,7 @@ class ItemOfferDTO implements ArrayAccess
         return [
             self::FLAGS_COMPARED_TO,
             self::FLAGS_MY_OWN_OFFER,
+            self::FLAGS_EXCLUDED_BY_ITEM_ID,
         ];
     }
     
@@ -557,9 +559,9 @@ class ItemOfferDTO implements ArrayAccess
      */
     public function setFlags($flags)
     {
-        $allowed_values = array('COMPARED_TO', 'MY_OWN_OFFER');
+        $allowed_values = array('COMPARED_TO', 'MY_OWN_OFFER', 'EXCLUDED_BY_ITEM_ID');
         if (!is_null($flags) && (array_diff($flags, $allowed_values))) {
-            throw new \InvalidArgumentException("Invalid value for 'flags', must be one of 'COMPARED_TO', 'MY_OWN_OFFER'");
+            throw new \InvalidArgumentException("Invalid value for 'flags', must be one of 'COMPARED_TO', 'MY_OWN_OFFER', 'EXCLUDED_BY_ITEM_ID'");
         }
         $this->container['flags'] = $flags;
 
