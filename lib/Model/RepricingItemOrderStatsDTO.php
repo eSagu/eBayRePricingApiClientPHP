@@ -1,6 +1,6 @@
 <?php
 /**
- * RepricingItemStrategyDTO
+ * RepricingItemOrderStatsDTO
  *
  * PHP version 5
  *
@@ -32,15 +32,15 @@ namespace eSagu\EBay\RePricing\V1\Model;
 use \ArrayAccess;
 
 /**
- * RepricingItemStrategyDTO Class Doc Comment
+ * RepricingItemOrderStatsDTO Class Doc Comment
  *
  * @category    Class
- * @description The repricing item&#39;s strategy. The repricing item&#39;s strategy is a container for the item&#39;s strategy and price settings.
+ * @description The repricing item&#39;s order stats.
  * @package     eSagu\EBay\RePricing\V1
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class RepricingItemStrategyDTO implements ArrayAccess
+class RepricingItemOrderStatsDTO implements ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,19 +48,17 @@ class RepricingItemStrategyDTO implements ArrayAccess
       * The original name of the model.
       * @var string
       */
-    protected static $swaggerModelName = 'RepricingItemStrategyDTO';
+    protected static $swaggerModelName = 'RepricingItemOrderStatsDTO';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'custom_code_id' => 'int',
-        'excluded_listings' => 'int[]',
-        'finding_api_filter_id' => 'int',
-        'finding_search_term' => '\eSagu\EBay\RePricing\V1\Model\FindingSearchTermDTO',
-        'price_gap_id' => 'int',
-        'price_settings' => '\eSagu\EBay\RePricing\V1\Model\RepricingItemPriceSettingsDTO',
+        'last_fourteen_days' => 'int',
+        'last_seven_days' => 'int',
+        'last_thirty_days' => 'int',
+        'repricing_item_id' => 'int',
         'inserted' => '\DateTime',
         'updated' => '\DateTime'
     ];
@@ -75,12 +73,10 @@ class RepricingItemStrategyDTO implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'custom_code_id' => 'customCodeId',
-        'excluded_listings' => 'excludedListings',
-        'finding_api_filter_id' => 'findingAPIFilterId',
-        'finding_search_term' => 'findingSearchTerm',
-        'price_gap_id' => 'priceGapId',
-        'price_settings' => 'priceSettings',
+        'last_fourteen_days' => 'lastFourteenDays',
+        'last_seven_days' => 'lastSevenDays',
+        'last_thirty_days' => 'lastThirtyDays',
+        'repricing_item_id' => 'repricingItemId',
         'inserted' => 'inserted',
         'updated' => 'updated'
     ];
@@ -91,12 +87,10 @@ class RepricingItemStrategyDTO implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'custom_code_id' => 'setCustomCodeId',
-        'excluded_listings' => 'setExcludedListings',
-        'finding_api_filter_id' => 'setFindingApiFilterId',
-        'finding_search_term' => 'setFindingSearchTerm',
-        'price_gap_id' => 'setPriceGapId',
-        'price_settings' => 'setPriceSettings',
+        'last_fourteen_days' => 'setLastFourteenDays',
+        'last_seven_days' => 'setLastSevenDays',
+        'last_thirty_days' => 'setLastThirtyDays',
+        'repricing_item_id' => 'setRepricingItemId',
         'inserted' => 'setInserted',
         'updated' => 'setUpdated'
     ];
@@ -107,12 +101,10 @@ class RepricingItemStrategyDTO implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'custom_code_id' => 'getCustomCodeId',
-        'excluded_listings' => 'getExcludedListings',
-        'finding_api_filter_id' => 'getFindingApiFilterId',
-        'finding_search_term' => 'getFindingSearchTerm',
-        'price_gap_id' => 'getPriceGapId',
-        'price_settings' => 'getPriceSettings',
+        'last_fourteen_days' => 'getLastFourteenDays',
+        'last_seven_days' => 'getLastSevenDays',
+        'last_thirty_days' => 'getLastThirtyDays',
+        'repricing_item_id' => 'getRepricingItemId',
         'inserted' => 'getInserted',
         'updated' => 'getUpdated'
     ];
@@ -148,12 +140,10 @@ class RepricingItemStrategyDTO implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['custom_code_id'] = isset($data['custom_code_id']) ? $data['custom_code_id'] : null;
-        $this->container['excluded_listings'] = isset($data['excluded_listings']) ? $data['excluded_listings'] : null;
-        $this->container['finding_api_filter_id'] = isset($data['finding_api_filter_id']) ? $data['finding_api_filter_id'] : null;
-        $this->container['finding_search_term'] = isset($data['finding_search_term']) ? $data['finding_search_term'] : null;
-        $this->container['price_gap_id'] = isset($data['price_gap_id']) ? $data['price_gap_id'] : null;
-        $this->container['price_settings'] = isset($data['price_settings']) ? $data['price_settings'] : null;
+        $this->container['last_fourteen_days'] = isset($data['last_fourteen_days']) ? $data['last_fourteen_days'] : null;
+        $this->container['last_seven_days'] = isset($data['last_seven_days']) ? $data['last_seven_days'] : null;
+        $this->container['last_thirty_days'] = isset($data['last_thirty_days']) ? $data['last_thirty_days'] : null;
+        $this->container['repricing_item_id'] = isset($data['repricing_item_id']) ? $data['repricing_item_id'] : null;
         $this->container['inserted'] = isset($data['inserted']) ? $data['inserted'] : null;
         $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
     }
@@ -184,127 +174,85 @@ class RepricingItemStrategyDTO implements ArrayAccess
 
 
     /**
-     * Gets custom_code_id
+     * Gets last_fourteen_days
      * @return int
      */
-    public function getCustomCodeId()
+    public function getLastFourteenDays()
     {
-        return $this->container['custom_code_id'];
+        return $this->container['last_fourteen_days'];
     }
 
     /**
-     * Sets custom_code_id
-     * @param int $custom_code_id
+     * Sets last_fourteen_days
+     * @param int $last_fourteen_days
      * @return $this
      */
-    public function setCustomCodeId($custom_code_id)
+    public function setLastFourteenDays($last_fourteen_days)
     {
-        $this->container['custom_code_id'] = $custom_code_id;
+        $this->container['last_fourteen_days'] = $last_fourteen_days;
 
         return $this;
     }
 
     /**
-     * Gets excluded_listings
-     * @return int[]
-     */
-    public function getExcludedListings()
-    {
-        return $this->container['excluded_listings'];
-    }
-
-    /**
-     * Sets excluded_listings
-     * @param int[] $excluded_listings
-     * @return $this
-     */
-    public function setExcludedListings($excluded_listings)
-    {
-        $this->container['excluded_listings'] = $excluded_listings;
-
-        return $this;
-    }
-
-    /**
-     * Gets finding_api_filter_id
+     * Gets last_seven_days
      * @return int
      */
-    public function getFindingApiFilterId()
+    public function getLastSevenDays()
     {
-        return $this->container['finding_api_filter_id'];
+        return $this->container['last_seven_days'];
     }
 
     /**
-     * Sets finding_api_filter_id
-     * @param int $finding_api_filter_id
+     * Sets last_seven_days
+     * @param int $last_seven_days
      * @return $this
      */
-    public function setFindingApiFilterId($finding_api_filter_id)
+    public function setLastSevenDays($last_seven_days)
     {
-        $this->container['finding_api_filter_id'] = $finding_api_filter_id;
+        $this->container['last_seven_days'] = $last_seven_days;
 
         return $this;
     }
 
     /**
-     * Gets finding_search_term
-     * @return \eSagu\EBay\RePricing\V1\Model\FindingSearchTermDTO
-     */
-    public function getFindingSearchTerm()
-    {
-        return $this->container['finding_search_term'];
-    }
-
-    /**
-     * Sets finding_search_term
-     * @param \eSagu\EBay\RePricing\V1\Model\FindingSearchTermDTO $finding_search_term
-     * @return $this
-     */
-    public function setFindingSearchTerm($finding_search_term)
-    {
-        $this->container['finding_search_term'] = $finding_search_term;
-
-        return $this;
-    }
-
-    /**
-     * Gets price_gap_id
+     * Gets last_thirty_days
      * @return int
      */
-    public function getPriceGapId()
+    public function getLastThirtyDays()
     {
-        return $this->container['price_gap_id'];
+        return $this->container['last_thirty_days'];
     }
 
     /**
-     * Sets price_gap_id
-     * @param int $price_gap_id
+     * Sets last_thirty_days
+     * @param int $last_thirty_days
      * @return $this
      */
-    public function setPriceGapId($price_gap_id)
+    public function setLastThirtyDays($last_thirty_days)
     {
-        $this->container['price_gap_id'] = $price_gap_id;
+        $this->container['last_thirty_days'] = $last_thirty_days;
 
         return $this;
     }
 
     /**
-     * Gets price_settings
-     * @return \eSagu\EBay\RePricing\V1\Model\RepricingItemPriceSettingsDTO
+     * Gets repricing_item_id
+     * @return int
      */
-    public function getPriceSettings()
+    public function getRepricingItemId()
     {
-        return $this->container['price_settings'];
+        return $this->container['repricing_item_id'];
     }
 
     /**
-     * Sets price_settings
-     * @param \eSagu\EBay\RePricing\V1\Model\RepricingItemPriceSettingsDTO $price_settings
+     * Sets repricing_item_id
+     * @param int $repricing_item_id
      * @return $this
      */
-    public function setPriceSettings($price_settings)
+    public function setRepricingItemId($repricing_item_id)
     {
-        $this->container['price_settings'] = $price_settings;
+        $this->container['repricing_item_id'] = $repricing_item_id;
 
         return $this;
     }

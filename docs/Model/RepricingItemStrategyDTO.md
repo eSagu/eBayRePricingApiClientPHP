@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **custom_code_id** | **int** |  | [optional] 
+**excluded_listings** | **int[]** |  | [optional] 
 **finding_api_filter_id** | **int** |  | [optional] 
 **finding_search_term** | [**\eSagu\EBay\RePricing\V1\Model\FindingSearchTermDTO**](FindingSearchTermDTO.md) |  | [optional] 
 **price_gap_id** | **int** |  | [optional] 

@@ -56,6 +56,7 @@ class RepricingItemDTO implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'additional_details' => '\eSagu\EBay\RePricing\V1\Model\RepricingItemAdditionalDetailsDTO',
+        'cheapest_variation' => 'string',
         'condition' => 'string',
         'current_price' => 'int',
         'end_time' => 'int',
@@ -71,6 +72,8 @@ class RepricingItemDTO implements ArrayAccess
         'offers' => '\eSagu\EBay\RePricing\V1\Model\ItemOfferDTO[]',
         'offers_last_update' => 'int',
         'optimization_result' => '\eSagu\EBay\RePricing\V1\Model\RepricingItemOptimizationResultDTO',
+        'order_stats' => '\eSagu\EBay\RePricing\V1\Model\RepricingItemOrderStatsDTO',
+        'parent_id' => 'int',
         'price_upload' => '\eSagu\EBay\RePricing\V1\Model\RepricingItemPriceUploadDTO',
         'primary_category' => '\eSagu\EBay\RePricing\V1\Model\EbayCategoryDTO',
         'quantity' => 'int',
@@ -102,6 +105,7 @@ class RepricingItemDTO implements ArrayAccess
      */
     protected static $attributeMap = [
         'additional_details' => 'additionalDetails',
+        'cheapest_variation' => 'cheapestVariation',
         'condition' => 'condition',
         'current_price' => 'currentPrice',
         'end_time' => 'endTime',
@@ -117,6 +121,8 @@ class RepricingItemDTO implements ArrayAccess
         'offers' => 'offers',
         'offers_last_update' => 'offersLastUpdate',
         'optimization_result' => 'optimizationResult',
+        'order_stats' => 'orderStats',
+        'parent_id' => 'parentId',
         'price_upload' => 'priceUpload',
         'primary_category' => 'primaryCategory',
         'quantity' => 'quantity',
@@ -144,6 +150,7 @@ class RepricingItemDTO implements ArrayAccess
      */
     protected static $setters = [
         'additional_details' => 'setAdditionalDetails',
+        'cheapest_variation' => 'setCheapestVariation',
         'condition' => 'setCondition',
         'current_price' => 'setCurrentPrice',
         'end_time' => 'setEndTime',
@@ -159,6 +166,8 @@ class RepricingItemDTO implements ArrayAccess
         'offers' => 'setOffers',
         'offers_last_update' => 'setOffersLastUpdate',
         'optimization_result' => 'setOptimizationResult',
+        'order_stats' => 'setOrderStats',
+        'parent_id' => 'setParentId',
         'price_upload' => 'setPriceUpload',
         'primary_category' => 'setPrimaryCategory',
         'quantity' => 'setQuantity',
@@ -186,6 +195,7 @@ class RepricingItemDTO implements ArrayAccess
      */
     protected static $getters = [
         'additional_details' => 'getAdditionalDetails',
+        'cheapest_variation' => 'getCheapestVariation',
         'condition' => 'getCondition',
         'current_price' => 'getCurrentPrice',
         'end_time' => 'getEndTime',
@@ -201,6 +211,8 @@ class RepricingItemDTO implements ArrayAccess
         'offers' => 'getOffers',
         'offers_last_update' => 'getOffersLastUpdate',
         'optimization_result' => 'getOptimizationResult',
+        'order_stats' => 'getOrderStats',
+        'parent_id' => 'getParentId',
         'price_upload' => 'getPriceUpload',
         'primary_category' => 'getPrimaryCategory',
         'quantity' => 'getQuantity',
@@ -236,6 +248,10 @@ class RepricingItemDTO implements ArrayAccess
         return self::$getters;
     }
 
+    const CHEAPEST_VARIATION_NON_VARIANT = 'NON_VARIANT';
+    const CHEAPEST_VARIATION_WORST = 'WORST';
+    const CHEAPEST_VARIATION_REGULAR = 'REGULAR';
+    const CHEAPEST_VARIATION_FORCED = 'FORCED';
     const CONDITION_NEW = 'NEW';
     const CONDITION_NEW_OTHER = 'NEW_OTHER';
     const CONDITION_NEW_WITH_DEFECTS = 'NEW_WITH_DEFECTS';
@@ -277,6 +293,20 @@ class RepricingItemDTO implements ArrayAccess
     const VARIATION_TYPE_CHILD = 'CHILD';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getCheapestVariationAllowableValues()
+    {
+        return [
+            self::CHEAPEST_VARIATION_NON_VARIANT,
+            self::CHEAPEST_VARIATION_WORST,
+            self::CHEAPEST_VARIATION_REGULAR,
+            self::CHEAPEST_VARIATION_FORCED,
+        ];
+    }
     
     /**
      * Gets allowable values of the enum
@@ -371,6 +401,7 @@ class RepricingItemDTO implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['additional_details'] = isset($data['additional_details']) ? $data['additional_details'] : null;
+        $this->container['cheapest_variation'] = isset($data['cheapest_variation']) ? $data['cheapest_variation'] : null;
         $this->container['condition'] = isset($data['condition']) ? $data['condition'] : null;
         $this->container['current_price'] = isset($data['current_price']) ? $data['current_price'] : null;
         $this->container['end_time'] = isset($data['end_time']) ? $data['end_time'] : null;
@@ -386,6 +417,8 @@ class RepricingItemDTO implements ArrayAccess
         $this->container['offers'] = isset($data['offers']) ? $data['offers'] : null;
         $this->container['offers_last_update'] = isset($data['offers_last_update']) ? $data['offers_last_update'] : null;
         $this->container['optimization_result'] = isset($data['optimization_result']) ? $data['optimization_result'] : null;
+        $this->container['order_stats'] = isset($data['order_stats']) ? $data['order_stats'] : null;
+        $this->container['parent_id'] = isset($data['parent_id']) ? $data['parent_id'] : null;
         $this->container['price_upload'] = isset($data['price_upload']) ? $data['price_upload'] : null;
         $this->container['primary_category'] = isset($data['primary_category']) ? $data['primary_category'] : null;
         $this->container['quantity'] = isset($data['quantity']) ? $data['quantity'] : null;
@@ -414,6 +447,11 @@ class RepricingItemDTO implements ArrayAccess
     public function listInvalidProperties()
     {
         $invalid_properties = [];
+
+        $allowed_values = ["NON_VARIANT", "WORST", "REGULAR", "FORCED"];
+        if (!in_array($this->container['cheapest_variation'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'cheapest_variation', must be one of 'NON_VARIANT', 'WORST', 'REGULAR', 'FORCED'.";
+        }
 
         $allowed_values = ["NEW", "NEW_OTHER", "NEW_WITH_DEFECTS", "MANUFACTURER_REFURBISHED", "SELLER_REFURBISHED", "LIKE_NEW", "USED_EXCELLENT", "USED_VERY_GOOD", "USED_GOOD", "USED_ACCEPTABLE", "FOR_PARTS_OR_NOT_WORKING", "UNKNOWN"];
         if (!in_array($this->container['condition'], $allowed_values)) {
@@ -447,6 +485,10 @@ class RepricingItemDTO implements ArrayAccess
     public function valid()
     {
 
+        $allowed_values = ["NON_VARIANT", "WORST", "REGULAR", "FORCED"];
+        if (!in_array($this->container['cheapest_variation'], $allowed_values)) {
+            return false;
+        }
         $allowed_values = ["NEW", "NEW_OTHER", "NEW_WITH_DEFECTS", "MANUFACTURER_REFURBISHED", "SELLER_REFURBISHED", "LIKE_NEW", "USED_EXCELLENT", "USED_VERY_GOOD", "USED_GOOD", "USED_ACCEPTABLE", "FOR_PARTS_OR_NOT_WORKING", "UNKNOWN"];
         if (!in_array($this->container['condition'], $allowed_values)) {
             return false;
@@ -484,6 +526,31 @@ class RepricingItemDTO implements ArrayAccess
     public function setAdditionalDetails($additional_details)
     {
         $this->container['additional_details'] = $additional_details;
+
+        return $this;
+    }
+
+    /**
+     * Gets cheapest_variation
+     * @return string
+     */
+    public function getCheapestVariation()
+    {
+        return $this->container['cheapest_variation'];
+    }
+
+    /**
+     * Sets cheapest_variation
+     * @param string $cheapest_variation
+     * @return $this
+     */
+    public function setCheapestVariation($cheapest_variation)
+    {
+        $allowed_values = array('NON_VARIANT', 'WORST', 'REGULAR', 'FORCED');
+        if (!is_null($cheapest_variation) && (!in_array($cheapest_variation, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'cheapest_variation', must be one of 'NON_VARIANT', 'WORST', 'REGULAR', 'FORCED'");
+        }
+        $this->container['cheapest_variation'] = $cheapest_variation;
 
         return $this;
     }
@@ -807,6 +874,48 @@ class RepricingItemDTO implements ArrayAccess
     public function setOptimizationResult($optimization_result)
     {
         $this->container['optimization_result'] = $optimization_result;
+
+        return $this;
+    }
+
+    /**
+     * Gets order_stats
+     * @return \eSagu\EBay\RePricing\V1\Model\RepricingItemOrderStatsDTO
+     */
+    public function getOrderStats()
+    {
+        return $this->container['order_stats'];
+    }
+
+    /**
+     * Sets order_stats
+     * @param \eSagu\EBay\RePricing\V1\Model\RepricingItemOrderStatsDTO $order_stats
+     * @return $this
+     */
+    public function setOrderStats($order_stats)
+    {
+        $this->container['order_stats'] = $order_stats;
+
+        return $this;
+    }
+
+    /**
+     * Gets parent_id
+     * @return int
+     */
+    public function getParentId()
+    {
+        return $this->container['parent_id'];
+    }
+
+    /**
+     * Sets parent_id
+     * @param int $parent_id
+     * @return $this
+     */
+    public function setParentId($parent_id)
+    {
+        $this->container['parent_id'] = $parent_id;
 
         return $this;
     }

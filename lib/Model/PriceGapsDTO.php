@@ -59,7 +59,8 @@ class PriceGapsDTO implements ArrayAccess
         'inserted' => '\DateTime',
         'name' => 'string',
         'price_gaps' => '\eSagu\EBay\RePricing\V1\Model\PriceGapDTO[]',
-        'updated' => '\DateTime'
+        'updated' => '\DateTime',
+        'variation_boost' => 'string'
     ];
 
     public static function swaggerTypes()
@@ -76,7 +77,8 @@ class PriceGapsDTO implements ArrayAccess
         'inserted' => 'inserted',
         'name' => 'name',
         'price_gaps' => 'priceGaps',
-        'updated' => 'updated'
+        'updated' => 'updated',
+        'variation_boost' => 'variationBoost'
     ];
 
 
@@ -89,7 +91,8 @@ class PriceGapsDTO implements ArrayAccess
         'inserted' => 'setInserted',
         'name' => 'setName',
         'price_gaps' => 'setPriceGaps',
-        'updated' => 'setUpdated'
+        'updated' => 'setUpdated',
+        'variation_boost' => 'setVariationBoost'
     ];
 
 
@@ -102,7 +105,8 @@ class PriceGapsDTO implements ArrayAccess
         'inserted' => 'getInserted',
         'name' => 'getName',
         'price_gaps' => 'getPriceGaps',
-        'updated' => 'getUpdated'
+        'updated' => 'getUpdated',
+        'variation_boost' => 'getVariationBoost'
     ];
 
     public static function attributeMap()
@@ -120,8 +124,26 @@ class PriceGapsDTO implements ArrayAccess
         return self::$getters;
     }
 
+    const VARIATION_BOOST_NONE = 'NONE';
+    const VARIATION_BOOST_LOW = 'LOW';
+    const VARIATION_BOOST_MEDIUM = 'MEDIUM';
+    const VARIATION_BOOST_HIGH = 'HIGH';
     
 
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getVariationBoostAllowableValues()
+    {
+        return [
+            self::VARIATION_BOOST_NONE,
+            self::VARIATION_BOOST_LOW,
+            self::VARIATION_BOOST_MEDIUM,
+            self::VARIATION_BOOST_HIGH,
+        ];
+    }
     
 
     /**
@@ -141,6 +163,7 @@ class PriceGapsDTO implements ArrayAccess
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['price_gaps'] = isset($data['price_gaps']) ? $data['price_gaps'] : null;
         $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
+        $this->container['variation_boost'] = isset($data['variation_boost']) ? $data['variation_boost'] : null;
     }
 
     /**
@@ -158,6 +181,11 @@ class PriceGapsDTO implements ArrayAccess
         if ($this->container['price_gaps'] === null) {
             $invalid_properties[] = "'price_gaps' can't be null";
         }
+        $allowed_values = ["NONE", "LOW", "MEDIUM", "HIGH"];
+        if (!in_array($this->container['variation_boost'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'variation_boost', must be one of 'NONE', 'LOW', 'MEDIUM', 'HIGH'.";
+        }
+
         return $invalid_properties;
     }
 
@@ -174,6 +202,10 @@ class PriceGapsDTO implements ArrayAccess
             return false;
         }
         if ($this->container['price_gaps'] === null) {
+            return false;
+        }
+        $allowed_values = ["NONE", "LOW", "MEDIUM", "HIGH"];
+        if (!in_array($this->container['variation_boost'], $allowed_values)) {
             return false;
         }
         return true;
@@ -281,6 +313,31 @@ class PriceGapsDTO implements ArrayAccess
     public function setUpdated($updated)
     {
         $this->container['updated'] = $updated;
+
+        return $this;
+    }
+
+    /**
+     * Gets variation_boost
+     * @return string
+     */
+    public function getVariationBoost()
+    {
+        return $this->container['variation_boost'];
+    }
+
+    /**
+     * Sets variation_boost
+     * @param string $variation_boost
+     * @return $this
+     */
+    public function setVariationBoost($variation_boost)
+    {
+        $allowed_values = array('NONE', 'LOW', 'MEDIUM', 'HIGH');
+        if (!is_null($variation_boost) && (!in_array($variation_boost, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'variation_boost', must be one of 'NONE', 'LOW', 'MEDIUM', 'HIGH'");
+        }
+        $this->container['variation_boost'] = $variation_boost;
 
         return $this;
     }

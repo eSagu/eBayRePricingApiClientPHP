@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **additional_details** | [**\eSagu\EBay\RePricing\V1\Model\RepricingItemAdditionalDetailsDTO**](RepricingItemAdditionalDetailsDTO.md) |  | [optional] 
+**cheapest_variation** | **string** |  | [optional] 
 **condition** | **string** |  | [optional] 
 **current_price** | **int** |  | [optional] 
 **end_time** | **int** |  | [optional] 
@@ -19,6 +20,8 @@ Name | Type | Description | Notes
 **offers** | [**\eSagu\EBay\RePricing\V1\Model\ItemOfferDTO[]**](ItemOfferDTO.md) |  | [optional] 
 **offers_last_update** | **int** |  | [optional] 
 **optimization_result** | [**\eSagu\EBay\RePricing\V1\Model\RepricingItemOptimizationResultDTO**](RepricingItemOptimizationResultDTO.md) |  | [optional] 
+**order_stats** | [**\eSagu\EBay\RePricing\V1\Model\RepricingItemOrderStatsDTO**](RepricingItemOrderStatsDTO.md) |  | [optional] 
+**parent_id** | **int** |  | [optional] 
 **price_upload** | [**\eSagu\EBay\RePricing\V1\Model\RepricingItemPriceUploadDTO**](RepricingItemPriceUploadDTO.md) |  | [optional] 
 **primary_category** | [**\eSagu\EBay\RePricing\V1\Model\EbayCategoryDTO**](EbayCategoryDTO.md) |  | [optional] 
 **quantity** | **int** |  | [optional] 
