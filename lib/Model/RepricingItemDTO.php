@@ -72,6 +72,7 @@ class RepricingItemDTO implements ArrayAccess
         'offers' => '\eSagu\EBay\RePricing\V1\Model\ItemOfferDTO[]',
         'offers_last_update' => 'int',
         'optimization_result' => '\eSagu\EBay\RePricing\V1\Model\RepricingItemOptimizationResultDTO',
+        'order_stats' => '\eSagu\EBay\RePricing\V1\Model\RepricingItemOrderStatsDTO',
         'parent_id' => 'int',
         'price_upload' => '\eSagu\EBay\RePricing\V1\Model\RepricingItemPriceUploadDTO',
         'primary_category' => '\eSagu\EBay\RePricing\V1\Model\EbayCategoryDTO',
@@ -120,6 +121,7 @@ class RepricingItemDTO implements ArrayAccess
         'offers' => 'offers',
         'offers_last_update' => 'offersLastUpdate',
         'optimization_result' => 'optimizationResult',
+        'order_stats' => 'orderStats',
         'parent_id' => 'parentId',
         'price_upload' => 'priceUpload',
         'primary_category' => 'primaryCategory',
@@ -164,6 +166,7 @@ class RepricingItemDTO implements ArrayAccess
         'offers' => 'setOffers',
         'offers_last_update' => 'setOffersLastUpdate',
         'optimization_result' => 'setOptimizationResult',
+        'order_stats' => 'setOrderStats',
         'parent_id' => 'setParentId',
         'price_upload' => 'setPriceUpload',
         'primary_category' => 'setPrimaryCategory',
@@ -208,6 +211,7 @@ class RepricingItemDTO implements ArrayAccess
         'offers' => 'getOffers',
         'offers_last_update' => 'getOffersLastUpdate',
         'optimization_result' => 'getOptimizationResult',
+        'order_stats' => 'getOrderStats',
         'parent_id' => 'getParentId',
         'price_upload' => 'getPriceUpload',
         'primary_category' => 'getPrimaryCategory',
@@ -413,6 +417,7 @@ class RepricingItemDTO implements ArrayAccess
         $this->container['offers'] = isset($data['offers']) ? $data['offers'] : null;
         $this->container['offers_last_update'] = isset($data['offers_last_update']) ? $data['offers_last_update'] : null;
         $this->container['optimization_result'] = isset($data['optimization_result']) ? $data['optimization_result'] : null;
+        $this->container['order_stats'] = isset($data['order_stats']) ? $data['order_stats'] : null;
         $this->container['parent_id'] = isset($data['parent_id']) ? $data['parent_id'] : null;
         $this->container['price_upload'] = isset($data['price_upload']) ? $data['price_upload'] : null;
         $this->container['primary_category'] = isset($data['primary_category']) ? $data['primary_category'] : null;
@@ -869,6 +874,27 @@ class RepricingItemDTO implements ArrayAccess
     public function setOptimizationResult($optimization_result)
     {
         $this->container['optimization_result'] = $optimization_result;
+
+        return $this;
+    }
+
+    /**
+     * Gets order_stats
+     * @return \eSagu\EBay\RePricing\V1\Model\RepricingItemOrderStatsDTO
+     */
+    public function getOrderStats()
+    {
+        return $this->container['order_stats'];
+    }
+
+    /**
+     * Sets order_stats
+     * @param \eSagu\EBay\RePricing\V1\Model\RepricingItemOrderStatsDTO $order_stats
+     * @return $this
+     */
+    public function setOrderStats($order_stats)
+    {
+        $this->container['order_stats'] = $order_stats;
 
         return $this;
     }

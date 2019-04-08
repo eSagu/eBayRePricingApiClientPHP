@@ -1,18 +1,14 @@
-# CustomCodeDTO
+# RepricingItemOrderStatsDTO
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**code** | **string** |  | [optional] 
-**code_is_hidden** | **bool** |  | [optional] 
-**id** | **int** |  | [optional] 
+**last_fourteen_days** | **int** |  | [optional] 
+**last_seven_days** | **int** |  | [optional] 
+**last_thirty_days** | **int** |  | [optional] 
+**repricing_item_id** | **int** |  | [optional] 
 **inserted** | [**\DateTime**](\DateTime.md) |  | [optional] 
-**name** | **string** |  | [optional] 
-**scripting_language** | **string** |  | [optional] 
-**settings** | **object** |  | [optional] 
 **updated** | [**\DateTime**](\DateTime.md) |  | [optional] 
-**user_service_id** | **int** |  | [optional] 
-**verified** | **bool** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

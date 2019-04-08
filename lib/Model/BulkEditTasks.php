@@ -55,6 +55,7 @@ class BulkEditTasks implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'change_price_tasks' => '\eSagu\EBay\RePricing\V1\Model\BulkTaskPriceSettings[]',
+        'remove_additional_details' => '\eSagu\EBay\RePricing\V1\Model\BulkTaskRemoveAdditionalDetails',
         'task_custom_code' => '\eSagu\EBay\RePricing\V1\Model\BulkTaskCustomCode',
         'task_finding_api_filter' => '\eSagu\EBay\RePricing\V1\Model\BulkTaskFindingAPIFilter',
         'task_price_gap' => '\eSagu\EBay\RePricing\V1\Model\BulkTaskPriceGap',
@@ -73,6 +74,7 @@ class BulkEditTasks implements ArrayAccess
      */
     protected static $attributeMap = [
         'change_price_tasks' => 'changePriceTasks',
+        'remove_additional_details' => 'removeAdditionalDetails',
         'task_custom_code' => 'taskCustomCode',
         'task_finding_api_filter' => 'taskFindingAPIFilter',
         'task_price_gap' => 'taskPriceGap',
@@ -87,6 +89,7 @@ class BulkEditTasks implements ArrayAccess
      */
     protected static $setters = [
         'change_price_tasks' => 'setChangePriceTasks',
+        'remove_additional_details' => 'setRemoveAdditionalDetails',
         'task_custom_code' => 'setTaskCustomCode',
         'task_finding_api_filter' => 'setTaskFindingApiFilter',
         'task_price_gap' => 'setTaskPriceGap',
@@ -101,6 +104,7 @@ class BulkEditTasks implements ArrayAccess
      */
     protected static $getters = [
         'change_price_tasks' => 'getChangePriceTasks',
+        'remove_additional_details' => 'getRemoveAdditionalDetails',
         'task_custom_code' => 'getTaskCustomCode',
         'task_finding_api_filter' => 'getTaskFindingApiFilter',
         'task_price_gap' => 'getTaskPriceGap',
@@ -140,6 +144,7 @@ class BulkEditTasks implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['change_price_tasks'] = isset($data['change_price_tasks']) ? $data['change_price_tasks'] : null;
+        $this->container['remove_additional_details'] = isset($data['remove_additional_details']) ? $data['remove_additional_details'] : null;
         $this->container['task_custom_code'] = isset($data['task_custom_code']) ? $data['task_custom_code'] : null;
         $this->container['task_finding_api_filter'] = isset($data['task_finding_api_filter']) ? $data['task_finding_api_filter'] : null;
         $this->container['task_price_gap'] = isset($data['task_price_gap']) ? $data['task_price_gap'] : null;
@@ -189,6 +194,27 @@ class BulkEditTasks implements ArrayAccess
     public function setChangePriceTasks($change_price_tasks)
     {
         $this->container['change_price_tasks'] = $change_price_tasks;
+
+        return $this;
+    }
+
+    /**
+     * Gets remove_additional_details
+     * @return \eSagu\EBay\RePricing\V1\Model\BulkTaskRemoveAdditionalDetails
+     */
+    public function getRemoveAdditionalDetails()
+    {
+        return $this->container['remove_additional_details'];
+    }
+
+    /**
+     * Sets remove_additional_details
+     * @param \eSagu\EBay\RePricing\V1\Model\BulkTaskRemoveAdditionalDetails $remove_additional_details
+     * @return $this
+     */
+    public function setRemoveAdditionalDetails($remove_additional_details)
+    {
+        $this->container['remove_additional_details'] = $remove_additional_details;
 
         return $this;
     }

@@ -64,6 +64,7 @@ class BulkEditRefinement implements ArrayAccess
         'by_quantity' => '\eSagu\EBay\RePricing\V1\Model\RefineByQuantity',
         'by_sku' => '\eSagu\EBay\RePricing\V1\Model\RefineBySKU',
         'by_shipping' => '\eSagu\EBay\RePricing\V1\Model\RefineByShipping',
+        'by_site' => '\eSagu\EBay\RePricing\V1\Model\RefineBySite',
         'by_title' => '\eSagu\EBay\RePricing\V1\Model\RefineByTitle',
         'by_variation_type' => '\eSagu\EBay\RePricing\V1\Model\RefineByVariationType'
     ];
@@ -88,6 +89,7 @@ class BulkEditRefinement implements ArrayAccess
         'by_quantity' => 'byQuantity',
         'by_sku' => 'bySKU',
         'by_shipping' => 'byShipping',
+        'by_site' => 'bySite',
         'by_title' => 'byTitle',
         'by_variation_type' => 'byVariationType'
     ];
@@ -108,6 +110,7 @@ class BulkEditRefinement implements ArrayAccess
         'by_quantity' => 'setByQuantity',
         'by_sku' => 'setBySku',
         'by_shipping' => 'setByShipping',
+        'by_site' => 'setBySite',
         'by_title' => 'setByTitle',
         'by_variation_type' => 'setByVariationType'
     ];
@@ -128,6 +131,7 @@ class BulkEditRefinement implements ArrayAccess
         'by_quantity' => 'getByQuantity',
         'by_sku' => 'getBySku',
         'by_shipping' => 'getByShipping',
+        'by_site' => 'getBySite',
         'by_title' => 'getByTitle',
         'by_variation_type' => 'getByVariationType'
     ];
@@ -173,6 +177,7 @@ class BulkEditRefinement implements ArrayAccess
         $this->container['by_quantity'] = isset($data['by_quantity']) ? $data['by_quantity'] : null;
         $this->container['by_sku'] = isset($data['by_sku']) ? $data['by_sku'] : null;
         $this->container['by_shipping'] = isset($data['by_shipping']) ? $data['by_shipping'] : null;
+        $this->container['by_site'] = isset($data['by_site']) ? $data['by_site'] : null;
         $this->container['by_title'] = isset($data['by_title']) ? $data['by_title'] : null;
         $this->container['by_variation_type'] = isset($data['by_variation_type']) ? $data['by_variation_type'] : null;
     }
@@ -408,6 +413,27 @@ class BulkEditRefinement implements ArrayAccess
     public function setByShipping($by_shipping)
     {
         $this->container['by_shipping'] = $by_shipping;
+
+        return $this;
+    }
+
+    /**
+     * Gets by_site
+     * @return \eSagu\EBay\RePricing\V1\Model\RefineBySite
+     */
+    public function getBySite()
+    {
+        return $this->container['by_site'];
+    }
+
+    /**
+     * Sets by_site
+     * @param \eSagu\EBay\RePricing\V1\Model\RefineBySite $by_site
+     * @return $this
+     */
+    public function setBySite($by_site)
+    {
+        $this->container['by_site'] = $by_site;
 
         return $this;
     }

@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **change_price_tasks** | [**\eSagu\EBay\RePricing\V1\Model\BulkTaskPriceSettings[]**](BulkTaskPriceSettings.md) |  | [optional] 
+**remove_additional_details** | [**\eSagu\EBay\RePricing\V1\Model\BulkTaskRemoveAdditionalDetails**](BulkTaskRemoveAdditionalDetails.md) |  | [optional] 
 **task_custom_code** | [**\eSagu\EBay\RePricing\V1\Model\BulkTaskCustomCode**](BulkTaskCustomCode.md) |  | [optional] 
 **task_finding_api_filter** | [**\eSagu\EBay\RePricing\V1\Model\BulkTaskFindingAPIFilter**](BulkTaskFindingAPIFilter.md) |  | [optional] 
 **task_price_gap** | [**\eSagu\EBay\RePricing\V1\Model\BulkTaskPriceGap**](BulkTaskPriceGap.md) |  | [optional] 

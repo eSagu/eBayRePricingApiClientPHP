@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **by_quantity** | [**\eSagu\EBay\RePricing\V1\Model\RefineByQuantity**](RefineByQuantity.md) |  | [optional] 
 **by_sku** | [**\eSagu\EBay\RePricing\V1\Model\RefineBySKU**](RefineBySKU.md) |  | [optional] 
 **by_shipping** | [**\eSagu\EBay\RePricing\V1\Model\RefineByShipping**](RefineByShipping.md) |  | [optional] 
+**by_site** | [**\eSagu\EBay\RePricing\V1\Model\RefineBySite**](RefineBySite.md) |  | [optional] 
 **by_title** | [**\eSagu\EBay\RePricing\V1\Model\RefineByTitle**](RefineByTitle.md) |  | [optional] 
 **by_variation_type** | [**\eSagu\EBay\RePricing\V1\Model\RefineByVariationType**](RefineByVariationType.md) |  | [optional] 
 
