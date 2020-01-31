@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **callList**
-> \eSagu\EBay\RePricing\V1\Model\RepricingItemDTO[] callList($by_item_id, $by_sku, $by_title, $by_title_exact, $by_search_term, $by_condition, $by_price_mode, $by_price_gaps, $by_finding_filter, $by_price_state, $by_current_price_from, $by_current_price_to, $by_quantity_from, $by_quantity_to, $by_shipping_from, $by_shipping_to, $by_site, $by_variation_type, $by_hide_ended_items, $by_id_greater_than, $where_price_mode_null, $where_search_rank_null, $where_search_rank_not_null, $where_total_entries_null, $where_total_entries_not_null, $where_only_own_offer, $by_items_without_price_settings, $offset, $limit, $sort, $order, $exclude_childs, $count_items, $return_items)
+> \eSagu\EBay\RePricing\V1\Model\RepricingItemDTO[] callList($by_item_id, $by_sku, $by_title, $by_title_exact, $by_search_term, $by_condition, $by_price_mode, $by_price_gaps, $by_finding_filter, $by_price_state, $by_current_price_from, $by_current_price_to, $by_quantity_from, $by_quantity_to, $by_shipping_from, $by_shipping_to, $by_orders_value, $by_orders_days, $by_orders_constraint, $by_site, $by_variation_type, $by_hide_ended_items, $by_id_greater_than, $where_price_mode_null, $where_search_rank_null, $where_search_rank_not_null, $where_total_entries_null, $where_total_entries_not_null, $where_only_own_offer, $by_items_without_price_settings, $offset, $limit, $sort, $order, $exclude_childs, $count_items, $return_items)
 
 Gets a list of repricing items.
 
@@ -42,6 +42,9 @@ $by_quantity_from = 56; // int |
 $by_quantity_to = 56; // int | 
 $by_shipping_from = 56; // int | 
 $by_shipping_to = 56; // int | 
+$by_orders_value = 56; // int | 
+$by_orders_days = "by_orders_days_example"; // string | 
+$by_orders_constraint = "by_orders_constraint_example"; // string | 
 $by_site = "by_site_example"; // string | 
 $by_variation_type = "by_variation_type_example"; // string | 
 $by_hide_ended_items = true; // bool | 
@@ -62,7 +65,7 @@ $count_items = false; // bool |
 $return_items = true; // bool | 
 
 try {
-    $result = $api_instance->callList($by_item_id, $by_sku, $by_title, $by_title_exact, $by_search_term, $by_condition, $by_price_mode, $by_price_gaps, $by_finding_filter, $by_price_state, $by_current_price_from, $by_current_price_to, $by_quantity_from, $by_quantity_to, $by_shipping_from, $by_shipping_to, $by_site, $by_variation_type, $by_hide_ended_items, $by_id_greater_than, $where_price_mode_null, $where_search_rank_null, $where_search_rank_not_null, $where_total_entries_null, $where_total_entries_not_null, $where_only_own_offer, $by_items_without_price_settings, $offset, $limit, $sort, $order, $exclude_childs, $count_items, $return_items);
+    $result = $api_instance->callList($by_item_id, $by_sku, $by_title, $by_title_exact, $by_search_term, $by_condition, $by_price_mode, $by_price_gaps, $by_finding_filter, $by_price_state, $by_current_price_from, $by_current_price_to, $by_quantity_from, $by_quantity_to, $by_shipping_from, $by_shipping_to, $by_orders_value, $by_orders_days, $by_orders_constraint, $by_site, $by_variation_type, $by_hide_ended_items, $by_id_greater_than, $where_price_mode_null, $where_search_rank_null, $where_search_rank_not_null, $where_total_entries_null, $where_total_entries_not_null, $where_only_own_offer, $by_items_without_price_settings, $offset, $limit, $sort, $order, $exclude_childs, $count_items, $return_items);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ItemApi->callList: ', $e->getMessage(), PHP_EOL;
@@ -90,6 +93,9 @@ Name | Type | Description  | Notes
  **by_quantity_to** | **int**|  | [optional]
  **by_shipping_from** | **int**|  | [optional]
  **by_shipping_to** | **int**|  | [optional]
+ **by_orders_value** | **int**|  | [optional]
+ **by_orders_days** | **string**|  | [optional]
+ **by_orders_constraint** | **string**|  | [optional]
  **by_site** | **string**|  | [optional]
  **by_variation_type** | **string**|  | [optional]
  **by_hide_ended_items** | **bool**|  | [optional] [default to true]

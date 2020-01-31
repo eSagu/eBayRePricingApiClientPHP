@@ -9,6 +9,7 @@ Name | Type | Description | Notes
 **id** | **int** |  | [optional] 
 **inserted** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **number_format** | **string** |  | [optional] 
+**public_csv_file_name** | **string** |  | [optional] 
 **state** | **string** |  | [optional] 
 **updated** | [**\DateTime**](\DateTime.md) |  | [optional] 
 

@@ -59,8 +59,10 @@ class RepricingItemDTO implements ArrayAccess
         'cheapest_variation' => 'string',
         'condition' => 'string',
         'current_price' => 'int',
+        'ebay_finding_api_error_code' => 'int',
         'end_time' => 'int',
         'guessed_online_price' => 'int',
+        'hit_counter' => 'string',
         'id' => 'int',
         'initial_price' => 'int',
         'inserted' => '\DateTime',
@@ -108,8 +110,10 @@ class RepricingItemDTO implements ArrayAccess
         'cheapest_variation' => 'cheapestVariation',
         'condition' => 'condition',
         'current_price' => 'currentPrice',
+        'ebay_finding_api_error_code' => 'ebayFindingApiErrorCode',
         'end_time' => 'endTime',
         'guessed_online_price' => 'guessedOnlinePrice',
+        'hit_counter' => 'hitCounter',
         'id' => 'id',
         'initial_price' => 'initialPrice',
         'inserted' => 'inserted',
@@ -153,8 +157,10 @@ class RepricingItemDTO implements ArrayAccess
         'cheapest_variation' => 'setCheapestVariation',
         'condition' => 'setCondition',
         'current_price' => 'setCurrentPrice',
+        'ebay_finding_api_error_code' => 'setEbayFindingApiErrorCode',
         'end_time' => 'setEndTime',
         'guessed_online_price' => 'setGuessedOnlinePrice',
+        'hit_counter' => 'setHitCounter',
         'id' => 'setId',
         'initial_price' => 'setInitialPrice',
         'inserted' => 'setInserted',
@@ -198,8 +204,10 @@ class RepricingItemDTO implements ArrayAccess
         'cheapest_variation' => 'getCheapestVariation',
         'condition' => 'getCondition',
         'current_price' => 'getCurrentPrice',
+        'ebay_finding_api_error_code' => 'getEbayFindingApiErrorCode',
         'end_time' => 'getEndTime',
         'guessed_online_price' => 'getGuessedOnlinePrice',
+        'hit_counter' => 'getHitCounter',
         'id' => 'getId',
         'initial_price' => 'getInitialPrice',
         'inserted' => 'getInserted',
@@ -264,6 +272,14 @@ class RepricingItemDTO implements ArrayAccess
     const CONDITION_USED_ACCEPTABLE = 'USED_ACCEPTABLE';
     const CONDITION_FOR_PARTS_OR_NOT_WORKING = 'FOR_PARTS_OR_NOT_WORKING';
     const CONDITION_UNKNOWN = 'UNKNOWN';
+    const HIT_COUNTER_BASIC_STYLE = 'BASIC_STYLE';
+    const HIT_COUNTER_CUSTOM_CODE = 'CUSTOM_CODE';
+    const HIT_COUNTER_GREEN_LED = 'GREEN_LED';
+    const HIT_COUNTER_HIDDEN = 'HIDDEN';
+    const HIT_COUNTER_HIDDEN_STYLE = 'HIDDEN_STYLE';
+    const HIT_COUNTER_HONESTY_STYLE = 'HONESTY_STYLE';
+    const HIT_COUNTER_NO_HIT_COUNTER = 'NO_HIT_COUNTER';
+    const HIT_COUNTER_RETRO_STYLE = 'RETRO_STYLE';
     const LISTING_TYPE_FIXED_PRICE = 'FIXED_PRICE';
     const LISTING_TYPE_UNSUPPORTED = 'UNSUPPORTED';
     const SITE_US = 'EBAY_US';
@@ -327,6 +343,24 @@ class RepricingItemDTO implements ArrayAccess
             self::CONDITION_USED_ACCEPTABLE,
             self::CONDITION_FOR_PARTS_OR_NOT_WORKING,
             self::CONDITION_UNKNOWN,
+        ];
+    }
+    
+    /**
+     * Gets allowable values of the enum
+     * @return string[]
+     */
+    public function getHitCounterAllowableValues()
+    {
+        return [
+            self::HIT_COUNTER_BASIC_STYLE,
+            self::HIT_COUNTER_CUSTOM_CODE,
+            self::HIT_COUNTER_GREEN_LED,
+            self::HIT_COUNTER_HIDDEN,
+            self::HIT_COUNTER_HIDDEN_STYLE,
+            self::HIT_COUNTER_HONESTY_STYLE,
+            self::HIT_COUNTER_NO_HIT_COUNTER,
+            self::HIT_COUNTER_RETRO_STYLE,
         ];
     }
     
@@ -404,8 +438,10 @@ class RepricingItemDTO implements ArrayAccess
         $this->container['cheapest_variation'] = isset($data['cheapest_variation']) ? $data['cheapest_variation'] : null;
         $this->container['condition'] = isset($data['condition']) ? $data['condition'] : null;
         $this->container['current_price'] = isset($data['current_price']) ? $data['current_price'] : null;
+        $this->container['ebay_finding_api_error_code'] = isset($data['ebay_finding_api_error_code']) ? $data['ebay_finding_api_error_code'] : null;
         $this->container['end_time'] = isset($data['end_time']) ? $data['end_time'] : null;
         $this->container['guessed_online_price'] = isset($data['guessed_online_price']) ? $data['guessed_online_price'] : null;
+        $this->container['hit_counter'] = isset($data['hit_counter']) ? $data['hit_counter'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['initial_price'] = isset($data['initial_price']) ? $data['initial_price'] : null;
         $this->container['inserted'] = isset($data['inserted']) ? $data['inserted'] : null;
@@ -458,6 +494,11 @@ class RepricingItemDTO implements ArrayAccess
             $invalid_properties[] = "invalid value for 'condition', must be one of 'NEW', 'NEW_OTHER', 'NEW_WITH_DEFECTS', 'MANUFACTURER_REFURBISHED', 'SELLER_REFURBISHED', 'LIKE_NEW', 'USED_EXCELLENT', 'USED_VERY_GOOD', 'USED_GOOD', 'USED_ACCEPTABLE', 'FOR_PARTS_OR_NOT_WORKING', 'UNKNOWN'.";
         }
 
+        $allowed_values = ["BASIC_STYLE", "CUSTOM_CODE", "GREEN_LED", "HIDDEN", "HIDDEN_STYLE", "HONESTY_STYLE", "NO_HIT_COUNTER", "RETRO_STYLE"];
+        if (!in_array($this->container['hit_counter'], $allowed_values)) {
+            $invalid_properties[] = "invalid value for 'hit_counter', must be one of 'BASIC_STYLE', 'CUSTOM_CODE', 'GREEN_LED', 'HIDDEN', 'HIDDEN_STYLE', 'HONESTY_STYLE', 'NO_HIT_COUNTER', 'RETRO_STYLE'.";
+        }
+
         $allowed_values = ["FIXED_PRICE", "UNSUPPORTED"];
         if (!in_array($this->container['listing_type'], $allowed_values)) {
             $invalid_properties[] = "invalid value for 'listing_type', must be one of 'FIXED_PRICE', 'UNSUPPORTED'.";
@@ -491,6 +532,10 @@ class RepricingItemDTO implements ArrayAccess
         }
         $allowed_values = ["NEW", "NEW_OTHER", "NEW_WITH_DEFECTS", "MANUFACTURER_REFURBISHED", "SELLER_REFURBISHED", "LIKE_NEW", "USED_EXCELLENT", "USED_VERY_GOOD", "USED_GOOD", "USED_ACCEPTABLE", "FOR_PARTS_OR_NOT_WORKING", "UNKNOWN"];
         if (!in_array($this->container['condition'], $allowed_values)) {
+            return false;
+        }
+        $allowed_values = ["BASIC_STYLE", "CUSTOM_CODE", "GREEN_LED", "HIDDEN", "HIDDEN_STYLE", "HONESTY_STYLE", "NO_HIT_COUNTER", "RETRO_STYLE"];
+        if (!in_array($this->container['hit_counter'], $allowed_values)) {
             return false;
         }
         $allowed_values = ["FIXED_PRICE", "UNSUPPORTED"];
@@ -602,6 +647,27 @@ class RepricingItemDTO implements ArrayAccess
     }
 
     /**
+     * Gets ebay_finding_api_error_code
+     * @return int
+     */
+    public function getEbayFindingApiErrorCode()
+    {
+        return $this->container['ebay_finding_api_error_code'];
+    }
+
+    /**
+     * Sets ebay_finding_api_error_code
+     * @param int $ebay_finding_api_error_code
+     * @return $this
+     */
+    public function setEbayFindingApiErrorCode($ebay_finding_api_error_code)
+    {
+        $this->container['ebay_finding_api_error_code'] = $ebay_finding_api_error_code;
+
+        return $this;
+    }
+
+    /**
      * Gets end_time
      * @return int
      */
@@ -639,6 +705,31 @@ class RepricingItemDTO implements ArrayAccess
     public function setGuessedOnlinePrice($guessed_online_price)
     {
         $this->container['guessed_online_price'] = $guessed_online_price;
+
+        return $this;
+    }
+
+    /**
+     * Gets hit_counter
+     * @return string
+     */
+    public function getHitCounter()
+    {
+        return $this->container['hit_counter'];
+    }
+
+    /**
+     * Sets hit_counter
+     * @param string $hit_counter
+     * @return $this
+     */
+    public function setHitCounter($hit_counter)
+    {
+        $allowed_values = array('BASIC_STYLE', 'CUSTOM_CODE', 'GREEN_LED', 'HIDDEN', 'HIDDEN_STYLE', 'HONESTY_STYLE', 'NO_HIT_COUNTER', 'RETRO_STYLE');
+        if (!is_null($hit_counter) && (!in_array($hit_counter, $allowed_values))) {
+            throw new \InvalidArgumentException("Invalid value for 'hit_counter', must be one of 'BASIC_STYLE', 'CUSTOM_CODE', 'GREEN_LED', 'HIDDEN', 'HIDDEN_STYLE', 'HONESTY_STYLE', 'NO_HIT_COUNTER', 'RETRO_STYLE'");
+        }
+        $this->container['hit_counter'] = $hit_counter;
 
         return $this;
     }

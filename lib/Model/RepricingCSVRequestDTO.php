@@ -61,6 +61,7 @@ class RepricingCSVRequestDTO implements ArrayAccess
         'id' => 'int',
         'inserted' => '\DateTime',
         'number_format' => 'string',
+        'public_csv_file_name' => 'string',
         'state' => 'string',
         'updated' => '\DateTime'
     ];
@@ -81,6 +82,7 @@ class RepricingCSVRequestDTO implements ArrayAccess
         'id' => 'id',
         'inserted' => 'inserted',
         'number_format' => 'numberFormat',
+        'public_csv_file_name' => 'publicCsvFileName',
         'state' => 'state',
         'updated' => 'updated'
     ];
@@ -97,6 +99,7 @@ class RepricingCSVRequestDTO implements ArrayAccess
         'id' => 'setId',
         'inserted' => 'setInserted',
         'number_format' => 'setNumberFormat',
+        'public_csv_file_name' => 'setPublicCsvFileName',
         'state' => 'setState',
         'updated' => 'setUpdated'
     ];
@@ -113,6 +116,7 @@ class RepricingCSVRequestDTO implements ArrayAccess
         'id' => 'getId',
         'inserted' => 'getInserted',
         'number_format' => 'getNumberFormat',
+        'public_csv_file_name' => 'getPublicCsvFileName',
         'state' => 'getState',
         'updated' => 'getUpdated'
     ];
@@ -298,6 +302,7 @@ class RepricingCSVRequestDTO implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['inserted'] = isset($data['inserted']) ? $data['inserted'] : null;
         $this->container['number_format'] = isset($data['number_format']) ? $data['number_format'] : null;
+        $this->container['public_csv_file_name'] = isset($data['public_csv_file_name']) ? $data['public_csv_file_name'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
     }
@@ -475,6 +480,27 @@ class RepricingCSVRequestDTO implements ArrayAccess
             throw new \InvalidArgumentException("Invalid value for 'number_format', must be one of 'DECIMAL_DOT', 'DECIMAL_COMMA', 'CENTS'");
         }
         $this->container['number_format'] = $number_format;
+
+        return $this;
+    }
+
+    /**
+     * Gets public_csv_file_name
+     * @return string
+     */
+    public function getPublicCsvFileName()
+    {
+        return $this->container['public_csv_file_name'];
+    }
+
+    /**
+     * Sets public_csv_file_name
+     * @param string $public_csv_file_name
+     * @return $this
+     */
+    public function setPublicCsvFileName($public_csv_file_name)
+    {
+        $this->container['public_csv_file_name'] = $public_csv_file_name;
 
         return $this;
     }

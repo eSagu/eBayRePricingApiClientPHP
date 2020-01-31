@@ -108,6 +108,9 @@ class ItemApi
      * @param int $by_quantity_to  (optional)
      * @param int $by_shipping_from  (optional)
      * @param int $by_shipping_to  (optional)
+     * @param int $by_orders_value  (optional)
+     * @param string $by_orders_days  (optional)
+     * @param string $by_orders_constraint  (optional)
      * @param string $by_site  (optional)
      * @param string $by_variation_type  (optional)
      * @param bool $by_hide_ended_items  (optional, default to true)
@@ -129,9 +132,9 @@ class ItemApi
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
      * @return \eSagu\EBay\RePricing\V1\Model\RepricingItemDTO[]
      */
-    public function callList($by_item_id = null, $by_sku = null, $by_title = null, $by_title_exact = null, $by_search_term = null, $by_condition = null, $by_price_mode = null, $by_price_gaps = null, $by_finding_filter = null, $by_price_state = null, $by_current_price_from = null, $by_current_price_to = null, $by_quantity_from = null, $by_quantity_to = null, $by_shipping_from = null, $by_shipping_to = null, $by_site = null, $by_variation_type = null, $by_hide_ended_items = null, $by_id_greater_than = null, $where_price_mode_null = null, $where_search_rank_null = null, $where_search_rank_not_null = null, $where_total_entries_null = null, $where_total_entries_not_null = null, $where_only_own_offer = null, $by_items_without_price_settings = null, $offset = null, $limit = null, $sort = null, $order = null, $exclude_childs = null, $count_items = null, $return_items = null)
+    public function callList($by_item_id = null, $by_sku = null, $by_title = null, $by_title_exact = null, $by_search_term = null, $by_condition = null, $by_price_mode = null, $by_price_gaps = null, $by_finding_filter = null, $by_price_state = null, $by_current_price_from = null, $by_current_price_to = null, $by_quantity_from = null, $by_quantity_to = null, $by_shipping_from = null, $by_shipping_to = null, $by_orders_value = null, $by_orders_days = null, $by_orders_constraint = null, $by_site = null, $by_variation_type = null, $by_hide_ended_items = null, $by_id_greater_than = null, $where_price_mode_null = null, $where_search_rank_null = null, $where_search_rank_not_null = null, $where_total_entries_null = null, $where_total_entries_not_null = null, $where_only_own_offer = null, $by_items_without_price_settings = null, $offset = null, $limit = null, $sort = null, $order = null, $exclude_childs = null, $count_items = null, $return_items = null)
     {
-        list($response) = $this->callListWithHttpInfo($by_item_id, $by_sku, $by_title, $by_title_exact, $by_search_term, $by_condition, $by_price_mode, $by_price_gaps, $by_finding_filter, $by_price_state, $by_current_price_from, $by_current_price_to, $by_quantity_from, $by_quantity_to, $by_shipping_from, $by_shipping_to, $by_site, $by_variation_type, $by_hide_ended_items, $by_id_greater_than, $where_price_mode_null, $where_search_rank_null, $where_search_rank_not_null, $where_total_entries_null, $where_total_entries_not_null, $where_only_own_offer, $by_items_without_price_settings, $offset, $limit, $sort, $order, $exclude_childs, $count_items, $return_items);
+        list($response) = $this->callListWithHttpInfo($by_item_id, $by_sku, $by_title, $by_title_exact, $by_search_term, $by_condition, $by_price_mode, $by_price_gaps, $by_finding_filter, $by_price_state, $by_current_price_from, $by_current_price_to, $by_quantity_from, $by_quantity_to, $by_shipping_from, $by_shipping_to, $by_orders_value, $by_orders_days, $by_orders_constraint, $by_site, $by_variation_type, $by_hide_ended_items, $by_id_greater_than, $where_price_mode_null, $where_search_rank_null, $where_search_rank_not_null, $where_total_entries_null, $where_total_entries_not_null, $where_only_own_offer, $by_items_without_price_settings, $offset, $limit, $sort, $order, $exclude_childs, $count_items, $return_items);
         return $response;
     }
 
@@ -156,6 +159,9 @@ class ItemApi
      * @param int $by_quantity_to  (optional)
      * @param int $by_shipping_from  (optional)
      * @param int $by_shipping_to  (optional)
+     * @param int $by_orders_value  (optional)
+     * @param string $by_orders_days  (optional)
+     * @param string $by_orders_constraint  (optional)
      * @param string $by_site  (optional)
      * @param string $by_variation_type  (optional)
      * @param bool $by_hide_ended_items  (optional, default to true)
@@ -177,7 +183,7 @@ class ItemApi
      * @throws \eSagu\EBay\RePricing\V1\ApiException on non-2xx response
      * @return array of \eSagu\EBay\RePricing\V1\Model\RepricingItemDTO[], HTTP status code, HTTP response headers (array of strings)
      */
-    public function callListWithHttpInfo($by_item_id = null, $by_sku = null, $by_title = null, $by_title_exact = null, $by_search_term = null, $by_condition = null, $by_price_mode = null, $by_price_gaps = null, $by_finding_filter = null, $by_price_state = null, $by_current_price_from = null, $by_current_price_to = null, $by_quantity_from = null, $by_quantity_to = null, $by_shipping_from = null, $by_shipping_to = null, $by_site = null, $by_variation_type = null, $by_hide_ended_items = null, $by_id_greater_than = null, $where_price_mode_null = null, $where_search_rank_null = null, $where_search_rank_not_null = null, $where_total_entries_null = null, $where_total_entries_not_null = null, $where_only_own_offer = null, $by_items_without_price_settings = null, $offset = null, $limit = null, $sort = null, $order = null, $exclude_childs = null, $count_items = null, $return_items = null)
+    public function callListWithHttpInfo($by_item_id = null, $by_sku = null, $by_title = null, $by_title_exact = null, $by_search_term = null, $by_condition = null, $by_price_mode = null, $by_price_gaps = null, $by_finding_filter = null, $by_price_state = null, $by_current_price_from = null, $by_current_price_to = null, $by_quantity_from = null, $by_quantity_to = null, $by_shipping_from = null, $by_shipping_to = null, $by_orders_value = null, $by_orders_days = null, $by_orders_constraint = null, $by_site = null, $by_variation_type = null, $by_hide_ended_items = null, $by_id_greater_than = null, $where_price_mode_null = null, $where_search_rank_null = null, $where_search_rank_not_null = null, $where_total_entries_null = null, $where_total_entries_not_null = null, $where_only_own_offer = null, $by_items_without_price_settings = null, $offset = null, $limit = null, $sort = null, $order = null, $exclude_childs = null, $count_items = null, $return_items = null)
     {
         // parse inputs
         $resourcePath = "/item";
@@ -254,6 +260,18 @@ class ItemApi
         // query params
         if ($by_shipping_to !== null) {
             $queryParams['by-shipping-to'] = $this->apiClient->getSerializer()->toQueryValue($by_shipping_to);
+        }
+        // query params
+        if ($by_orders_value !== null) {
+            $queryParams['by-orders-value'] = $this->apiClient->getSerializer()->toQueryValue($by_orders_value);
+        }
+        // query params
+        if ($by_orders_days !== null) {
+            $queryParams['by-orders-days'] = $this->apiClient->getSerializer()->toQueryValue($by_orders_days);
+        }
+        // query params
+        if ($by_orders_constraint !== null) {
+            $queryParams['by-orders-constraint'] = $this->apiClient->getSerializer()->toQueryValue($by_orders_constraint);
         }
         // query params
         if ($by_site !== null) {

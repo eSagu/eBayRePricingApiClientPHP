@@ -114,6 +114,7 @@ Class | Method | HTTP request | Description
 *PriceGapsApi* | [**get**](docs/Api/PriceGapsApi.md#get) | **GET** /price-gaps/{priceGapId} | Get a single PriceGap item.
 *PriceGapsApi* | [**post**](docs/Api/PriceGapsApi.md#post) | **POST** /price-gaps | Creates a new PriceGap item.
 *PriceGapsApi* | [**put**](docs/Api/PriceGapsApi.md#put) | **PUT** /price-gaps/{priceGapId} | Updates a PriceGap item.
+*RepricingItemHistoryApi* | [**priceOptimization**](docs/Api/RepricingItemHistoryApi.md#priceoptimization) | **GET** /item/{itemId}/history/price-optimization | Gets a history of price optimizations for a given item.
 *SearchTermStopWordsApi* | [**get**](docs/Api/SearchTermStopWordsApi.md#get) | **GET** /search-term-stop-words | Get the search term stop words.
 *SearchTermStopWordsApi* | [**post**](docs/Api/SearchTermStopWordsApi.md#post) | **POST** /search-term-stop-words | Creates new search term stop words if empty.
 *SearchTermStopWordsApi* | [**put**](docs/Api/SearchTermStopWordsApi.md#put) | **PUT** /search-term-stop-words | Edits search term stop words.
@@ -148,8 +149,10 @@ Class | Method | HTTP request | Description
  - [RefineByEndTime](docs/Model/RefineByEndTime.md)
  - [RefineByItemId](docs/Model/RefineByItemId.md)
  - [RefineByItemIds](docs/Model/RefineByItemIds.md)
+ - [RefineByOrders](docs/Model/RefineByOrders.md)
  - [RefineByPriceMode](docs/Model/RefineByPriceMode.md)
  - [RefineByPriceModeWhereNull](docs/Model/RefineByPriceModeWhereNull.md)
+ - [RefineByPriceState](docs/Model/RefineByPriceState.md)
  - [RefineByQuantity](docs/Model/RefineByQuantity.md)
  - [RefineBySKU](docs/Model/RefineBySKU.md)
  - [RefineByShipping](docs/Model/RefineByShipping.md)
@@ -162,6 +165,7 @@ Class | Method | HTTP request | Description
  - [RepricingEbayOrderHistoryDTO](docs/Model/RepricingEbayOrderHistoryDTO.md)
  - [RepricingItemAdditionalDetailsDTO](docs/Model/RepricingItemAdditionalDetailsDTO.md)
  - [RepricingItemDTO](docs/Model/RepricingItemDTO.md)
+ - [RepricingItemHistoryPriceOptimizationDTO](docs/Model/RepricingItemHistoryPriceOptimizationDTO.md)
  - [RepricingItemOptimizationResultDTO](docs/Model/RepricingItemOptimizationResultDTO.md)
  - [RepricingItemOrderStatsDTO](docs/Model/RepricingItemOrderStatsDTO.md)
  - [RepricingItemPriceSettingsDTO](docs/Model/RepricingItemPriceSettingsDTO.md)
