@@ -68,6 +68,7 @@ class RepricingItemDTO implements ArrayAccess
         'inserted' => '\DateTime',
         'item_id' => 'int',
         'item_images' => 'string[]',
+        'item_search_url' => 'string',
         'item_url' => 'string',
         'listing_type' => 'string',
         'offer_ended' => 'bool',
@@ -119,6 +120,7 @@ class RepricingItemDTO implements ArrayAccess
         'inserted' => 'inserted',
         'item_id' => 'itemId',
         'item_images' => 'itemImages',
+        'item_search_url' => 'itemSearchURL',
         'item_url' => 'itemUrl',
         'listing_type' => 'listingType',
         'offer_ended' => 'offerEnded',
@@ -166,6 +168,7 @@ class RepricingItemDTO implements ArrayAccess
         'inserted' => 'setInserted',
         'item_id' => 'setItemId',
         'item_images' => 'setItemImages',
+        'item_search_url' => 'setItemSearchUrl',
         'item_url' => 'setItemUrl',
         'listing_type' => 'setListingType',
         'offer_ended' => 'setOfferEnded',
@@ -213,6 +216,7 @@ class RepricingItemDTO implements ArrayAccess
         'inserted' => 'getInserted',
         'item_id' => 'getItemId',
         'item_images' => 'getItemImages',
+        'item_search_url' => 'getItemSearchUrl',
         'item_url' => 'getItemUrl',
         'listing_type' => 'getListingType',
         'offer_ended' => 'getOfferEnded',
@@ -447,6 +451,7 @@ class RepricingItemDTO implements ArrayAccess
         $this->container['inserted'] = isset($data['inserted']) ? $data['inserted'] : null;
         $this->container['item_id'] = isset($data['item_id']) ? $data['item_id'] : null;
         $this->container['item_images'] = isset($data['item_images']) ? $data['item_images'] : null;
+        $this->container['item_search_url'] = isset($data['item_search_url']) ? $data['item_search_url'] : null;
         $this->container['item_url'] = isset($data['item_url']) ? $data['item_url'] : null;
         $this->container['listing_type'] = isset($data['listing_type']) ? $data['listing_type'] : null;
         $this->container['offer_ended'] = isset($data['offer_ended']) ? $data['offer_ended'] : null;
@@ -835,6 +840,27 @@ class RepricingItemDTO implements ArrayAccess
     public function setItemImages($item_images)
     {
         $this->container['item_images'] = $item_images;
+
+        return $this;
+    }
+
+    /**
+     * Gets item_search_url
+     * @return string
+     */
+    public function getItemSearchUrl()
+    {
+        return $this->container['item_search_url'];
+    }
+
+    /**
+     * Sets item_search_url
+     * @param string $item_search_url
+     * @return $this
+     */
+    public function setItemSearchUrl($item_search_url)
+    {
+        $this->container['item_search_url'] = $item_search_url;
 
         return $this;
     }

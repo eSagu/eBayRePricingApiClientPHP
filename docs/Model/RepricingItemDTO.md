@@ -16,6 +16,7 @@ Name | Type | Description | Notes
 **inserted** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **item_id** | **int** |  | [optional] 
 **item_images** | **string[]** |  | [optional] 
+**item_search_url** | **string** |  | [optional] 
 **item_url** | **string** |  | [optional] 
 **listing_type** | **string** |  | [optional] 
 **offer_ended** | **bool** |  | [optional] 
