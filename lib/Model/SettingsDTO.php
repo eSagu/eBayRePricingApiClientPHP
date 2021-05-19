@@ -62,6 +62,7 @@ class SettingsDTO implements ArrayAccess
         'outdated_stock_items_minus_days' => 'int',
         'show_expert_settings' => 'bool',
         'stock_update_max_age' => 'int',
+        'stock_update_max_age_locked' => 'bool',
         'updated' => '\DateTime',
         'upload_enabled' => 'bool',
         'use_relist_parent_id' => 'bool'
@@ -85,6 +86,7 @@ class SettingsDTO implements ArrayAccess
         'outdated_stock_items_minus_days' => 'outdatedStockItemsMinusDays',
         'show_expert_settings' => 'showExpertSettings',
         'stock_update_max_age' => 'stockUpdateMaxAge',
+        'stock_update_max_age_locked' => 'stockUpdateMaxAgeLocked',
         'updated' => 'updated',
         'upload_enabled' => 'uploadEnabled',
         'use_relist_parent_id' => 'useRelistParentId'
@@ -104,6 +106,7 @@ class SettingsDTO implements ArrayAccess
         'outdated_stock_items_minus_days' => 'setOutdatedStockItemsMinusDays',
         'show_expert_settings' => 'setShowExpertSettings',
         'stock_update_max_age' => 'setStockUpdateMaxAge',
+        'stock_update_max_age_locked' => 'setStockUpdateMaxAgeLocked',
         'updated' => 'setUpdated',
         'upload_enabled' => 'setUploadEnabled',
         'use_relist_parent_id' => 'setUseRelistParentId'
@@ -123,6 +126,7 @@ class SettingsDTO implements ArrayAccess
         'outdated_stock_items_minus_days' => 'getOutdatedStockItemsMinusDays',
         'show_expert_settings' => 'getShowExpertSettings',
         'stock_update_max_age' => 'getStockUpdateMaxAge',
+        'stock_update_max_age_locked' => 'getStockUpdateMaxAgeLocked',
         'updated' => 'getUpdated',
         'upload_enabled' => 'getUploadEnabled',
         'use_relist_parent_id' => 'getUseRelistParentId'
@@ -221,6 +225,7 @@ class SettingsDTO implements ArrayAccess
         $this->container['outdated_stock_items_minus_days'] = isset($data['outdated_stock_items_minus_days']) ? $data['outdated_stock_items_minus_days'] : null;
         $this->container['show_expert_settings'] = isset($data['show_expert_settings']) ? $data['show_expert_settings'] : null;
         $this->container['stock_update_max_age'] = isset($data['stock_update_max_age']) ? $data['stock_update_max_age'] : null;
+        $this->container['stock_update_max_age_locked'] = isset($data['stock_update_max_age_locked']) ? $data['stock_update_max_age_locked'] : null;
         $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
         $this->container['upload_enabled'] = isset($data['upload_enabled']) ? $data['upload_enabled'] : null;
         $this->container['use_relist_parent_id'] = isset($data['use_relist_parent_id']) ? $data['use_relist_parent_id'] : null;
@@ -476,6 +481,27 @@ class SettingsDTO implements ArrayAccess
     public function setStockUpdateMaxAge($stock_update_max_age)
     {
         $this->container['stock_update_max_age'] = $stock_update_max_age;
+
+        return $this;
+    }
+
+    /**
+     * Gets stock_update_max_age_locked
+     * @return bool
+     */
+    public function getStockUpdateMaxAgeLocked()
+    {
+        return $this->container['stock_update_max_age_locked'];
+    }
+
+    /**
+     * Sets stock_update_max_age_locked
+     * @param bool $stock_update_max_age_locked
+     * @return $this
+     */
+    public function setStockUpdateMaxAgeLocked($stock_update_max_age_locked)
+    {
+        $this->container['stock_update_max_age_locked'] = $stock_update_max_age_locked;
 
         return $this;
     }

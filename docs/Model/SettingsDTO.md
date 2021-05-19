@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **outdated_stock_items_minus_days** | **int** |  | 
 **show_expert_settings** | **bool** |  | 
 **stock_update_max_age** | **int** |  | 
+**stock_update_max_age_locked** | **bool** |  | [optional] 
 **updated** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **upload_enabled** | **bool** |  | 
 **use_relist_parent_id** | **bool** |  | 

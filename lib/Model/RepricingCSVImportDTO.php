@@ -61,6 +61,7 @@ class RepricingCSVImportDTO implements ArrayAccess
         'id' => 'int',
         'inserted' => '\DateTime',
         'md5' => 'string',
+        'price_protection' => 'int',
         'state' => 'string',
         'updated' => '\DateTime'
     ];
@@ -81,6 +82,7 @@ class RepricingCSVImportDTO implements ArrayAccess
         'id' => 'id',
         'inserted' => 'inserted',
         'md5' => 'md5',
+        'price_protection' => 'priceProtection',
         'state' => 'state',
         'updated' => 'updated'
     ];
@@ -97,6 +99,7 @@ class RepricingCSVImportDTO implements ArrayAccess
         'id' => 'setId',
         'inserted' => 'setInserted',
         'md5' => 'setMd5',
+        'price_protection' => 'setPriceProtection',
         'state' => 'setState',
         'updated' => 'setUpdated'
     ];
@@ -113,6 +116,7 @@ class RepricingCSVImportDTO implements ArrayAccess
         'id' => 'getId',
         'inserted' => 'getInserted',
         'md5' => 'getMd5',
+        'price_protection' => 'getPriceProtection',
         'state' => 'getState',
         'updated' => 'getUpdated'
     ];
@@ -182,6 +186,7 @@ class RepricingCSVImportDTO implements ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['inserted'] = isset($data['inserted']) ? $data['inserted'] : null;
         $this->container['md5'] = isset($data['md5']) ? $data['md5'] : null;
+        $this->container['price_protection'] = isset($data['price_protection']) ? $data['price_protection'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
         $this->container['updated'] = isset($data['updated']) ? $data['updated'] : null;
     }
@@ -342,6 +347,27 @@ class RepricingCSVImportDTO implements ArrayAccess
     public function setMd5($md5)
     {
         $this->container['md5'] = $md5;
+
+        return $this;
+    }
+
+    /**
+     * Gets price_protection
+     * @return int
+     */
+    public function getPriceProtection()
+    {
+        return $this->container['price_protection'];
+    }
+
+    /**
+     * Sets price_protection
+     * @param int $price_protection
+     * @return $this
+     */
+    public function setPriceProtection($price_protection)
+    {
+        $this->container['price_protection'] = $price_protection;
 
         return $this;
     }
