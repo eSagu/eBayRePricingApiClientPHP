@@ -4,7 +4,6 @@ All URIs are relative to *https://api.esagu.de/ebay/repricing/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-<<<<<<< HEAD
 [**get21**](SettingsApi.md#get21) | **GET** /settings | Gets the repricing settings.
 [**post13**](SettingsApi.md#post13) | **POST** /settings | Adds new repricing settings if not exists.
 [**put12**](SettingsApi.md#put12) | **PUT** /settings | Edit the repricing settings.
@@ -12,15 +11,6 @@ Method | HTTP request | Description
 
 # **get21**
 > \eSagu\EBay\RePricing\V1\Model\SettingsDTO get21()
-=======
-[**get**](SettingsApi.md#get) | **GET** /settings | Gets the repricing settings.
-[**post**](SettingsApi.md#post) | **POST** /settings | Adds new repricing settings if not exists.
-[**put**](SettingsApi.md#put) | **PUT** /settings | Edit the repricing settings.
-
-
-# **get**
-> \eSagu\EBay\RePricing\V1\Model\SettingsDTO get()
->>>>>>> a0d1cbe91759f3ab528e23040bc9b2ac6045ad7b
 
 Gets the repricing settings.
 
@@ -39,17 +29,10 @@ eSagu\EBay\RePricing\V1\Configuration::getDefaultConfiguration()->setApiKey('Aut
 $api_instance = new eSagu\EBay\RePricing\V1\Api\SettingsApi();
 
 try {
-<<<<<<< HEAD
     $result = $api_instance->get21();
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling SettingsApi->get21: ', $e->getMessage(), PHP_EOL;
-=======
-    $result = $api_instance->get();
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling SettingsApi->get: ', $e->getMessage(), PHP_EOL;
->>>>>>> a0d1cbe91759f3ab528e23040bc9b2ac6045ad7b
 }
 ?>
 ```
@@ -72,13 +55,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-<<<<<<< HEAD
 # **post13**
 > post13($body)
-=======
-# **post**
-> post($body)
->>>>>>> a0d1cbe91759f3ab528e23040bc9b2ac6045ad7b
 
 Adds new repricing settings if not exists.
 
@@ -98,15 +76,9 @@ $api_instance = new eSagu\EBay\RePricing\V1\Api\SettingsApi();
 $body = new \eSagu\EBay\RePricing\V1\Model\SettingsDTO(); // \eSagu\EBay\RePricing\V1\Model\SettingsDTO | 
 
 try {
-<<<<<<< HEAD
     $api_instance->post13($body);
 } catch (Exception $e) {
     echo 'Exception when calling SettingsApi->post13: ', $e->getMessage(), PHP_EOL;
-=======
-    $api_instance->post($body);
-} catch (Exception $e) {
-    echo 'Exception when calling SettingsApi->post: ', $e->getMessage(), PHP_EOL;
->>>>>>> a0d1cbe91759f3ab528e23040bc9b2ac6045ad7b
 }
 ?>
 ```
@@ -132,13 +104,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-<<<<<<< HEAD
 # **put12**
 > put12($body)
-=======
-# **put**
-> put($body)
->>>>>>> a0d1cbe91759f3ab528e23040bc9b2ac6045ad7b
 
 Edit the repricing settings.
 
@@ -158,15 +125,9 @@ $api_instance = new eSagu\EBay\RePricing\V1\Api\SettingsApi();
 $body = new \eSagu\EBay\RePricing\V1\Model\SettingsDTO(); // \eSagu\EBay\RePricing\V1\Model\SettingsDTO | 
 
 try {
-<<<<<<< HEAD
     $api_instance->put12($body);
 } catch (Exception $e) {
     echo 'Exception when calling SettingsApi->put12: ', $e->getMessage(), PHP_EOL;
-=======
-    $api_instance->put($body);
-} catch (Exception $e) {
-    echo 'Exception when calling SettingsApi->put: ', $e->getMessage(), PHP_EOL;
->>>>>>> a0d1cbe91759f3ab528e23040bc9b2ac6045ad7b
 }
 ?>
 ```

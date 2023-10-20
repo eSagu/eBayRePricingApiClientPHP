@@ -4,7 +4,6 @@ All URIs are relative to *https://api.esagu.de/ebay/repricing/v1*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-<<<<<<< HEAD
 [**get14**](NewItemBulkEditApi.md#get14) | **GET** /new-item-bulk-edit | Get the new item bulk edit settings.
 [**post9**](NewItemBulkEditApi.md#post9) | **POST** /new-item-bulk-edit | Creates the new item bulk edit settings if empty.
 [**put7**](NewItemBulkEditApi.md#put7) | **PUT** /new-item-bulk-edit | Edits the new item bulk edit settings.
@@ -12,15 +11,6 @@ Method | HTTP request | Description
 
 # **get14**
 > \eSagu\EBay\RePricing\V1\Model\NewItemBulkEditDTO get14()
-=======
-[**get**](NewItemBulkEditApi.md#get) | **GET** /new-item-bulk-edit | Get the new item bulk edit settings.
-[**post**](NewItemBulkEditApi.md#post) | **POST** /new-item-bulk-edit | Creates the new item bulk edit settings if empty.
-[**put**](NewItemBulkEditApi.md#put) | **PUT** /new-item-bulk-edit | Edits the new item bulk edit settings.
-
-
-# **get**
-> \eSagu\EBay\RePricing\V1\Model\NewItemBulkEditDTO get()
->>>>>>> a0d1cbe91759f3ab528e23040bc9b2ac6045ad7b
 
 Get the new item bulk edit settings.
 
@@ -39,17 +29,10 @@ eSagu\EBay\RePricing\V1\Configuration::getDefaultConfiguration()->setApiKey('Aut
 $api_instance = new eSagu\EBay\RePricing\V1\Api\NewItemBulkEditApi();
 
 try {
-<<<<<<< HEAD
     $result = $api_instance->get14();
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling NewItemBulkEditApi->get14: ', $e->getMessage(), PHP_EOL;
-=======
-    $result = $api_instance->get();
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling NewItemBulkEditApi->get: ', $e->getMessage(), PHP_EOL;
->>>>>>> a0d1cbe91759f3ab528e23040bc9b2ac6045ad7b
 }
 ?>
 ```
@@ -72,13 +55,8 @@ This endpoint does not need any parameter.
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-<<<<<<< HEAD
 # **post9**
 > post9($body)
-=======
-# **post**
-> post($body)
->>>>>>> a0d1cbe91759f3ab528e23040bc9b2ac6045ad7b
 
 Creates the new item bulk edit settings if empty.
 
@@ -98,15 +76,9 @@ $api_instance = new eSagu\EBay\RePricing\V1\Api\NewItemBulkEditApi();
 $body = new \eSagu\EBay\RePricing\V1\Model\NewItemBulkEditDTO(); // \eSagu\EBay\RePricing\V1\Model\NewItemBulkEditDTO | 
 
 try {
-<<<<<<< HEAD
     $api_instance->post9($body);
 } catch (Exception $e) {
     echo 'Exception when calling NewItemBulkEditApi->post9: ', $e->getMessage(), PHP_EOL;
-=======
-    $api_instance->post($body);
-} catch (Exception $e) {
-    echo 'Exception when calling NewItemBulkEditApi->post: ', $e->getMessage(), PHP_EOL;
->>>>>>> a0d1cbe91759f3ab528e23040bc9b2ac6045ad7b
 }
 ?>
 ```
@@ -132,13 +104,8 @@ void (empty response body)
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-<<<<<<< HEAD
 # **put7**
 > put7($body)
-=======
-# **put**
-> put($body)
->>>>>>> a0d1cbe91759f3ab528e23040bc9b2ac6045ad7b
 
 Edits the new item bulk edit settings.
 
@@ -158,15 +125,9 @@ $api_instance = new eSagu\EBay\RePricing\V1\Api\NewItemBulkEditApi();
 $body = new \eSagu\EBay\RePricing\V1\Model\NewItemBulkEditDTO(); // \eSagu\EBay\RePricing\V1\Model\NewItemBulkEditDTO | 
 
 try {
-<<<<<<< HEAD
     $api_instance->put7($body);
 } catch (Exception $e) {
     echo 'Exception when calling NewItemBulkEditApi->put7: ', $e->getMessage(), PHP_EOL;
-=======
-    $api_instance->put($body);
-} catch (Exception $e) {
-    echo 'Exception when calling NewItemBulkEditApi->put: ', $e->getMessage(), PHP_EOL;
->>>>>>> a0d1cbe91759f3ab528e23040bc9b2ac6045ad7b
 }
 ?>
 ```
